@@ -1,0 +1,246 @@
+<style>
+  div.reg-title {
+      border-bottom: 1px solid #000;
+  }
+  .reg-select {
+    margin-right: 5px;
+    float: left;
+  }
+  .reg-select select {
+    min-height: 150px;
+    max-height: 250px;
+  }
+  .reg-tables {
+    float:left;
+  }
+  .name {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+</style>
+
+<form>
+  <div class="reg-title"><b>What would you like to create?</b></div>
+    <div style="flexcol" id="reg-row">
+      <section id="col1" class="reg-select">
+        <select multiple id="categories" onChange="populateCategory(this)">
+          {{#each categories}}
+            <option value="{{id}}">{{name}}</option>
+          {{/each}}
+        </select>
+      </section>
+    </div>
+  </div>
+</form>
+
+<script type="text/javascript">
+  const xml = `{{{xml}}}`;
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(xml, 'application/xml');
+  let markovJSON = '';
+  loadMarkov();
+
+  function loadMarkov() {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', '/modules/random-everything-generator/markov-source/male-names.markov');
+    xhr.onload = function() {
+      const jsonStr = xhr.response;
+      markovJSON = JSON.parse(jsonStr);
+    }
+    xhr.send();
+  }
+
+  function getNextLetter(prev) {
+    // Get a capital letter to start
+    let nxt = markovJSON[prev];
+    let total = 0
+    Object.keys(nxt).forEach(letter => total += nxt[letter])
+    let rnd = Math.floor(Math.random() * total);
+    let r = '';
+    let i = 0;
+    Object.keys(nxt).every(letter => {
+      i += parseInt(nxt[letter]);
+      if (i > rnd) {
+        r += letter;
+        return false;
+      }
+      return true;
+    });
+    return r;
+  }
+
+  function fromMarkov() {
+    if (markovJSON == '')
+      return "Unknown";
+    let r = '';   
+    r = getNextLetter('');
+    while (r.length < 3 || r.substr(r.length-2) != '--') {
+      r += getNextLetter(r.substr(r.length-1))
+    }
+    r = r.substr(0, r.length-2);
+    return r;
+  }
+
+  function buildFromTable(node) {
+    let html = '';
+    // TODO: convert all <table include=''> to <include>
+    const tableInclude = node.getAttribute("include");
+    if (tableInclude) {
+      return;
+    }
+
+    const tableName = node.getAttribute("name");
+    const tableId = node.getAttribute("id");
+    const tableType = node.getAttribute("type") || "standard";
+    switch (tableType) {
+      case "standard": {
+        html += '<div>'+tableName+' ';
+        const nodeValues = node.getElementsByTagName("value");
+        let randValue = Math.floor(Math.random() * nodeValues.length);
+        html += nodeValues[randValue].textContent+'</div>';
+        break;
+      }
+      case "pattern":
+      case "name": {
+        html += '<div class="name">Name: ';
+        const nodePatterns = node.getElementsByTagName("patterns");
+        if (nodePatterns.length == 0)
+          return;
+        const nodePattern = nodePatterns[0].getElementsByTagName("pattern");
+        let htmlValue = '';
+        for (const pattern of nodePattern) {
+          let p = pattern.textContent;
+          let m = p.match(/\{(.*?)\}/);
+          while (m && m.length > 0) {
+            listType = m[1];
+            switch (listType) {
+              case 'markov': {
+                p = p.replace('{markov}', fromMarkov);
+                break;
+              }
+              default: {
+                let values = []
+                const nodesList = node.getElementsByTagName("list");
+                for (let i = 0; i < nodesList.length; i++) {
+                  if (nodesList[i].getAttribute("type") == listType) {
+                    let items = nodesList[i].getElementsByTagName("item");
+                    for (let j = 0; j < items.length; j++) {
+                      values.push(items[j].textContent);
+                    }
+                  }
+                }
+                let r = values[Math.floor(Math.random()*values.length)];
+                p = p.replace('{'+m[1]+'}', r);
+                break;
+              }
+            }
+            m = p.match(/\{(.*?)\}/);
+          }
+          htmlValue = p;
+        }
+        html += htmlValue + '</div>';
+      }
+    }
+    return html;
+  }
+
+  function buildFromInclude(node, rDiv) {
+    let include = node.getAttribute('include');
+    $.get('/modules/random-everything-generator/xml/'+include+'.xml', data => {
+      const table = data.getElementsByTagName('table')[0];
+      const values = table.getElementsByTagName('value');
+      const value = values[Math.floor(Math.random() * values.length)];
+      document.getElementById(rDiv).innerHTML = value.textContent;
+    });
+  }
+
+  function populateCategory(select) {
+    const selectedValue = select.value;
+    const id = selectedValue;
+    colIdx = select.parentNode.id.substr(3);
+
+    // Check if the category is in the Categories XML
+    const category = doc.getElementById(id);
+    if (category.children.length > 0) { // This category has child nodes
+      colIdxNext = parseInt(colIdx) + 1;
+      let sectionNext = document.createElement('SECTION');
+      sectionNext.id = "col"+colIdxNext;
+      sectionNext.classList.add('reg-select');
+      selectNext = document.createElement('SELECT');
+      selectNext.multiple = true;      
+      selectNext.style.height = (category.children.length*1.3)+'em';
+      selectNext.addEventListener('change', function() {
+        populateCategory(this);
+      })
+      sectionNext.appendChild(selectNext);
+
+      for (const child of category.children) {
+        let option = document.createElement('OPTION');
+        option.value = child.getAttribute('id');
+        option.innerHTML = child.getAttribute('name');
+        selectNext.appendChild(option);
+      }
+
+      if (document.getElementById('col'+colIdxNext)) {
+        $(`section#col${colIdxNext}`).replaceWith(sectionNext)
+      } else {
+        document.getElementById('reg-row').appendChild(sectionNext);
+      }
+    } else { // Load and generate random tables
+      let sectionNext = document.createElement('SECTION');
+      sectionNext.classList.add('reg-tables');
+      sectionNext.id = 'reg-tables';
+      document.getElementById('reg-row').appendChild(sectionNext);
+
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', '/modules/random-everything-generator/xml/'+id+'.xml');
+      xhr.send();
+      xhr.onload = function() {
+        const xmlStr = xhr.response;
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(xmlStr, 'application/xml');
+        const nodeCategory = doc.getElementsByTagName('category')[0];
+        const catTitle = nodeCategory.getAttribute("name");
+        const nodeName = nodeCategory.getElementsByTagName('name')[0];
+        if (nodeName) {
+          const name = nodeName.getAttribute('name');
+        }
+
+        let html = '';
+        let div = document.getElementById('reg-tables');
+        div.innerHTML = '';
+
+        // TODO: 
+        // Load in <member> tags
+        
+        div.innerHTML += `<h2>${catTitle}</h2>`;
+
+        if (nodeName) {
+          div.innerHTML += "<div class='name'>Name: " + fromMarkov() + "</div>";
+        }
+
+        for (const categoryChild of nodeCategory.children) {
+          switch(categoryChild.tagName) {
+            case 'table': {
+              div.innerHTML+=buildFromTable(categoryChild);
+              break;
+            }
+            case 'include': {
+              let rDiv = document.createElement('DIV');
+              let spanName = document.createElement('SPAN');
+              spanName.innerHTML = categoryChild.getAttribute('name') + ': ';
+              spanValue = document.createElement('SPAN');
+              rDiv.appendChild(spanName);
+              rDiv.appendChild(spanValue);
+              spanValue.id = "id_" + Math.floor(Math.random()*1000000);
+              div.appendChild(rDiv);
+              buildFromInclude(categoryChild, spanValue.id);
+              break;
+            }
+          }
+        }
+      }
+    }
+  }
+</script>
+

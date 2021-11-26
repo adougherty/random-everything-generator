@@ -1,0 +1,26 @@
+TODO
+
+V0.1
+* When selecting a top-level category, remove previous results
+* Support nested <category> tags (See forest.xml)
+* Support regions
+* Support <member> tags
+* Let user re-roll results (individual AND all)
+* Let user make a completely random anything from a top-level category
+* Let user create a completely random story
+* Let user create a completely random world
+* Add all WotC Races
+* Add all WotC Classes
+* Wizard Class needs to support Chonurgy and Graviturgy
+* NPC background needs to support all backgrounds
+* Roll NPC age based on age tables
+
+V1
+* Save NPCs to character sheets
+* Save Stories to Journals (with links)
+* Save Items to items directory
+* Update markov to determine name length based on change based on supplied lengths
+
+V2
+* Generate Random Maps
+* Generate Random Character Sheet

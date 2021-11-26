@@ -1,0 +1,38 @@
+{
+	"name": "random-everything-generator",
+	"title": "Random Everything Generator",
+	"description": "Stuck with writer's block? Let us create the story for you",
+	"authors": [
+		{
+			"name": "DarthCluck",
+			"url": "https://github.com/adougherty"
+		}
+	],
+	"version": "0.0.1",
+	"minimumCoreVersion": "0.8.0",
+	"compatibleCoreVersion": "0.8.9",
+    "esmodules": ["./reg.js"],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		}
+	],
+	"packs": [
+		{
+			"name": "rolltables-reg",
+			"label": "RollTables (REG)",
+			"path":"packs/reg.db",
+			"entity":"RollTable",
+      		"private": false,
+      		"module":"random-everything-generator"
+		}
+	],
+	"includes": [
+		"scripts/*.*"
+	],
+	"url": "https://github.com/adougherty/random-everything-generator",
+	"manifest": "https://raw.githubusercontent.com/adougherty/random-everything-generator/master/module.json",
+	"download": "https://github.com/adougherty/random-everything-generator/archive/refs/heads/v0.0.1.zip"
+}
