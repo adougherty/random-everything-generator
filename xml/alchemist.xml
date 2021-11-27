@@ -1,18 +1,6 @@
         <category name="Alchemist" id="alchemist">
             <name name="The alchemist's name is..."/>
-            <table name="Race: The alchemist's race is..." id="npc_race">
-                <value region_start="0" region_end="8" region_include="darkelf">Dark Elf</value>
-                <value>Dragonborn</value>
-                <value region_start="0" region_end="5" region_include="gnome">Gnome</value>
-                <value>Half-Orc</value>
-                <value region_start="0" region_end="8" region_include="halfling">Halfling</value>
-                <value region_start="0" region_end="8" region_include="highelf">High Elf</value>
-                <value region_start="0" region_end="10" region_include="dwarf">Hill Dwarf</value>
-                <value>Human</value>
-                <value region_start="0" region_end="14" region_include="dwarf">Mountain Dwarf</value>
-                <value>Tiefling</value>
-                <value region_start="0" region_end="8" region_include="woodelf">Wood Elf</value>
-            </table>
+            <include name="Race" include="npc_race" />
             <table name="The alchemist is..." id="alchemist_is">
                 <value>An apothecary</value>
                 <value region_start="8" region_end="14" region_include="wizard">A hedge wizard</value>

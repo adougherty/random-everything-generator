@@ -81,8 +81,72 @@
     return r;
   }
 
+  /*
+   * Generates a name from a <table type="name">
+   *
+   * Arguments: [XMLNode] <table type="name"> node
+   * Returns:   [String]  generated name
+   */
+
+  function generateName(node) {
+    const nodePatterns = node.getElementsByTagName("patterns");
+    if (nodePatterns.length == 0)
+      return;
+    const nodePattern = nodePatterns[0].getElementsByTagName("pattern");
+    let htmlValue = '';
+    for (const pattern of nodePattern) {
+      let p = pattern.textContent;
+      let m = p.match(/\{(.*?)\}/);
+      while (m && m.length > 0) {
+        const listType = m[1];
+        switch (listType) {
+          case 'markov': {
+            p = p.replace('{markov}', fromMarkov);
+            break;
+          }
+          default: {
+            let values = []
+            const nodesList = node.getElementsByTagName("list");
+            for (let i = 0; i < nodesList.length; i++) {
+              if (nodesList[i].getAttribute("type") == listType) {
+                let items = nodesList[i].getElementsByTagName("item");
+                for (let j = 0; j < items.length; j++) {
+                  values.push(items[j].textContent);
+                }
+              }
+            }
+            let r = values[Math.floor(Math.random()*values.length)];
+            p = p.replace('{'+m[1]+'}', r);
+            break;
+          }
+        }
+        m = p.match(/\{(.*?)\}/);
+      }
+      htmlValue = p;
+    }
+    return htmlValue
+  }
+
+  function createElement(tag, value=null) {
+    const elem = document.createElement(tag)
+    elem.id = 'id_' + Math.floor(Math.random()*1000000);
+    if (value != null)
+      elem.innerHTML = value
+    return elem;
+  }
+
+  function createRegenButton(callback) {
+    const aRegen = document.createElement('A');
+    aRegen.addEventListener('click', callback);
+    const iRegen = document.createElement('I');
+    $(iRegen).addClass('fas fa-sync-alt');
+    $(iRegen).css({'display': 'inline-block', 'margin-left': '5px'})
+    aRegen.appendChild(iRegen);
+    return aRegen;
+  }
+
   function buildFromTable(node) {
-    let html = '';
+    let div = document.createElement('DIV');
     // TODO: convert all <table include=''> to <include>
     const tableInclude = node.getAttribute("include");
     if (tableInclude) {
@@ -94,54 +158,30 @@
     const tableType = node.getAttribute("type") || "standard";
     switch (tableType) {
       case "standard": {
-        html += '<div>'+tableName+' ';
         const nodeValues = node.getElementsByTagName("value");
         let randValue = Math.floor(Math.random() * nodeValues.length);
-        html += nodeValues[randValue].textContent+'</div>';
+        div.appendChild(createElement('SPAN', tableName+' '))
+        const spanValue = createElement('SPAN', nodeValues[randValue].textContent)
+        div.appendChild(spanValue);
+        div.appendChild(createRegenButton(() => {
+          let randValue = Math.floor(Math.random() * nodeValues.length);
+          spanValue.innerHTML = nodeValues[randValue].textContent;
+        }));
         break;
       }
       case "pattern":
       case "name": {
-        html += '<div class="name">Name: ';
-        const nodePatterns = node.getElementsByTagName("patterns");
-        if (nodePatterns.length == 0)
-          return;
-        const nodePattern = nodePatterns[0].getElementsByTagName("pattern");
-        let htmlValue = '';
-        for (const pattern of nodePattern) {
-          let p = pattern.textContent;
-          let m = p.match(/\{(.*?)\}/);
-          while (m && m.length > 0) {
-            listType = m[1];
-            switch (listType) {
-              case 'markov': {
-                p = p.replace('{markov}', fromMarkov);
-                break;
-              }
-              default: {
-                let values = []
-                const nodesList = node.getElementsByTagName("list");
-                for (let i = 0; i < nodesList.length; i++) {
-                  if (nodesList[i].getAttribute("type") == listType) {
-                    let items = nodesList[i].getElementsByTagName("item");
-                    for (let j = 0; j < items.length; j++) {
-                      values.push(items[j].textContent);
-                    }
-                  }
-                }
-                let r = values[Math.floor(Math.random()*values.length)];
-                p = p.replace('{'+m[1]+'}', r);
-                break;
-              }
-            }
-            m = p.match(/\{(.*?)\}/);
-          }
-          htmlValue = p;
-        }
-        html += htmlValue + '</div>';
+        $(div).addClass('name');
+        div.appendChild(createElement('SPAN', 'Name: '));
+
+        const spanValue = createElement('SPAN', generateName(node));
+        div.appendChild(spanValue);
+        div.appendChild(createRegenButton(() => {
+          spanValue.innerHTML = generateName(node);
+        }));
       }
     }
-    return html;
+    return div;
   }
 
   function buildFromInclude(node, rDiv) {
@@ -206,35 +246,43 @@
           const name = nodeName.getAttribute('name');
         }
 
-        let html = '';
         let div = document.getElementById('reg-tables');
         div.innerHTML = '';
 
         // TODO: 
         // Load in <member> tags
+        const h2 = document.createElement('H2');
+        h2.innerHTML = catTitle;
+        div.appendChild(h2);
         
-        div.innerHTML += `<h2>${catTitle}</h2>`;
-
         if (nodeName) {
-          div.innerHTML += "<div class='name'>Name: " + fromMarkov() + "</div>";
+          const divName = document.createElement('DIV');
+          divName.appendChild(createElement('SPAN', 'Name: '));
+          let spanValue = createElement('SPAN', fromMarkov());
+          divName.appendChild(spanValue);
+          divName.appendChild(createRegenButton(() => {
+            spanValue.innerHTML = fromMarkov();
+          }));
+          div.appendChild(divName);
         }
 
         for (const categoryChild of nodeCategory.children) {
           switch(categoryChild.tagName) {
             case 'table': {
-              div.innerHTML+=buildFromTable(categoryChild);
+              div.appendChild(buildFromTable(categoryChild));
               break;
             }
             case 'include': {
               let rDiv = document.createElement('DIV');
-              let spanName = document.createElement('SPAN');
-              spanName.innerHTML = categoryChild.getAttribute('name') + ': ';
-              spanValue = document.createElement('SPAN');
+              let spanName = createElement('SPAN', categoryChild.getAttribute('name') + ': ');
+              let spanValue = createElement('SPAN');
               rDiv.appendChild(spanName);
               rDiv.appendChild(spanValue);
-              spanValue.id = "id_" + Math.floor(Math.random()*1000000);
               div.appendChild(rDiv);
               buildFromInclude(categoryChild, spanValue.id);
+              rDiv.appendChild(createRegenButton(()=> {
+                buildFromInclude(categoryChild, spanValue.id);
+              }));
               break;
             }
           }
