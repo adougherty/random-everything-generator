@@ -87,7 +87,6 @@
    * Arguments: [XMLNode] <table type="name"> node
    * Returns:   [String]  generated name
    */
-
   function generateName(node) {
     const nodePatterns = node.getElementsByTagName("patterns");
     if (nodePatterns.length == 0)
@@ -135,7 +134,7 @@
     return elem;
   }
 
-  function createRegenButton(callback) {
+  function createRegenButton(callback = ()=>{}) {
     const aRegen = document.createElement('A');
     aRegen.addEventListener('click', callback);
     const iRegen = document.createElement('I');
@@ -145,7 +144,7 @@
     return aRegen;
   }
 
-  function buildFromTable(node) {
+  function buildFromTable(node, regenAllButton) {
     let div = document.createElement('DIV');
     // TODO: convert all <table include=''> to <include>
     const tableInclude = node.getAttribute("include");
@@ -163,10 +162,12 @@
         div.appendChild(createElement('SPAN', tableName+' '))
         const spanValue = createElement('SPAN', nodeValues[randValue].textContent)
         div.appendChild(spanValue);
-        div.appendChild(createRegenButton(() => {
+        let regenFunction = () => {
           let randValue = Math.floor(Math.random() * nodeValues.length);
           spanValue.innerHTML = nodeValues[randValue].textContent;
-        }));
+        }
+        div.appendChild(createRegenButton(regenFunction));
+        regenAllButton.addEventListener('click', regenFunction)
         break;
       }
       case "pattern":
@@ -176,9 +177,9 @@
 
         const spanValue = createElement('SPAN', generateName(node));
         div.appendChild(spanValue);
-        div.appendChild(createRegenButton(() => {
-          spanValue.innerHTML = generateName(node);
-        }));
+        let regenFunction = () => spanValue.innerHTML = generateName(node);
+        div.appendChild(createRegenButton(regenFunction));
+        regenAllButton.addEventListener('click', regenFunction);
       }
     }
     return div;
@@ -252,24 +253,26 @@
         // TODO: 
         // Load in <member> tags
         const h2 = document.createElement('H2');
+        const regenAllButton = createRegenButton()
         h2.innerHTML = catTitle;
+        h2.appendChild(regenAllButton)
         div.appendChild(h2);
-        
+
         if (nodeName) {
           const divName = document.createElement('DIV');
           divName.appendChild(createElement('SPAN', 'Name: '));
           let spanValue = createElement('SPAN', fromMarkov());
           divName.appendChild(spanValue);
-          divName.appendChild(createRegenButton(() => {
-            spanValue.innerHTML = fromMarkov();
-          }));
+          let regenFunction = () => spanValue.innerHTML = fromMarkov();
+          divName.appendChild(createRegenButton(regenFunction));
+          regenAllButton.addEventListener('click', regenFunction)
           div.appendChild(divName);
         }
 
         for (const categoryChild of nodeCategory.children) {
           switch(categoryChild.tagName) {
             case 'table': {
-              div.appendChild(buildFromTable(categoryChild));
+              div.appendChild(buildFromTable(categoryChild, regenAllButton));
               break;
             }
             case 'include': {
@@ -279,10 +282,10 @@
               rDiv.appendChild(spanName);
               rDiv.appendChild(spanValue);
               div.appendChild(rDiv);
+              let regenFunction = () => buildFromInclude(categoryChild, spanValue.id);
               buildFromInclude(categoryChild, spanValue.id);
-              rDiv.appendChild(createRegenButton(()=> {
-                buildFromInclude(categoryChild, spanValue.id);
-              }));
+              rDiv.appendChild(createRegenButton(regenFunction));
+              regenAllButton.addEventListener('click', regenFunction)
               break;
             }
           }
