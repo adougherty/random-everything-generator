@@ -5,8 +5,8 @@ V0.1
 * Support nested <category> tags (See forest.xml)
 * Support regions
 * Support <member> tags
-* Let user re-roll all results
 * Exclude current result from possible re-rolls
+* Let user make a completely random anything from a top-level category
 * Let user create a completely random story
 * Let user create a completely random world
 * Let user select a specific result (and type in a specific result)

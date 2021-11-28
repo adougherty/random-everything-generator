@@ -12,8 +12,19 @@
   }
   .reg-tables {
     float:left;
+    max-width: 600px;
+    max-height: 250px;
+    overflow-y: auto;
   }
-  .name {
+  .reg-tables-name {
+    vertical-align: top;
+  }
+  .reg-tables-value {
+    display: inline-block;
+    max-width: 300px;
+    vertical-align: top;
+  }
+  .reg-name {
     font-weight: bold;
     text-decoration: underline;
   }
@@ -22,8 +33,10 @@
 <form>
   <div class="reg-title"><b>What would you like to create?</b></div>
     <div style="flexcol" id="reg-row">
+      <section id="col0" class="reg-select">
+      </section>
       <section id="col1" class="reg-select">
-        <select multiple id="categories" onChange="populateCategory(this)">
+        <select multiple id='select1' onChange="populateCategory(this)">
           {{#each categories}}
             <option value="{{id}}">{{name}}</option>
           {{/each}}
@@ -145,13 +158,9 @@
   }
 
   function buildFromTable(node, regenAllButton) {
-    let div = document.createElement('DIV');
-    // TODO: convert all <table include=''> to <include>
-    const tableInclude = node.getAttribute("include");
-    if (tableInclude) {
-      return;
-    }
+    if (node.getAttribute("include")) return; // These shouldn't exist anymore
 
+    let div = document.createElement('DIV');
     const tableName = node.getAttribute("name");
     const tableId = node.getAttribute("id");
     const tableType = node.getAttribute("type") || "standard";
@@ -159,8 +168,11 @@
       case "standard": {
         const nodeValues = node.getElementsByTagName("value");
         let randValue = Math.floor(Math.random() * nodeValues.length);
-        div.appendChild(createElement('SPAN', tableName+' '))
+        const spanName = createElement('SPAN', tableName+' '); 
+        $(spanName).addClass('reg-tables-name')
+        div.appendChild(spanName)
         const spanValue = createElement('SPAN', nodeValues[randValue].textContent)
+        $(spanValue).addClass('reg-tables-value')
         div.appendChild(spanValue);
         let regenFunction = () => {
           let randValue = Math.floor(Math.random() * nodeValues.length);
@@ -172,7 +184,7 @@
       }
       case "pattern":
       case "name": {
-        $(div).addClass('name');
+        $(div).addClass('reg-name');
         div.appendChild(createElement('SPAN', 'Name: '));
 
         const spanValue = createElement('SPAN', generateName(node));
@@ -198,7 +210,7 @@
   function populateCategory(select) {
     const selectedValue = select.value;
     const id = selectedValue;
-    colIdx = select.parentNode.id.substr(3);
+    let colIdx = select.parentNode.id.substr(3);
 
     // Check if the category is in the Categories XML
     const category = doc.getElementById(id);
@@ -208,6 +220,7 @@
       sectionNext.id = "col"+colIdxNext;
       sectionNext.classList.add('reg-select');
       selectNext = document.createElement('SELECT');
+      selectNext.id = 'select' + colIdx;
       selectNext.multiple = true;      
       selectNext.style.height = (category.children.length*1.3)+'em';
       selectNext.addEventListener('change', function() {
@@ -228,9 +241,32 @@
         document.getElementById('reg-row').appendChild(sectionNext);
       }
     } else { // Load and generate random tables
+      // Reduce previous column to col0
+      /*
+      let prevColIdx = colIdx - 1;
+      if (!document.getElementById('archived_col' + prevColIdx)) {
+        let prevSelect = document.getElementById('select'+prevColIdx);
+        prevSelectedValue = prevSelect.options[prevSelect.selectedIndex].innerHTML;
+        let divListItem = createElement('DIV', prevSelectedValue);
+        divListItem.id = 'archived_col' + prevColIdx;
+        divListItem.addEventListener('click', () => {
+          let idx = divListItem.id.substr(12)
+          console.log(idx);
+          let i = idx;
+          while (document.getElementById('col'+(++i))) {
+            document.getElementById('col'+i).remove();
+          }
+        })
+        document.getElementById('col0').appendChild(divListItem);
+        document.getElementById('col' + prevColIdx).style.display = 'none';
+      }
+      */
+
+      // Create Result section
       let sectionNext = document.createElement('SECTION');
       sectionNext.classList.add('reg-tables');
-      sectionNext.id = 'reg-tables';
+      sectionNext.id = 'col'+(colIdxNext+1);
+      //console.log(sectionNext.id);
       document.getElementById('reg-row').appendChild(sectionNext);
 
       let xhr = new XMLHttpRequest();
@@ -247,7 +283,7 @@
           const name = nodeName.getAttribute('name');
         }
 
-        let div = document.getElementById('reg-tables');
+        let div = document.getElementById('col'+(colIdxNext+1));
         div.innerHTML = '';
 
         // TODO: 
