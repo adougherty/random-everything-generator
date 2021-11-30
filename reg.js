@@ -182,66 +182,13 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
                         regChild.path = '';
                         regChild.Markov = markov;
                         regChild.render(true);
+                        select.selectedIndex = 0;
                     }
                 });
             }
         })
     })
 });
-
-Hooks.on('renderREGChild', (app, html, data) => {
-    let saveBtn = $(`<a class="reg-save"><i class="far fa-save"></i>Save</a>`);
-    saveBtn.click(ev => {
-        let saveApp = new REGTitle();
-        saveApp.render(true);
-    });
-    html.closest('.app').find('.reg-save').remove();
-    let titleElement = html.closest('.app').find('.window-title');
-    saveBtn.insertAfter(titleElement);
-})
-
-class REGTitle extends FormApplication {
-    static get defaultOptions() {
-        const overrides = {
-            height: 100,
-            width: 200,
-            template: `modules/random-everything-generator/templates/title.hbs`,
-            title: 'Random Everything Generator - Save',
-            resizable: false,
-            minimizable: false
-        }
-
-        return foundry.utils.mergeObject(super.defaultOptions, overrides);
-    }
-
-    getData(options) {
-        return {
-            title: document.RandomEverythingGeneratorData['save']
-        };
-    }
-
-    async _updateObject(event, formData) {
-        if (game.user.isGM) {
-            let json = game.settings.get(MODULE_NAME, STORAGE_STORIES);
-            let stories = (json) ? JSON.parse(json) : {};
-            stories[formData['reg-title']] = document.RandomEverythingGeneratorData
-
-            // Add a new Story option, if this option does not already exist
-            if ($('#reg-select-story').find(`option[value="${formData['reg-title']}"]`).length==0) {
-                let option = document.createElement('OPTION');
-                option.value = formData['reg-title'];
-                option.innerHTML = formData['reg-title'];
-                document.getElementById('reg-select-story').appendChild(option)
-            }
-            
-            game.settings.set(MODULE_NAME, STORAGE_STORIES, JSON.stringify(stories));
-            this.render();
-
-        } else {
-            ui.notifications.error("You have to be GM to save stories.");
-        }
-    }
-}
 
 Hooks.on("init", async(app, hmtl) => {
     await game.settings.register(MODULE_NAME, STORAGE_STORIES, {

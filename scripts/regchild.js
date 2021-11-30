@@ -51,5 +51,26 @@ Hooks.on('renderREGChild', (app, html, data) => {
     html.closest('.app').find('.reg-save').remove();
     let titleElement = html.closest('.app').find('.window-title');
     saveBtn.insertAfter(titleElement);
+
+    if (!app.Path && document.RandomEverythingGeneratorData.save) {
+        let delBtn = $(`<a class="reg-delete"><i class="far fa-trash-alt"></i>Delete</a>`);
+        delBtn.click(ev => {
+            let json = game.settings.get(MODULE_NAME, STORAGE_STORIES);
+            let stories = (json) ? JSON.parse(json) : {};
+
+            console.log('DELETING...')
+            delete stories[document.RandomEverythingGeneratorData.save];
+            for (child of document.getElementById('reg-select-story').childNodes) {
+                if (child.value == document.RandomEverythingGeneratorData.save) {
+                    child.parentNode.removeChild(child);
+                }
+            }
+            document.RandomEverythingGeneratorData = {};
+            game.settings.set(MODULE_NAME, STORAGE_STORIES, JSON.stringify(stories));
+            app.close();
+        });
+        html.closest('.app').find('.reg-del').remove();
+        delBtn.insertAfter(titleElement);
+    }
 })
 

@@ -1,8 +1,6 @@
 TODO
 
 V0.1
-* Add ability to delete a story
-* Provide a way to load saved stories
 * Bug: rerolling a pattern (such as mountain name) uses the last pattern
 * Make sure main button only shows for GMs
 * Support __noun__
