@@ -92,6 +92,9 @@ Hooks.once('devModeReady', ({ registerPackageDebugFlag }) => {
 })
 
 Hooks.on("renderRollTableDirectory", (app, html, data) => {
+    if (!game.user.isGM)
+        return;
+
     let buildCategory = function(nodeCategories) {
         let r = [];
         for (const node of nodeCategories) { // Each of the top-level categories
@@ -200,7 +203,6 @@ Hooks.on("init", async(app, hmtl) => {
         default: '',
         onChange: value => {
             console.log(`${MODULE_NAME}: Updated Stories`)
-            console.log(value);
         }
     });
 });

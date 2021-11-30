@@ -413,47 +413,7 @@
     }
   }
 
-  class REGChild extends Application{
-    static ID = 'random-everything-generator';
-    static TEMPLATES = {
-        MAIN: `modules/${this.ID}/templates/random-everything-generator-child.hbs`
-    };
-    static log(force, ...args) {
-        const shouldLog = force || game.modules.get('_dev_mode')?.api?.getPackageDebugValue(this.ID);
-        if (shouldLog) {
-            console.log(this.ID, '|', ...args);
-        }
-    };
-    Title;
-    XML;
-    Path;
 
-    constructor(title) {
-      super({title: `${title} - Random Everything Generator`});
-      this.Title = title;
-    }
-
-    static get defaultOptions() {
-        const overrides = {
-            height: 410,
-            width: 500,
-            template: REGChild.TEMPLATES.MAIN,
-            resizable: true,
-            minimizable: true
-        }
-
-        return foundry.utils.mergeObject(super.defaultOptions, overrides);
-    }
-
-    getData(options) {
-       return {
-          title: this.Title,
-          xml: this.XML,
-          appid: this.id,
-          path: this.Path
-       };
-    }
-  }
 
 </script>
 

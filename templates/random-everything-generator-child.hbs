@@ -113,7 +113,9 @@
     let path = src.id.replace(/^app-\d+/, '');
     console.log(path);
     if (file == '__noun__') {
-
+      let regChild = new REGChild(src.innerHTML, true);
+      regChild.Path = path
+      regChild.render(true);
     } else {
       document.RandomEverythingGeneratorData[path] = file;
       let xhr = new XMLHttpRequest();
@@ -185,16 +187,20 @@
       }
       case "pattern":
       case "name": {
+        let localPath = path + '.name';
+
         let id = node.getAttribute('id') || 'name';
         $(div).addClass('reg-name');
         div.appendChild(createElement('SPAN', 'Name: '));
 
-        let localPath = path + '.name';
-
+        // Either use the saved name, or create a new one and save it
         let name = document.RandomEverythingGeneratorData[localPath] || generateName(node);
         const spanValue = createElement('SPAN', name);
         document.RandomEverythingGeneratorData[path + '.name'] = name
+
         div.appendChild(spanValue);
+
+        // Set regen functions
         let regenFunction = () => {
           let name = generateName(node);
           spanValue.innerHTML = name;
@@ -255,37 +261,36 @@
       return;
     const nodePattern = nodePatterns[0].getElementsByTagName("pattern");
     let htmlValue = '';
-    for (const pattern of nodePattern) {
-      let p = pattern.textContent;
-      let m = p.match(/\{(.*?)\}/);
-      while (m && m.length > 0) {
-        const listType = m[1];
-        switch (listType) {
-          case 'markov': {
-            p = p.replace('{markov}', fromMarkov);
-            break;
-          }
-          default: {
-            let values = []
-            const nodesList = node.getElementsByTagName("list");
-            for (let i = 0; i < nodesList.length; i++) {
-              if (nodesList[i].getAttribute("type") == listType) {
-                let items = nodesList[i].getElementsByTagName("item");
-                for (let j = 0; j < items.length; j++) {
-                  values.push(items[j].textContent);
-                }
+    // Choose a random pattern
+    const pattern = nodePattern[Math.floor(Math.random()*nodePattern.length)]
+    let p = pattern.textContent;
+    let m = p.match(/\{(.*?)\}/);
+    while (m && m.length > 0) {
+      const listType = m[1];
+      switch (listType) {
+        case 'markov': {
+          p = p.replace('{markov}', fromMarkov);
+          break;
+        }
+        default: {
+          let values = []
+          const nodesList = node.getElementsByTagName("list");
+          for (let i = 0; i < nodesList.length; i++) {
+            if (nodesList[i].getAttribute("type") == listType) {
+              let items = nodesList[i].getElementsByTagName("item");
+              for (let j = 0; j < items.length; j++) {
+                values.push(items[j].textContent);
               }
             }
-            let r = values[Math.floor(Math.random()*values.length)];
-            p = p.replace('{'+m[1]+'}', r);
-            break;
           }
+          let r = values[Math.floor(Math.random()*values.length)];
+          p = p.replace('{'+m[1]+'}', r);
+          break;
         }
-        m = p.match(/\{(.*?)\}/);
       }
-      htmlValue = p;
+      m = p.match(/\{(.*?)\}/);
     }
-    return htmlValue
+    return p
   }
 
   function populateChildCategory() {

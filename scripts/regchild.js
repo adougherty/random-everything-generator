@@ -1,7 +1,8 @@
 class REGChild extends Application{
     static ID = 'random-everything-generator';
     static TEMPLATES = {
-        MAIN: `modules/${this.ID}/templates/random-everything-generator-child.hbs`
+        MAIN: `modules/${this.ID}/templates/random-everything-generator-child.hbs`,
+        NOUN: `modules/${this.ID}/templates/noun.hbs`
     };
     static log(force, ...args) {
         const shouldLog = force || game.modules.get('_dev_mode')?.api?.getPackageDebugValue(this.ID);
@@ -14,31 +15,36 @@ class REGChild extends Application{
     Path;
     Markov;
 
-    constructor(title) {
-      super({title: `${title} - Random Everything Generator`});
-      this.Title = title;
+    constructor(title, noun=false) {
+        super({
+            title: `${title} - Random Everything Generator`,
+            template: (noun) ? REGChild.TEMPLATES.NOUN : REGChild.TEMPLATES.MAIN,
+            height: (noun) ? '500' : 'auto'
+        });
+        this.Title = title;
     }
 
     static get defaultOptions() {
         const overrides = {
-            height: 'auto',
             width: 500,
-            template: REGChild.TEMPLATES.MAIN,
             resizable: true,
-            minimizable: true
+            minimizable: true,
+            editable: true
         }
 
         return foundry.utils.mergeObject(super.defaultOptions, overrides);
     }
 
     getData(options) {
-       return {
-          title: this.Title,
-          xml: this.XML,
-          appid: this.id,
-          path: this.Path,
-          markov: this.Markov
-       };
+        return {
+            title: this.Title,
+            xml: this.XML,
+            appid: this.id,
+            path: this.Path,
+            markov: this.Markov,
+            data: (document.RandomEverythingGeneratorData[this.Path]) ? document.RandomEverythingGeneratorData[this.Path] : 'Hello World',
+            owner: game.user.id
+        };
     }
 }
 

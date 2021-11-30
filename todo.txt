@@ -1,12 +1,7 @@
 TODO
 
 V0.1
-* Bug: rerolling a pattern (such as mountain name) uses the last pattern
-* Make sure main button only shows for GMs
 * Support __noun__
-* When selecting a top-level category, remove previous results
-	* Be sure to warn that data will be lost.
-* Support nested <category> tags (See forest.xml)
 * Support <member> tags
 * Exclude current result from possible re-rolls
 * Let user make a completely random anything from a top-level category

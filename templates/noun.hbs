@@ -1,0 +1,15 @@
+<style>
+    .reg .editor {
+        height: 90%;
+    }
+
+    .reg .editor-content {
+        height:  100%;
+        overflow-y: auto;
+        word-break: break-word;
+    }
+</style>
+
+<form class="editable reg">
+    {{editor content=data target="data" owner=owner editable=true entities=true button=true}}
+</form>
