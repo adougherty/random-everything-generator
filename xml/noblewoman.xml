@@ -7,7 +7,7 @@
                         <value>A homely young lady</value>
                         <value>An acerbic wit</value>
                         <value region_start="32" region_end="37" region_include="noblehouse">A guest, a member of a powerful house</value>
-                        <value region_start="30" region_end="35" region_include="noblehosue">A guest, a member of a lesser house</value>
+                        <value region_start="30" region_end="35" region_include="noblehouse">A guest, a member of a lesser house</value>
                     </table>
                     <table name="The lady seeks someone to..." id="noblewoman_seeks">
                         <value region_start="35" region_end="40" region_include="__noun__">Help gain revenge against a bitter rival</value>

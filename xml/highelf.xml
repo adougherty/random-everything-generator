@@ -41,15 +41,15 @@
                     <value region_start="13" region_end="19" region_include="bard">A well-known singer</value>
                 </table>
                 <table name="The high elf is looking to...">
-                    <value region_start="19" region_end="24" region_include="beast">Track an unnatural beast</value>
+                    <value region_start="19" region_end="24" region_include="__noun__">Track an unnatural beast</value>
                     <value region_start="9" region_end="16" region_include="__noun__">Track an invader</value>
                     <value region_start="26" region_end="36" region_include="forest">Lead any travelers out of the forest</value>
                     <value region_start="37" region_end="51" region_include="__noun__">Find some knowledge about an ancient event or place</value>
                     <value region_start="9" region_end="22" region_include="__noun__">Locate a legendary gem</value>
                     <value region_start="17" region_end="24" region_include="__noun__">Solve an ancient mystery</value>
-                    <value region_start="43" region_end="47" region_include="books">Find one of the last copies of a legendary book</value>
+                    <value region_start="43" region_end="47" region_include="book">Find one of the last copies of a legendary book</value>
                     <value>Sail to the undying lands</value>
-                    <value>Share a drink a tale of woe</value>
+                    <value>Share a drink and a tale of woe</value>
                 </table>
                 <table name="The high elf carries...">
                     <value>An ancient blade</value>

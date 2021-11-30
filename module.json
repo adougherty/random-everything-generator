@@ -29,8 +29,8 @@
       		"module":"random-everything-generator"
 		}
 	],
-	"includes": [
-		"scripts/*.*"
+	"scripts": [
+		"scripts/regchild.js"
 	],
 	"url": "https://github.com/adougherty/random-everything-generator",
 	"manifest": "https://raw.githubusercontent.com/adougherty/random-everything-generator/master/module.json",

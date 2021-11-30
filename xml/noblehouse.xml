@@ -1,5 +1,5 @@
         <category name="Noble House" id="noblehouse">
-            <table name="The house is...">
+            <table name="The house is..." id="noblehouse_is">
                 <value>Ancient and well-respected by all houses, great and small</value>
                 <value>Ancient and greatly diminished in standing from what it once was</value>
                 <value>Old with the respect of many houses, great and small</value>
@@ -7,7 +7,7 @@
                 <value>Old by often overshadowed by other houses</value>
                 <value>Newly raised up to the nobility</value>
             </table>
-            <table name="The house's colors are">
+            <table name="The house's colors are" id="noblehouse_color">
                 <value>Black</value>
                 <value>Red / Scarlet</value>
                 <value>Gold</value>
@@ -29,7 +29,7 @@
                 <value>Orange</value>
                 <value>Olive Green</value>
             </table>
-            <table name="The house's symbol is...">
+            <table name="The house's symbol is..." id="noblehouse_symbol">
                 <value>An arrow</value>
                 <value>An axe</value>
                 <value>A dagger</value>
@@ -97,7 +97,7 @@
                 <value>A swan</value>
                 <value>A vulture</value>
             </table>
-            <table name="The house's motto champions the ideals of...">
+            <table name="The house's motto champions the ideals of..." id="noblehouse_motto">
                 <value>Compassion</value>
                 <value>Courage</value>
                 <value>Courtesy</value>
@@ -119,7 +119,7 @@
                 <value>Trust</value>
                 <value>Wisdom</value>
             </table>
-            <table name="The best known member of the house is or was...">
+            <table name="The best known member of the house is or was..." id="noblehouse_bestmember">
                 <value region_start="10" region_end="16" region_include="knight">A gallant knight</value>
                 <value region_start="12" region_end="17" region_include="appearance">A beautiful woman</value>
                 <value region_start="11" region_end="21" region_include="__noun__">A ruthless negotiator</value>
@@ -135,7 +135,7 @@
                 <value>A gifted orator</value>
                 <value>A dangerous and mad ruler</value>
             </table>
-            <table name="The current head of the house is...">
+            <table name="The current head of the house is..." id="noblehouse_head">
                 <value region_start="13" region_end="16" region_include="nobleman">A kindly old man</value>
                 <value region_start="13" region_end="18" region_include="noblewoman">A kindly old woman</value>
                 <value region_start="15" region_end="18" region_include="nobleman">A ruthless old man</value>
@@ -154,7 +154,7 @@
                 <value>A child</value>
                 <value>A blind middle-aged man</value>
             </table>
-            <table name="The house's goals include (individual members may have different goals)...">
+            <table name="The house's goals include (individual members may have different goals)..." id="noblehouse_goal">
                 <value region_start="18" region_end="22" region_include="city">Domination of the city's politics</value>
                 <value region_start="18" region_end="24" region_include="__noun__">Domination of the region's politics</value>
                 <value region_start="18" region_end="22" region_include="city">Domination of the city's trade</value>
@@ -170,7 +170,7 @@
                 <value region_start="32" region_end="37" region_include="noblehouse">Marriage with a powerful allied house</value>
                 <value region_start="31" region_end="36" region_include="noblehouse">Marriage with a powerful rival house</value>
             </table>
-            <table name="One or more house members keep secret (the secret may involve past or present events)...">
+            <table name="One or more house members keep secret (the secret may involve past or present events)..." id="noblehouse_secret">
                 <value region_start="24" region_end="31" region_include="__noun__">A long-timed scandalous romance</value>
                 <value region_start="19" region_end="32" region_include="__noun__">The existence of a bastard child</value>
                 <value region_start="38" region_end="45" region_include="castle">A minder in one of the house's keeps, castles, or palaces</value>
@@ -180,7 +180,7 @@
                 <value>The senility or madness of family members</value>
                 <value region_start="29" region_end="34" region_include="noblehouse">Criminal sabotage of a rival house</value>
             </table>
-            <table name="The house's seat of power is located in or near">
+            <table name="The house's seat of power is located in or near" id="noblehouse_location">
                 <value region_start="7" region_end="11" region_include="noblehouse">A port city</value>
                 <value region_start="16" region_end="25" region_include="mountain">A range of high mountains</value>
                 <value region_start="10" region_end="22" region_include="__noun__">A fertile river valley</value>

@@ -1,7 +1,12 @@
+const STORAGE_STORIES = "stories";
+const MODULE_NAME = "random-everything-generator";
+document.RandomEverythingGeneratorData = {};
+
 class RandomEverythingGenerator extends FormApplication{
     static ID = 'random-everything-generator';
     static TEMPLATES = {
-        MAIN: `modules/${this.ID}/templates/random-everything-generator.hbs`
+        MAIN: `modules/${this.ID}/templates/random-everything-generator.hbs`,
+        CATEGORY: `modules/${this.ID}/templates/category.hbs`
     };
     static log(force, ...args) {
         const shouldLog = force || game.modules.get('_dev_mode')?.api?.getPackageDebugValue(this.ID);
@@ -11,13 +16,22 @@ class RandomEverythingGenerator extends FormApplication{
     };
     Categories;
     XML;
+    Choices = {};
+    Path = '';
+
+    constructor(object, options) {
+        super(object, options);
+    }
+
+    get entity() {
+        return this.object;
+    }
 
     static get defaultOptions() {
         const overrides = {
-            height: 310,
-            width: 1000,
-            id: 'random-everything-generator',
-            template: RandomEverythingGenerator.TEMPLATES.MAIN,
+            height: 'auto',
+            width: 'auto',
+            template: RandomEverythingGenerator.TEMPLATES.CATEGORY,
             title: 'Random Everything Generator',
             resizable: true,
             minimizable: true
@@ -29,8 +43,47 @@ class RandomEverythingGenerator extends FormApplication{
     getData(options) {
         return {
             categories: this.Categories,
-            xml: this.XML
+            xml: this.XML,
+            appid: this.id,
+            path: '',
+            choices: this.Choices
         };
+    }
+
+    async _updateObject(event, formData) {
+        let doc = $.parseXML(this.XML);
+        let category = $(doc).find(`category[id='${formData.category}']`)
+        this.Path += '.' + formData.category;
+
+        if (category.children().length > 0) {
+            let choices = {}
+            for (const subcat of category.children()) {
+                choices[subcat.getAttribute('id')] = subcat.getAttribute('name');
+            }
+            let REGWindow = new RandomEverythingGenerator();
+            REGWindow.XML = this.XML;
+            REGWindow.Choices = choices;
+            REGWindow.render(true);
+        } else {
+            if (!document.RandomEverythingGeneratorData['top'])
+                document.RandomEverythingGeneratorData['top'] = formData.category;
+            $.ajax({
+                url: '/modules/random-everything-generator/markov-source/male-names.markov',
+                success: markov => {
+                    $.ajax({
+                        url: `/modules/random-everything-generator/xml/${formData.category}.xml`,
+                        dataType: 'text',
+                        success: xmlStr => {
+                            let regChild = new REGChild(category.attr('name'));
+                            regChild.XML = xmlStr;
+                            regChild.path = this.Path;
+                            regChild.Markov = markov;
+                            regChild.render(true);
+                        }
+                    });
+                }
+            })
+        }
     }
 }
 
@@ -52,18 +105,35 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
 
         return r;
     }
+
+    let json = game.settings.get(MODULE_NAME, STORAGE_STORIES);
+    let stories = (json) ? JSON.parse(json) : {};
+    let story_options = [];
+    for (let story of Object.keys(stories)) {
+        story_options.push(`<option value="${story}">${story}</option>`);
+    }
+
     const headerActions = html.find('div.header-actions');
     const buttonLabel = game.i18n.localize('RandomEverythingGenerator.button-title')
     const regButtonHtml =
-        `<div class="header-reg action-buttons">
-            <button class="reg">${buttonLabel}</button>
+        `<div class="header-reg action-buttons flexrow">
+            <button class="reg" title="${buttonLabel}">${buttonLabel}</button>
+            <select id="reg-select-story" class="reg" style="background-color:rgba(255,255,245,0.8);height:24px;margin:6px 6px 0px 6px;max-width:125px"">
+                <option value="">Stories</option>
+                ${story_options.join()}
+            </select>   
         </div>`;
-
     headerActions.after(regButtonHtml);
 
     const regButton = html.find("button.reg");
     regButton.on('click', event => {
         event.preventDefault();
+
+        if ($('.reg-title').length > 0) {
+            ui.notifications.error("Can only create one story at a time")
+            return;
+        }
+
         RandomEverythingGenerator.log(true, "Opening RandomEverythingGenerator Form");
 
         let xhr = new XMLHttpRequest();
@@ -72,8 +142,7 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
         xhr.onload = function() {
             // Add a list item for every top-level category
             const xmlStr = xhr.response;
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(xmlStr, 'application/xml');
+            const doc = new DOMParser().parseFromString(xmlStr, 'application/xml');
             const nodeTop = doc.getElementsByTagName('categories')[0]; // Guaranteed top level node
             const nodeCategories = nodeTop.children;
             const categories = [];
@@ -84,7 +153,107 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
             let reg = new RandomEverythingGenerator();
             reg.Categories = categories[0];
             reg.XML = xmlStr;
+
+            for (const node of nodeCategories) {
+                reg.Choices[node.getAttribute('id')] = node.getAttribute('name')
+            }
+
             reg.render(true);
         }
+    });
+
+    const regStorySelect = html.find("select.reg");
+    regStorySelect.on('change', event => {
+        let select = document.getElementById('reg-select-story');
+        let json = game.settings.get(MODULE_NAME, STORAGE_STORIES);
+        let stories = (json) ? JSON.parse(json) : {};
+        let story = stories[select.value];
+        document.RandomEverythingGeneratorData = story;
+        document.RandomEverythingGeneratorData['save'] = select.value
+        $.ajax({
+            url: '/modules/random-everything-generator/markov-source/male-names.markov',
+            success: markov => {
+                $.ajax({
+                    url: `/modules/random-everything-generator/xml/${story.top}.xml`,
+                    dataType: 'text',
+                    success: xmlStr => {
+                        let regChild = new REGChild(story.top);
+                        regChild.XML = xmlStr;
+                        regChild.path = '';
+                        regChild.Markov = markov;
+                        regChild.render(true);
+                    }
+                });
+            }
+        })
     })
+});
+
+Hooks.on('renderREGChild', (app, html, data) => {
+    let saveBtn = $(`<a class="reg-save"><i class="far fa-save"></i>Save</a>`);
+    saveBtn.click(ev => {
+        let saveApp = new REGTitle();
+        saveApp.render(true);
+    });
+    html.closest('.app').find('.reg-save').remove();
+    let titleElement = html.closest('.app').find('.window-title');
+    saveBtn.insertAfter(titleElement);
+})
+
+class REGTitle extends FormApplication {
+    static get defaultOptions() {
+        const overrides = {
+            height: 100,
+            width: 200,
+            template: `modules/random-everything-generator/templates/title.hbs`,
+            title: 'Random Everything Generator - Save',
+            resizable: false,
+            minimizable: false
+        }
+
+        return foundry.utils.mergeObject(super.defaultOptions, overrides);
+    }
+
+    getData(options) {
+        return {
+            title: document.RandomEverythingGeneratorData['save']
+        };
+    }
+
+    async _updateObject(event, formData) {
+        if (game.user.isGM) {
+            let json = game.settings.get(MODULE_NAME, STORAGE_STORIES);
+            let stories = (json) ? JSON.parse(json) : {};
+            stories[formData['reg-title']] = document.RandomEverythingGeneratorData
+
+            // Add a new Story option, if this option does not already exist
+            if ($('#reg-select-story').find(`option[value="${formData['reg-title']}"]`).length==0) {
+                let option = document.createElement('OPTION');
+                option.value = formData['reg-title'];
+                option.innerHTML = formData['reg-title'];
+                document.getElementById('reg-select-story').appendChild(option)
+            }
+            
+            game.settings.set(MODULE_NAME, STORAGE_STORIES, JSON.stringify(stories));
+            this.render();
+
+        } else {
+            ui.notifications.error("You have to be GM to save stories.");
+        }
+    }
+}
+
+Hooks.on("init", async(app, hmtl) => {
+    await game.settings.register(MODULE_NAME, STORAGE_STORIES, {
+        name: 'Stories JSON',
+        hint: 'Stories. Do not edit',
+        scope: 'world',
+        config: false,
+        type: String,
+        default: '',
+        onChange: value => {
+            console.log(`${MODULE_NAME}: Updated Stories`)
+            console.log(value);
+        }
+    });
 });

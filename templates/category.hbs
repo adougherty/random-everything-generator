@@ -1,0 +1,17 @@
+<style>
+  div.reg-title {
+      border-bottom: 1px solid #000;
+  }
+  .reg-select {
+    min-height: 150px;
+    max-height: 250px;
+  }
+</style>
+
+<form>
+  <div class="reg-title"><b>What would you like to create?</b></div>
+  <select name="category" onChange="document.getElementById('reg-submit').click()">
+    {{selectOptions choices localize=true blank="Select a Category"}}
+  </select>
+  <input type="submit" value="Select" id="reg-submit" style="display:none"/>
+</form>

@@ -95,7 +95,7 @@
         <value region_start="15" region_end="19" region_include="nobleman">A brash, young lord</value>
         <value region_start="15" region_end="19" region_include="noblewoman">A brash, young lord</value>
         <value region_start="2" region_end="19" region_include="mercenaries">A mercenary company</value>
-        <value region_start="11" region_end="18" region_include="barbairan">A fearsome warlord</value>
+        <value region_start="11" region_end="18" region_include="barbarian">A fearsome warlord</value>
         <value region_start="10" region_end="19" region_include="mercenary">A retired sellsword</value>
         <value region_start="10" region_end="18" region_include="merchant">A wealthy merchant</value>
         <value region_start="10" region_end="16" region_include="pirate">A retired pirate</value>
@@ -118,19 +118,19 @@
         <value region_start="2" region_end="6" region_include="cult">A cult</value>
     </table>
     <table name="The position or territory is worth defending because:" short="Territory Value" id="castle_value">
-        <value region_start="0|46" region_end="20|51" region_include="wilderness|__noun__">The surrounding land is excellent for growing crops</value>
-        <value region_start="11|29" region_end="16|33" region_include="mines|__noun__">The nearby mines are rich in ores</value>
-        <value region_start="11|29" region_end="16|33" region_include="mines|__noun__">The nearby mines are rich in gems</value>
-        <value region_start="0|46" region_end="20|55" region_include="wilderness|__noun__">The surrounding land is excellent for grazing livestock</value>
+        <value region_start="0|46" region_end="20|51" region_include="__noun__|__noun__">The surrounding land is excellent for growing crops</value>
+        <value region_start="11|29" region_end="16|33" region_include="mine|__noun__">The nearby mines are rich in ores</value>
+        <value region_start="11|29" region_end="16|33" region_include="mine|__noun__">The nearby mines are rich in gems</value>
+        <value region_start="0|46" region_end="20|55" region_include="__noun__|__noun__">The surrounding land is excellent for grazing livestock</value>
         <value region_start="48" region_end="57" region_include="mountain">The nearby pass is the easiest way to cross the mountains</value>
         <value region_start="11" region_end="17" region_include="__noun__">The nearby harbor is important for trade</value>
         <value region_start="11|52" region_end="31|58" region_include="__noun__|__noun__">The nearby source of freshwater is precious in this region</value>
-        <value region_start="4" region_end="14" region_include="wilderness">The wild lands beyond are full of threats</value>
-        <value region_start="4" region_end="21" region_include="wilderness">The surrounding lands are part of a long-standing territorial dispute</value>
-        <value region_start="4" region_end="20" region_include="wilderness">The surrounding land is held sacred</value>
-        <value region_start="4|36|50" region_end="16|40|62" region_include="wilderness|__noun__|__noun__">The nearby lands are home to a rare herb that has magical uses</value>
-        <value region_start="4|36|50" region_end="16|40|62" region_include="wilderness|__noun__|__noun__">The nearby lands are home to a rare tree that has magical uses</value>
-        <value region_start="4|36|54" region_end="16|44|66" region_include="wilderness|__noun__|__noun__">The nearby lands are home to a rare creature that has magical uses</value>
+        <value region_start="4" region_end="14" region_include="__noun__">The wild lands beyond are full of threats</value>
+        <value region_start="4" region_end="21" region_include="__noun__">The surrounding lands are part of a long-standing territorial dispute</value>
+        <value region_start="4" region_end="20" region_include="__noun__">The surrounding land is held sacred</value>
+        <value region_start="4|36|50" region_end="16|40|62" region_include="__noun__|__noun__|__noun__">The nearby lands are home to a rare herb that has magical uses</value>
+        <value region_start="4|36|50" region_end="16|40|62" region_include="__noun__|__noun__|__noun__">The nearby lands are home to a rare tree that has magical uses</value>
+        <value region_start="4|36|54" region_end="16|44|66" region_include="__noun__|__noun__|__noun__">The nearby lands are home to a rare creature that has magical uses</value>
     </table>
     <table name="The inner keep's defenses include:" short="Defenses" id="castle_defenses">
         <value>Hundreds of arrow slits</value>

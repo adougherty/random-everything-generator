@@ -324,7 +324,7 @@
                 <value region_start="0|16" region_end="4|21" region_include="__noun__|__noun__">Ales and other goods made on-site</value>
                 <value>Refuge from war</value>
                 <value>Shelter on a long journey</value>
-                <value region_start="4" region_end="9" region_include="__noun__">The secret of true happiness</value>
+                <value region_start="5" region_end="10" region_include="__noun__">The secret of true happiness</value>
                 <value>Physical perfection</value>
                 <value region_start="31" region_end="36" region_include="__noun__">The means to travel to another realm</value>
                 <value region_start="14" region_end="35" region_include="__noun__">Training in a unique fighting style</value>
