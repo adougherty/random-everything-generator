@@ -19,7 +19,6 @@
   }
   .reg-tables-value {
     display: inline-block;
-    max-width: 300px;
     vertical-align: top;
   }
   .reg-name {
@@ -35,16 +34,35 @@
     color:  blue;
     font-style: italic;
   }
+
+  section.reg-members {
+    max-width: 150px;
+    border-left: 1px solid #000;
+    padding-left: 3px;
+  }
+
+  section.reg-members header {
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+  }
+
+  section.reg-members select {
+    width: 100%;
+  }
 </style>
 
-
 <form>
-  <div id="test">
-    {{testlink}}
-  </div>
   <h2 class="reg-title" id='{{appid}}-reg-title'><b>{{title}}</b></h2>
-  <div style="flexcol" id="{{appid}}-reg-row">
+  <div class="flexrow" id="{{appid}}-reg-row">
     <section id="{{appid}}-child-col1" class="reg-tables">
+    </section>
+    <section id="{{appid}}-members" class="reg-members">
+      <header>Members</header>
+      <select name="add-member" id="{{appid}}-add-member">
+        {{selectOptions members blank="Add Member"}}
+      </select>
+      <ul id="{{appid}}-members-list">
+      </ul>
     </section>
   </div>
 </form>

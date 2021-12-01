@@ -193,34 +193,6 @@
         <value region_start="0|21" region_end="5|32" region_include="__noun__|necromancer">Staff of an infamous necromancer.</value>
         <value region_start="20" region_end="25" region_include="__noun__">A portal to another plane</value>
     </table>
-    <member name="Encounter: Under siege">
-        <table name="Encounter">
-            <value>A squad of archers hustling up a stair</value>
-            <value region_start="12" region_end="18" region_include="military">A patrol of guards brandishing weapons</value>
-            <value region_start="2" region_end="7" region_include="guard">A guard shouting instructions</value>
-            <value region_start="2" region_end="8" region_include="knight">A knight hurrying to the stables</value>
-            <value region_start="2" region_end="9" region_include="maidservant">A servant cowering in a hiding place</value>
-            <value region_start="10" region_end="15" region_include="__noun__">A curious child peeking out a window</value>
-            <value region_start="2" region_end="9" region_include="maidservant">A servant kneeling in prayer</value>
-            <value region_start="2" region_end="7" region_include="nobleman">A noble hastily penning a letter</value>
-            <value region_start="2|18" region_end="8|24" region_include="squire|knight">A squire aiding a knight with his armor</value>
-            <value region_start="2" region_end="8" region_include="healer">A healer checking over his potions</value>
-        </table>
-    </member>
-    <member name="Encounter: In peace">
-        <table name="Encounter">
-            <value region_start="4" region_end="12" region_include="huntsman">The huntsman cleaning a recent kill</value>
-            <value region_start="4" region_end="17" region_include="kennelmaster">The kennel master leading a leashed dog</value>
-            <value region_start="4" region_end="16" region_include="horsemaster">The horse master instructing a young rider</value>
-            <value region_start="4" region_end="11" region_include="armorer">The armorer scolding an apprentice</value>
-            <value region_start="2|24" region_end="6|28" region_include="maidservant|noblewoman">A maid fussing over her lady's dress</value>
-            <value region_start="4" region_end="17" region_include="sage">The tutor or sage lost in a book</value>
-            <value region_start="4|29" region_end="12|35" region_include="chaplain|maidservant">The chaplain whispering with a maid</value>
-            <value region_start="2" region_end="6" region_include="maidservant">A maid polishing an ornamental shield</value>
-            <value region_start="2" region_end="9" region_include="maidservant">A servant carrying a tray of food</value>
-            <value region_start="8" region_end="15" region_include="archer">Several archers practicing in the yard</value>
-        </table>
-    </member>
     <member name="Chamber" include="room_castlechamber" />
     <member name="Castle Inhabitant" include="castle_inhabitants" />
 </category>
