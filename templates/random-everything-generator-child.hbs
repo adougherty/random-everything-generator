@@ -202,7 +202,10 @@
         div.appendChild(spanValue);
 
         let regenFunction = () => {
-          let randValue = Math.floor(Math.random() * nodeValues.length);
+          let randValue = null;
+          do {
+            randValue = Math.floor(Math.random() * nodeValues.length);
+          } while (document.RandomEverythingGeneratorData[localPath] == randValue);
           let value = processRegions(nodeValues[randValue], localPath + '.' + randValue);
           spanValue.innerHTML = value;
           document.RandomEverythingGeneratorData[localPath] = randValue;

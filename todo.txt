@@ -2,8 +2,6 @@ TODO
 
 V0.1
 * Support __noun__
-* Support <member> tags
-* Exclude current result from possible re-rolls
 * Let user make a completely random anything from a top-level category
 * Let user create a completely random world
 * Let user select a specific result (and type in a specific result)
