@@ -153,6 +153,7 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
             RandomEverythingGenerator.log(true, categories);
 
             // Most of the work is going to be performed in random-everything-generator.hbs
+            document.RandomEverythingGeneratorData = {};
             let reg = new RandomEverythingGenerator();
             reg.Categories = categories[0];
             reg.XML = xmlStr;

@@ -85,7 +85,7 @@
                 <value region_start="0" region_end="7" region_include="miner">a miner, coming back to civilization with many valuables and oddities to sell.</value>
                 <value>an artist, pursuing their inspiration in the wilderness.</value>
                 <value>a grizzled old veteran, looking for their final battle.</value>
-                <value region_start="0" region_end="15" region_include="druid">an elderly druid, preparing a ritual to perform during an upcoming astral event (solstice, equinox, eclipse, etc).</value>
+                <value region_start="0" region_end="16" region_include="druid">an elderly druid, preparing a ritual to perform during an upcoming astral event (solstice, equinox, eclipse, etc).</value>
                 <value>a nomadic tribe of centaurs traveling across the plains.</value>
                 <value region_start="23" region_end="28" region_include="deity">an acolyte of a nature deity, undergoing a pilgrimage.</value>
                 <value region_start="0" region_end="7" region_include="nobleman">a noble and their entourage, returning from a big game hunt.</value>

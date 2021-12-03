@@ -49,6 +49,11 @@
   section.reg-members select {
     width: 100%;
   }
+
+  li.reg-member:hover {
+    cursor: pointer;
+    background-color:  #C0C0C0;
+  }
 </style>
 
 <form>
@@ -62,6 +67,9 @@
         {{selectOptions members blank="Add Member"}}
       </select>
       <ul id="{{appid}}-members-list">
+        {{#each linkedMembers}}
+          <li class="reg-member" id="{{../appid}}-member-{{this.index}}">{{this.label}}</li>
+        {{/each}}
       </ul>
     </section>
   </div>
