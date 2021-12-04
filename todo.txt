@@ -4,7 +4,6 @@ V0.1
 * Support __noun__
 * Let user make a completely random anything from a top-level category
 * Let user create a completely random world
-* Let user type in a response for names
 * Add all WotC Races
 * Add all WotC Classes
 * Wizard Class needs to support Chonurgy and Graviturgy

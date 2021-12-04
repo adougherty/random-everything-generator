@@ -92,7 +92,7 @@
       </ul>
     </section>
   </div>
-  <div id="reg-option-select" class="reg-option-select" style="display:none">
+  <div id="{{appid}}-reg-option-select" class="reg-option-select" style="display:none">
   </div>
 </form>
 
@@ -201,8 +201,29 @@
     let a = document.createElement('A');
     a.id = `{{appid}}-dropdown-${path}`;
     a.innerHTML = '&#9660;';
-    if (!values) // Most likely a <name> or <pattern> and needs to be treated differently
-        return a;
+    if (!values) { // Most likely a <name> or <pattern> and needs to be treated differently
+      a.addEventListener('click', ev => {
+        let key = a.id.replace(/^app-\d+-dropdown-/, '');
+        let div = $('#{{appid}}-reg-option-select');
+        $(div).empty();
+        let input = $('<input placeholder="Set a your own value"/>');
+
+        if (document.RandomEverythingGeneratorData[path] != parseInt(document.RandomEverythingGeneratorData[path]) && document.RandomEverythingGeneratorData[path].length > 0)
+          input.val(document.RandomEverythingGeneratorData[path]);
+        input.on('keypress', e => {
+          if (e.which == 13) {
+            e.preventDefault();
+            target.innerHTML = $(input).val();
+            document.RandomEverythingGeneratorData[path] = $(input).val();
+            $(div).empty();
+            $(div).css('display', 'none');          
+          }
+        });
+        $(div).append(input);
+        $(div).css('display', 'block');
+      });
+      return a;
+    }
 
     this.dropDownValues[path] = [];
     for (let value of values) {
@@ -210,7 +231,7 @@
     }
     a.addEventListener('click', ev => {
       let key = a.id.replace(/^app-\d+-dropdown-/, '');
-      let div = $('#reg-option-select');
+      let div = $('#{{appid}}-reg-option-select');
       $(div).empty();
       let input = $('<input placeholder="Set a your own value"/>');
       if (document.RandomEverythingGeneratorData[path] != parseInt(document.RandomEverythingGeneratorData[path]) && document.RandomEverythingGeneratorData[path].length > 0)
@@ -259,7 +280,11 @@
   }
 
   function buildFromTable(node, regenAllButton, path) {
-    if (node.getAttribute("include")) return; // These shouldn't exist anymore
+    if (node.getAttribute("include")) {
+      // These shouldn't exist anymore
+      console.warn("Invalid include attribute in " + node.getAttribute('id'));
+      return;
+    } 
 
     let div = document.createElement('DIV');
     const tableName = node.getAttribute("name");
@@ -275,7 +300,10 @@
           return div;
 
         let randValue = null;
-        if (parseInt(document.RandomEverythingGeneratorData[localPath])!=document.RandomEverythingGeneratorData[localPath] && document.RandomEverythingGeneratorData[localPath].length > 0) {
+        if (document.RandomEverythingGeneratorData[localPath] &&
+            parseInt(document.RandomEverythingGeneratorData[localPath])!=document.RandomEverythingGeneratorData[localPath] &&
+            document.RandomEverythingGeneratorData[localPath].length > 0)
+        {
           // Is a text value
           randValue = -1
         } else if (parseInt(document.RandomEverythingGeneratorData[localPath])==document.RandomEverythingGeneratorData[localPath]) {
@@ -339,7 +367,7 @@
           document.RandomEverythingGeneratorData[path + '.name'] = name
         }
         div.appendChild(createRegenButton(regenFunction));
-        div.appendChild(createDropDownButton(localPath));
+        div.appendChild(createDropDownButton(localPath, null, spanValue));
         div.appendChild(createDeleteButton(localPath));
         regenAllButton.addEventListener('click', regenFunction);
       }
