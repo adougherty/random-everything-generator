@@ -244,6 +244,20 @@
     return a;
   }
 
+  function createDeleteButton(path) {
+    const aDelete = document.createElement('A');
+    aDelete.addEventListener('click', () => {
+      let div = document.getElementById(`reg-${path}`);
+      $(div).remove();
+      document.RandomEverythingGeneratorData[path] = -2;
+    });
+    const iDelete = document.createElement('I');
+    $(iDelete).addClass('fas fa-minus');
+    //$(iDelete).css({'display': 'inline-block', 'margin-left': '5px'})
+    aDelete.appendChild(iDelete);
+    return aDelete;
+  }
+
   function buildFromTable(node, regenAllButton, path) {
     if (node.getAttribute("include")) return; // These shouldn't exist anymore
 
@@ -255,6 +269,10 @@
       case "standard": {
         const nodeValues = node.getElementsByTagName("value");
         let localPath = path + '.' + node.getAttribute('id');
+        div.id = 'reg-' + localPath;
+
+        if (document.RandomEverythingGeneratorData[localPath] == -2)
+          return div;
 
         let randValue = null;
         if (parseInt(document.RandomEverythingGeneratorData[localPath])!=document.RandomEverythingGeneratorData[localPath] && document.RandomEverythingGeneratorData[localPath].length > 0) {
@@ -294,12 +312,14 @@
         }
         div.appendChild(createRegenButton(regenFunction));
         div.appendChild(createDropDownButton(localPath, nodeValues, spanValue))
+        div.appendChild(createDeleteButton(localPath))
         regenAllButton.addEventListener('click', regenFunction)
         break;
       }
       case "pattern":
       case "name": {
         let localPath = path + '.name';
+        div.id = 'reg-' + localPath;
 
         let id = node.getAttribute('id') || 'name';
         $(div).addClass('reg-name');
@@ -320,6 +340,7 @@
         }
         div.appendChild(createRegenButton(regenFunction));
         div.appendChild(createDropDownButton(localPath));
+        div.appendChild(createDeleteButton(localPath));
         regenAllButton.addEventListener('click', regenFunction);
       }
     }

@@ -4,7 +4,7 @@ V0.1
 * Support __noun__
 * Let user make a completely random anything from a top-level category
 * Let user create a completely random world
-* Let user delete results (They may not care what the alchemist is currently brewing, and don't want to save it to journal/character sheet)
+* Let user type in a response for names
 * Add all WotC Races
 * Add all WotC Classes
 * Wizard Class needs to support Chonurgy and Graviturgy
