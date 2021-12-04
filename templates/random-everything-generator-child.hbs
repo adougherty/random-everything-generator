@@ -54,6 +54,25 @@
     cursor: pointer;
     background-color:  #C0C0C0;
   }
+
+  div.reg-option-select {
+    position: absolute;
+    border: 1px solid #000;
+    height: calc(100% - 30px);
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100;
+    top: 30px;
+    left: 0px;
+    background-color: #D3D3D3;
+    padding: 5px;
+    overflow-y: auto;
+    text-overflow: auto;
+  }
+
+  div.reg-option-select input {
+    width: 100%;
+  }
 </style>
 
 <form>
@@ -73,11 +92,14 @@
       </ul>
     </section>
   </div>
+  <div id="reg-option-select" class="reg-option-select" style="display:none">
+  </div>
 </form>
 
 <script type="text/javascript">
   var doc = new DOMParser().parseFromString(`{{{xml}}}`, 'application/xml');
   var markovJSON = JSON.parse(`{{{markov}}}`);
+  var dropDownValues = {};
 
   jQuery.fn.outerHTML = function() {
     return (this[0]) ? this[0].outerHTML : '';
@@ -127,6 +149,7 @@
         let link = $(`<a id='${linkId}' class='reg-link' onClick="openChildStory('${includes[i]}', this)">${at}</a>`);
         if (includes[i] == '__noun__')
           link.addClass('reg-is-noun');
+
         r = before+link.outerHTML()+after;
       }
       return r;
@@ -174,6 +197,53 @@
     return aRegen;
   }
 
+  function createDropDownButton(path, values, target) {
+    let a = document.createElement('A');
+    a.id = `{{appid}}-dropdown-${path}`;
+    a.innerHTML = '&#9660;';
+    if (!values) // Most likely a <name> or <pattern> and needs to be treated differently
+        return a;
+
+    this.dropDownValues[path] = [];
+    for (let value of values) {
+      this.dropDownValues[path].push(value.textContent);
+    }
+    a.addEventListener('click', ev => {
+      let key = a.id.replace(/^app-\d+-dropdown-/, '');
+      let div = $('#reg-option-select');
+      $(div).empty();
+      let input = $('<input placeholder="Set a your own value"/>');
+      if (document.RandomEverythingGeneratorData[path] != parseInt(document.RandomEverythingGeneratorData[path]) && document.RandomEverythingGeneratorData[path].length > 0)
+        input.val(document.RandomEverythingGeneratorData[path]);
+      input.on('keypress', e => {
+        if (e.which == 13) {
+          e.preventDefault();
+          target.innerHTML = $(input).val();
+          document.RandomEverythingGeneratorData[path] = $(input).val();
+          $(div).empty();
+          $(div).css('display', 'none');          
+        }
+      });
+      $(div).append(input);
+      for (idx of Object.keys(this.dropDownValues[key])) {
+        let divOption = document.createElement('DIV');
+        let a = document.createElement('A');
+        a.innerHTML = this.dropDownValues[key][idx];
+        a.addEventListener('click', () => {
+          let selectedIndex = this.dropDownValues[key].indexOf(a.innerHTML);
+          target.innerHTML = processRegions(values[selectedIndex], path + '.' + selectedIndex)
+          document.RandomEverythingGeneratorData[path] = selectedIndex;
+          $(div).empty();
+          $(div).css('display', 'none');
+        })
+        divOption.appendChild(a);
+        $(div).append(divOption);
+      }
+      $(div).css('display', 'block');
+    })
+    return a;
+  }
+
   function buildFromTable(node, regenAllButton, path) {
     if (node.getAttribute("include")) return; // These shouldn't exist anymore
 
@@ -185,15 +255,27 @@
       case "standard": {
         const nodeValues = node.getElementsByTagName("value");
         let localPath = path + '.' + node.getAttribute('id');
-        let randValue = (parseInt(document.RandomEverythingGeneratorData[localPath])==document.RandomEverythingGeneratorData[localPath])
-          ? parseInt(document.RandomEverythingGeneratorData[localPath])
-          : Math.floor(Math.random() * nodeValues.length);
+
+        let randValue = null;
+        if (parseInt(document.RandomEverythingGeneratorData[localPath])!=document.RandomEverythingGeneratorData[localPath] && document.RandomEverythingGeneratorData[localPath].length > 0) {
+          // Is a text value
+          randValue = -1
+        } else if (parseInt(document.RandomEverythingGeneratorData[localPath])==document.RandomEverythingGeneratorData[localPath]) {
+          // In an int value
+          randValue = parseInt(document.RandomEverythingGeneratorData[localPath]);
+        } else {
+          // Either null or something unexpected
+          randValue = Math.floor(Math.random() * nodeValues.length);
+        }
+
         const spanName = createElement('SPAN', tableName+' '); 
         $(spanName).addClass('reg-tables-name')
         div.appendChild(spanName)
 
-        document.RandomEverythingGeneratorData[path + '.' + node.getAttribute('id')] = randValue;
-        let value = processRegions(nodeValues[randValue], localPath + '.' + randValue);
+        document.RandomEverythingGeneratorData[path + '.' + node.getAttribute('id')] = (randValue >= 0) ? randValue : document.RandomEverythingGeneratorData[localPath];
+        let value = (randValue == -1)
+          ? document.RandomEverythingGeneratorData[localPath]
+          : processRegions(nodeValues[randValue], localPath + '.' + randValue);
         if (value === false) {
           console.error(`Could not process ${node.getAttribute('id')} value:${randValue}`)
         }
@@ -211,6 +293,7 @@
           document.RandomEverythingGeneratorData[localPath] = randValue;
         }
         div.appendChild(createRegenButton(regenFunction));
+        div.appendChild(createDropDownButton(localPath, nodeValues, spanValue))
         regenAllButton.addEventListener('click', regenFunction)
         break;
       }
@@ -236,6 +319,7 @@
           document.RandomEverythingGeneratorData[path + '.name'] = name
         }
         div.appendChild(createRegenButton(regenFunction));
+        div.appendChild(createDropDownButton(localPath));
         regenAllButton.addEventListener('click', regenFunction);
       }
     }

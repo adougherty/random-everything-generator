@@ -53,7 +53,6 @@ class REGChild extends Application{
                     let category = $(xml).find('category');
                     label = $(category).attr('name');
 
-                    console.log("LABEL: " + label);
                     this.LinkedMembers.push({
                         index: m[1],
                         label,
