@@ -20,6 +20,7 @@ class REGChild extends Application{
     RegenCallbacks = {};
     DropdownCallbacks = {};
     DeleteCallbacks = {};
+    OpenChildCallBacks = {};
 
     constructor(title, noun=false) {
         super({
@@ -108,6 +109,10 @@ class REGChild extends Application{
         return a;
     }
 
+    xmlToString(xmlData) {
+        return (new XMLSerializer()).serializeToString(xmlData);
+    }
+
     processRegions(value, path) {
         if ($(value).attr('region_include')) {
           let includes = value.getAttribute('region_include').split('|');
@@ -129,13 +134,43 @@ class REGChild extends Application{
             let className = 'reg-link';
             if (includes[i] == '__noun__')
                 className += ' reg-is-noun';
-            let link = `<a id='${linkId}' class='${className}' onClick="openChildStory('${includes[i]}', this)">${at}</a>`;
+            let link = `<a id='${linkId}' class='${className}'>${at}</a>`;
+
+            this.OpenChildCallBacks[linkId] = () => {
+                const file = includes[i];
+                const localPath = `${path}.${i}`;
+
+                if (file == '__noun__') {
+                    const regChild = new REGChild(at, true);
+                    regChild.Path = localPath;
+                    regChild.render(true);
+                } else {
+                    document.RandomEverythingGeneratorData[localPath] = file;
+                    $.get(`/modules/random-everything-generator/xml/${file}.xml`, xml => {
+                        const category = $(xml).find('category')[0];
+                        const regChild = new REGChild($(category).attr('name'));
+                        regChild.XML = this.xmlToString(xml);
+                        regChild.Path = localPath;
+                        regChild.Markov = this.Markov;
+                        regChild.render(true);
+                    })
+                }
+
+                console.log(localPath);
+
+            }
 
             r = before+link+after;
           }
           return r;
         } else {
-          return value.textContent;
+            if (!value) {
+                console.warn("Value is empty");
+                return '';
+            } else {
+                return value.textContent;
+            }
+            
         }
     }
 
@@ -145,6 +180,7 @@ class REGChild extends Application{
             console.warn("Invalid include attribute in " + node.getAttribute('id'));
             return;
         }
+
 
         const tableName = $(node).attr('name');
         const tableId = $(node).attr('id')
@@ -235,8 +271,8 @@ class REGChild extends Application{
             case 'pattern':
             case 'name': {
                 const localPath = this.Path + '.' + $(node).attr('id');
+        console.log(node);
 
-                console.log(localPath);
                 this.RegenCallbacks[localPath] = () => {
                     const newName = this.generateName(node);
                     document.RandomEverythingGeneratorData[localPath] = newName;
@@ -270,7 +306,9 @@ class REGChild extends Application{
                     document.RandomEverythingGeneratorData[localPath] = -2;
                 }
 
-                return document.RandomEverythingGeneratorData[localPath] || this.generateName(node)
+                const name = document.RandomEverythingGeneratorData[localPath] || this.generateName(node)
+                document.RandomEverythingGeneratorData[localPath] = name;
+                return name;
                 break;
             }
         }
@@ -280,7 +318,6 @@ class REGChild extends Application{
         const include = $(child).attr('include');
         const localPath = this.Path + '.' + include;
 
-        console.log(localPath)
         this.RegenCallbacks[localPath] = () => {
             $.get('/modules/random-everything-generator/xml/'+include+'.xml', data => {
                 const table = $(data).find('table')[0];
@@ -463,12 +500,16 @@ class REGChild extends Application{
                     result['id'] = this.Path + '.' + include;
                     result['key'] = $(child).attr('name').replace(/(\.\.\.|:)$/,'');
                     let data = await this.valueFromInclude(child);
-                    const table = $(data).find('table')[0];
-                    const values = $(table).find('value');
-                    const value = values[Math.floor(Math.random() * values.length)];
-                    document.RandomEverythingGeneratorData[localPath] = value.textContent;
-                    result['value'] = value.textContent;
-                    r.push(result);
+                    if (data['id']) {
+                        r.push(data)
+                    } else {
+                        const table = $(data).find('table')[0];
+                        const values = $(table).find('value');
+                        const value = values[Math.floor(Math.random() * values.length)];
+                        document.RandomEverythingGeneratorData[localPath] = value.textContent;
+                        result['value'] = value.textContent;
+                        r.push(result);
+                    }
                     break;
                 }
             }
@@ -519,7 +560,6 @@ class REGChild extends Application{
         }
 
         for (let path of Object.keys(this.RegenCallbacks)) {
-            //console.log(path);
             const span = document.getElementById(`reg-regen-${path}`);
             $(span).click(this.RegenCallbacks[path]);
         }
@@ -532,6 +572,11 @@ class REGChild extends Application{
         for (let path of Object.keys(this.DeleteCallbacks)) {
             const a = document.getElementById(`reg-delete-${path}`);
             $(a).click(this.DeleteCallbacks[path]);
+        }
+
+        for (let id of Object.keys(this.OpenChildCallBacks)) {
+            const a = document.getElementById(id);
+            $(a).click(this.OpenChildCallBacks[id]);
         }
     }
 

@@ -1,5 +1,5 @@
         <category name="City" id="city">
-            <table name="The city's name is..." type="name">
+            <table name="The city's name is..." type="name" id="city_name">
                 <patterns>
                     <pattern>{aye} {bee}</pattern>
                 </patterns>

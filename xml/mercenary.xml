@@ -1,7 +1,7 @@
         <category name="Mercenary" id="mercenary">
             <name name="The mercenary's name is..."/>
             <include name="Race" include="npc_race" />
-            <table name="This mercenary is...">
+            <table name="This mercenary is..."  id="mercenary_is">
                 <value region_start="11" region_end="17" region_include="outlaw">A grizzled outlaw.</value>
                 <value>A lifelong wanderer.</value>
                 <value>A disillusioned deserter.</value>
@@ -35,7 +35,7 @@
                 <value region_start="13" region_end="19" region_include="priest">A de-frocked priest</value>
                 <value>A favorite among the ladies</value>
             </table>
-            <table name="The mercenary's primary skillset is that of...">
+            <table name="The mercenary's primary skillset is that of..." id="mercenary_skillset">
                 <value region_start="2" region_end="9" region_include="fighter">A warrior</value>
                 <value region_start="2" region_end="11" region_include="barbarian">A barbarian.</value>
                 <value region_start="2" region_end="8" region_include="__noun__">A hunter</value>
@@ -56,7 +56,7 @@
                 <value region_start="2" region_end="8" region_include="priest">A priest.</value>
                 <value region_start="12" region_end="16" region_include="bard">A singer or bard.</value>
             </table>
-            <table name="The mercenary's primary weapon is...">
+            <table name="The mercenary's primary weapon is..." id="mercenary_weapon">
                 <value>A longsword.</value>
                 <value>A longsword and a shield</value>
                 <value>A battleaxe.</value>
@@ -77,7 +77,7 @@
                 <value>A scimitar and a shield</value>
                 <value>A morning star</value>
             </table>
-            <table name="The mercenary's weapon is...">
+            <table name="The mercenary's weapon is..." id="mercenary_weaponis">
                 <value region_start="11" region_end="27" region_include="__noun__">Covered in mysterious runes.</value>
                 <value region_start="11" region_end="27" region_include="__noun__">Made of an unusual material.</value>
                 <value>Emitting a supernatural hum or glow.</value>
@@ -87,7 +87,7 @@
                 <value>Battered to the point of breaking.</value>
                 <value region_start="16" region_end="20" region_include="__noun__">Engraved with a name.</value>
             </table>
-            <table name="The mercenary is also good at...">
+            <table name="The mercenary is also good at..." id="mercenary_good">
                 <value>Legends and folklore</value>
                 <value>Languages</value>
                 <value>Military strategy and logistics</value>
@@ -125,7 +125,7 @@
                 <value>Riding</value>
                 <value>Trade</value>
             </table>
-            <table name="Additionally, the mercenary...">
+            <table name="Additionally, the mercenary..." id="mercenary_more">
                 <value region_start="38" region_end="48" region_include="armorer">Wears unusually light or heavy armor (crafted by)</value>
                 <value>Wears colorful clothing.</value>
                 <value>Has a disfiguring facial scar.</value>
@@ -167,13 +167,13 @@
                 <value>Has an annoying laugh.</value>
                 <value region_start="31" region_end="35" region_include="coins">Is constantly fidgeting with a coin.</value>
             </table>
-            <table name="The mercenary's level of competence could be described as...">
+            <table name="The mercenary's level of competence could be described as..." id="mercenary_competence">
                 <value>Poor.</value>
                 <value>Average.</value>
                 <value>Good.</value>
                 <value>Excellent.</value>
             </table>
-            <table name="The mercenary's pricing is...">
+            <table name="The mercenary's pricing is..." id="mercenary_price">
                 <value>Unbelievably cheap.</value>
                 <value>Low.</value>
                 <value>Affordable.</value>
@@ -181,7 +181,7 @@
                 <value>High.</value>
                 <value>Exorbitant.</value>
             </table>
-            <table name="The mercenary is armored in...">
+            <table name="The mercenary is armored in..." id="mercenary_armor">
                 <value>Exotic robes</value>
                 <value>Leather armor</value>
                 <value>Studded leather armor</value>
@@ -191,7 +191,7 @@
                 <value region_start="13" region_end="23" region_include="armorer">Scale armor (crafted by)</value>
                 <value region_start="13" region_end="23" region_include="armorer">Plate armor (crafted by)</value>
             </table>
-            <table name="the mercenary's armor is...">
+            <table name="the mercenary's armor is..." id="mercenary_armoris">
                 <value>Shiny and new</value>
                 <value>In excellent condition</value>
                 <value>Obviously repaired, but serviceable</value>
@@ -199,7 +199,7 @@
                 <value>Dirty and well-worn</value>
                 <value>Barely held together</value>
             </table>
-            <table name="the mercenary fights with...">
+            <table name="the mercenary fights with..." id="mercenary_fights">
                 <value>Hit-and-run tactics</value>
                 <value>Making a direct assault</value>
                 <value>Fancy footwork</value>
@@ -209,7 +209,7 @@
                 <value>Lots of taunts and jeers</value>
                 <value>Dirty tactics</value>
             </table>
-            <table name="The mercenary fights for...">
+            <table name="The mercenary fights for..." id="mercenary_fightsfor">
                 <value>The love of gold</value>
                 <value>Pure bloodlust</value>
                 <value>A chance to deal out sadistic torment</value>
@@ -219,7 +219,7 @@
                 <value>Gold to secure a marriage</value>
                 <value>Fortune and glory</value>
             </table>
-            <table name="On the mercenary's face is...">
+            <table name="On the mercenary's face is..." id="mercenary_face">
                 <value>An eye-catching mole</value>
                 <value region_start="9" region_end="16" region_include="__noun__">A garish earring</value>
                 <value>An empty eye socket</value>
@@ -232,7 +232,7 @@
                 <value>An unruly beard</value>
                 <value>An intimidating mustache</value>
             </table>
-            <table name="The mercenary carries...">
+            <table name="The mercenary carries..." id="mercenary_carry">
                 <value>A blade with a gem embedded in the pommel</value>
                 <value>A blade with soft leather tassels dangling from the pommel</value>
                 <value>A blade with a carved ivory hilt</value>
@@ -256,7 +256,7 @@
                 <value>Arrows/bolts fletched with crow feathers</value>
                 <value>Arrows/bolts fletched with peacock feathers</value>
             </table>
-            <table name="The mercenary is seeking...">
+            <table name="The mercenary is seeking..." id="mercenary_seeking">
                 <value>Accomplices on a mission</value>
                 <value region_start="2" region_end="10" region_include="criminal">A fugitive on whom a bounty has been declared</value>
                 <value>A song to serve as a distraction from personal troubles</value>
