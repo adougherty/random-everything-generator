@@ -18,7 +18,7 @@ class REGNoun extends FormApplication {
 
     getData(options) {
         return {
-            noun: document.RandomEverythingGeneratorData[this.Path]
+            noun: "document.RandomEverythingGeneratorData[this.Path]"
         };
     }
 

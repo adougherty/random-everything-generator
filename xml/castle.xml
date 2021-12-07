@@ -90,9 +90,7 @@
         <value region_start="13" region_end="17" region_include="nobleman">An ambitious lord</value>
         <value region_start="13" region_end="17" region_include="noblewoman">An ambitious lady</value>
         <value region_start="8" region_end="14" region_include="__noun__">An evil tyrant</value>
-        <value region_start="11" region_end="15" region_include="nobleman">An elderly lord</value>
         <value region_start="11" region_end="15" region_include="noblewoman">An elderly lord</value>
-        <value region_start="15" region_end="19" region_include="nobleman">A brash, young lord</value>
         <value region_start="15" region_end="19" region_include="noblewoman">A brash, young lord</value>
         <value region_start="2" region_end="19" region_include="mercenaries">A mercenary company</value>
         <value region_start="11" region_end="18" region_include="barbarian">A fearsome warlord</value>
