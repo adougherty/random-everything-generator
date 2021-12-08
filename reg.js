@@ -53,7 +53,6 @@ class RandomEverythingGenerator extends FormApplication{
     async _updateObject(event, formData) {
         let doc = $.parseXML(this.XML);
         let category = $(doc).find(`category[id='${formData.category}']`)
-        this.Path += '.' + formData.category;
 
         if (category.children().length > 0) {
             let choices = {}
@@ -74,9 +73,11 @@ class RandomEverythingGenerator extends FormApplication{
                         url: `/modules/random-everything-generator/xml/${formData.category}.xml`,
                         dataType: 'text',
                         success: xmlStr => {
+                            if (this.Path)
+                                document.RandomEverythingGeneratorData[this.Path] = formData.category;
                             let regChild = new REGChild(category.attr('name'));
                             regChild.XML = xmlStr;
-                            regChild.path = this.Path;
+                            regChild.Path = this.Path + '.' + formData.category;
                             regChild.Markov = markov;
                             regChild.render(true);
                         }

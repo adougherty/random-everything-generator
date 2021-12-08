@@ -137,27 +137,50 @@ class REGChild extends Application{
             let link = `<a id='${linkId}' class='${className}'>${at}</a>`;
 
             this.OpenChildCallBacks[linkId] = () => {
-                const file = includes[i];
-                const localPath = `${path}.${i}`;
+                let file = includes[i];
+                let localPath = `${path}.${i}`;
 
                 if (file == '__noun__') {
+                    // Open the Noun Window
                     const regChild = new REGChild(at, true);
                     regChild.Path = localPath;
                     regChild.render(true);
                 } else {
+                    // Open a Child Window
+                    console.log(document.RandomEverythingGeneratorData[localPath])
+                    if (document.RandomEverythingGeneratorData[localPath] && 
+                        document.RandomEverythingGeneratorData[localPath] != parseInt(document.RandomEverythingGeneratorData[localPath])) {
+                        // There is already a selected value for this category
+                        file = document.RandomEverythingGeneratorData[localPath];
+                        localPath += '.' + file;
+                    }
                     document.RandomEverythingGeneratorData[localPath] = file;
                     $.get(`/modules/random-everything-generator/xml/${file}.xml`, xml => {
-                        const category = $(xml).find('category')[0];
-                        const regChild = new REGChild($(category).attr('name'));
-                        regChild.XML = this.xmlToString(xml);
-                        regChild.Path = localPath;
-                        regChild.Markov = this.Markov;
-                        regChild.render(true);
+                        if ($(xml).find('categories').length > 0) {
+                            // Prompt user for a category selection
+                            const categories = $(xml).find('categories')[0];
+                            // This is a container for other categories
+                            
+                            let reg = new RandomEverythingGenerator();
+                            for (const cat of categories.children) {
+                                reg.Choices[$(cat).attr('id')] = $(cat).attr('name')
+                            }
+                            reg.XML = this.xmlToString(xml);
+                            reg.Categories = $(xml).find('categories');
+                            reg.Path = localPath;
+                            reg.render(true);
+                        } else {
+                            const category = $(xml).find('category')[0];
+                            const regChild = new REGChild($(category).attr('name'));
+                            regChild.XML = this.xmlToString(xml);
+                            regChild.Path = localPath;
+                            regChild.Markov = this.Markov;
+                            regChild.render(true);
+                        }
                     })
                 }
 
                 console.log(localPath);
-
             }
 
             r = before+link+after;
@@ -271,7 +294,6 @@ class REGChild extends Application{
             case 'pattern':
             case 'name': {
                 const localPath = this.Path + '.' + $(node).attr('id');
-        console.log(node);
 
                 this.RegenCallbacks[localPath] = () => {
                     const newName = this.generateName(node);
@@ -387,8 +409,6 @@ class REGChild extends Application{
             return await $.get('/modules/random-everything-generator/xml/'+include+'.xml', data => {
             });
         }
-
-
     }
 
     generateName(node) {
@@ -434,7 +454,7 @@ class REGChild extends Application{
         console.log(this.Path)
         let xml = $.parseXML(this.XML);
         let nodeCategory = $(xml).find('category')[0];
-        let nodeName = $(nodeCategory).find('name')
+        let nodeName = $(nodeCategory).find('name');
 
         // Place Name first
         if (nodeName.length > 0) {

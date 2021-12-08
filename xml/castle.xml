@@ -172,7 +172,7 @@
         <value region_start="9" region_end="23" region_include="__noun__">A cursed treasure hoard</value>
         <value region_start="39" region_end="43" region_include="__noun__">The last bottle of a famous vintage of wine</value>
         <value region_start="2|28" region_end="11|34" region_include="__noun__|__noun__">A lost work of a celebrated artist</value>
-        <value region_start="16" region_end="33" region_include="nobleman">The crypt of an ancient sovereign</value>
+        <value region_start="16" region_end="33" region_include="noble">The crypt of an ancient sovereign</value>
         <value region_start="13" region_end="19" region_include="dragon">An unhatched dragon egg</value>
         <value region_start="0|12" region_end="6|29" region_include="legendary_weapon|fighter">Weapon of a legendary warrior.</value>
         <value region_start="0|17" region_end="4|22" region_include="wands|witch">Wand of a famous witch.</value>
