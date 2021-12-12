@@ -18,7 +18,7 @@
                 <value>Silver, friendly and caring.</value>
                 <value>Bronze, a dragon of the coast.</value>
             </table>
-            <table name="Appearance: The dragon has a unique appearance...">
+            <table name="Appearance: The dragon has a unique appearance..." id="appearance">
                 <value>It has very sleek and soft scales that blend together and shine.</value>
                 <value>Is relatively normal for its colour.</value>
                 <value>It has very tough and overgrown scales like barbaric plate armour.</value>
@@ -90,7 +90,7 @@
                 <value>Broad fan like tail fins.</value>
                 <value>Wreaths of flowers and plants around its body.</value>
             </table>
-            <table name="Appearance: It also has...">
+            <table name="Appearance: It also has..." id="has">
                 <value>One horn missing sharply removed.</value>
                 <value>Light scarring around the eyes.</value>
                 <value>A heavy mace like tail which it will happily use as a weapon.</value>
@@ -132,7 +132,7 @@
                 <value>A large underbiting jaw.</value>
                 <value>Fake horns.</value>
             </table>
-            <table name="Traits: The dragon is...">
+            <table name="Traits: The dragon is..." id="is">
                 <value>A dire dragon seemingly mutated someway by fel energies. Larger and more violent than even most dragons.</value>
                 <value>The runt of the litter. It’s smaller than average and weaker, yet more intelligent and stealthy.</value>
                 <value>A new parent protecting its eggs. It is proud and excited for them but will protect them to the death.</value>
@@ -204,7 +204,7 @@
                 <value>It wants to die in such a way that legends and songs will be created after it. Will actually try and orchestrate this.</value>
                 <value>Is sick. A dragon sneezing is a powerful, but embarrassing weapon.</value>
             </table>
-            <table name="Speech: When it comes to conversation...">
+            <table name="Speech: When it comes to conversation..." id="speech">
                 <value>It is offended by those who will not speak Draconic and refuses to speak in any other tongue.</value>
                 <value>It knows many languages and loves to talk.</value>
                 <value>Is mute and refuses to talk.</value>
@@ -226,7 +226,7 @@
                 <value>It gets uncomfortably close as it speaks.</value>
                 <value>It seems to know everything about everyone it talks too.</value>
             </table>
-            <table name="Hoard: Each dragon is compelled to hoard, but many hoard in different ways. This dragon's hoard is...">
+            <table name="Hoard: Each dragon is compelled to hoard, but many hoard in different ways. This dragon's hoard is..." id="hoard">
                 <value>Made of gold and coins. A sea of gold and silver coins.</value>
                 <value>Gold but only the currency of one race, oddly not the race in the nearby areas.</value>
                 <value>Carefully organised money in stacks and every treasure is organised using a complex system.</value>
@@ -258,7 +258,7 @@
                 <value>Up for being shared. The dragon will often share its hoard to those that need it, endorsing heroes. Often though this is a loan to be repaid.</value>
                 <value>Has been passed down for generations and only grown in size.</value>
             </table>
-            <table name="Lair: Dragons have a home. Often a large dungeon. This dragon's lair is...">
+            <table name="Lair: Dragons have a home. Often a large dungeon. This dragon's lair is..." id="lair">
                 <value>An ancient ruin from an ancient race.</value>
                 <value>The peak of the tallest mountain, with few paths up to the lair.</value>
                 <value>A temple built for the dragon personally by its worshippers or people enslaved.</value>
@@ -290,7 +290,7 @@
                 <value region_start="6" region_end="18" region_include="town">Under a settlement. Most likely hidden from the population.</value>
                 <value region_start="0" region_end="10" region_include="mountain">A mountain top shrine.</value>
             </table>
-            <table name="Lair: The lair also has...">
+            <table name="Lair: The lair also has..." id="lair_has">
                 <value>A place of magical power. A layline that lets the dragon tap into raw magic.</value>
                 <value>A place of elemental power.</value>
                 <value>A portal between realms.</value>
@@ -322,7 +322,7 @@
                 <value>Flooded caverns of waterborne monsters.</value>
                 <value>One huge chamber with pillars breaking it up.</value>
             </table>
-            <table name="Henchmen: The lair is defended by...">
+            <table name="Henchmen: The lair is defended by..." id="henchmen">
                 <value>Goblins who worship the dragon out of fear. The dragon would not care for their lives and hire them en masse.</value>
                 <value>Mercenaries hired by the dragon to keep it safe. The races and skills do not matter to the dragon, so would be varied.</value>
                 <value>Hobgoblin soldiers. More trained professionals.</value>

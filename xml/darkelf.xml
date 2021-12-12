@@ -1,12 +1,12 @@
             <category name="Dark elf" id="darkelf" link="appearance">
-                <table name="Hair Color: The dark elf has...">
+                <table name="Hair Color: The dark elf has..." id="hair">
                     <value>Bright white hair</value>
                     <value>Silver-blonde hair</value>
                     <value>Whitish grey hair</value>
                     <value>Shiny platinum hair</value>
                     <value>Pale grey hair</value>
                 </table>
-                <table name="Eye Color: The dark elf has...">
+                <table name="Eye Color: The dark elf has..." id="eye">
                     <value>whitish blue eyes</value>
                     <value>Pale blue eyes</value>
                     <value>Lilac eyes</value>
@@ -14,7 +14,7 @@
                     <value>Deep red eyes</value>
                     <value>Pale pink eyes</value>
                 </table>
-                <table name="The dark elf has...">
+                <table name="The dark elf has..." id="has">
                     <value>A likable grin</value>
                     <value>A delicate laugh</value>
                     <value>An amused smirk</value>
@@ -24,7 +24,7 @@
                     <value>A habit of pacing</value>
                     <value>A habit of scratching the back of the neck</value>
                 </table>
-                <table name="The dark elf is...">
+                <table name="The dark elf is..." id="is">
                     <value region_start="9" region_end="17" region_include="assassin">A deadly assassin</value>
                     <value>A death-marked heretic</value>
                     <value region_start="13" region_end="17" region_include="wizard">An ambitious mage</value>
@@ -36,7 +36,7 @@
                     <value>A patient and calculating spy</value>
                     <value>A devoted guardian</value>
                 </table>
-                <table name="The dark elf is looking to...">
+                <table name="The dark elf is looking to..." id="looking">
                     <value region_start="18" region_end="23" region_include="aberrant_beast">Track an aberrant beast</value>
                     <value region_start="33" region_end="42" region_include="darkelf">Investigate the disappearance of a comrade</value>
                     <value region_start="36" region_end="40" region_include="traps">Lead any travelers into a dangerous trap</value>
@@ -48,7 +48,7 @@
                     <value>Kill some goblins</value>
                     <value>Share some wine while prying for secrets</value>
                 </table>
-                <table name="The dark elf carries...">
+                <table name="The dark elf carries..." id="carries">
                     <value>An ancient staff</value>
                     <value region_start="11" region_end="15" region_include="wands">An ancient wand</value>
                     <value region_start="9" region_end="32" region_include="__noun__">A unique gem or piece of jewelry</value>

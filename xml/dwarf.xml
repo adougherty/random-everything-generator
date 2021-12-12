@@ -13,7 +13,7 @@
                     <value id="dwarf_cook">A hardy cook</value>
                     <value id="dwarf_mapmaker">A studious mapmaker</value>
                 </table>
-                <table name="The dwarf's beard is...">
+                <table name="The dwarf's beard is..." id="beard">
                     <value>Snowy white</value>
                     <value>Stony grey</value>
                     <value>Fiery red</value>
@@ -25,7 +25,7 @@
                     <value>Neatly trimmed</value>
                     <value>Magnificent</value>
                 </table>
-                <table name="The dwarf is looking to...">
+                <table name="The dwarf is looking to..." id="looking">
                     <value region_start="16" region_end="31" region_include="__noun__">Re-establish an ancestral claim</value>
                     <value>Find a new source for precious gems</value>
                     <value region_start="37" region_end="51" region_include="__noun__">Find some knowledge about an ancient event or place</value>
@@ -33,7 +33,7 @@
                     <value>Drink some ale and sing a bawdy song</value>
                     <value>Drink some ale and start a fight</value>
                 </table>
-                <table name="The dwarf wears...">
+                <table name="The dwarf wears..." id="wears">
                     <value>A traveler's cloak with a black hood</value>
                     <value>A traveler's cloak with a blue hood</value>
                     <value>A traveler's cloak with a grey hood</value>
@@ -46,7 +46,7 @@
                     <value region_start="37" region_end="47" region_include="armorer">Scale armor made of blackened steel (crafted by)</value>
                     <value region_start="33" region_end="43" region_include="armorer">Nearly impenetrable plate armor (crafted by)</value>
                 </table>
-                <table name="The dwarf carries...">
+                <table name="The dwarf carries..." id="carries">
                     <value>An old battleaxe with a razor sharp edge</value>
                     <value>A highly polished warhammer and a steel shield</value>
                     <value>A huge greataxe and some throwing axes</value>

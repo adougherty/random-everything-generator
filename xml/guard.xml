@@ -1,7 +1,7 @@
         <category name="Guard" id="guard">
             <name name="The guard's name is..."/>
             <include name="Race" include="npc_race" />
-            <table name="The guard is...">
+            <table name="The guard is..." id="is">
                 <value>A farm boy</value>
                 <value region_start="11" region_end="18" region_include="miner">The son of a miner</value>
                 <value region_start="11" region_end="22" region_include="fisherfolk">The son of a fisherman</value>
@@ -14,7 +14,7 @@
                 <value region_start="9" region_end="18" region_include="crafter_artisan">A failed craftsman</value>
                 <value>A favorite among the ladies</value>
             </table>
-            <table name="The guard works for...">
+            <table name="The guard works for..." id="works">
                 <value>The steady pay</value>
                 <value>A chance to deal out sadistic punishment</value>
                 <value>Gold to repay debts</value>
@@ -29,7 +29,7 @@
                 <value>The chance to demonstrate his valor</value>
                 <value>The possibility of being raised to a knight</value>
             </table>
-            <table name="On the guard's face is...">
+            <table name="On the guard's face is..." id="face">
                 <value>A large wart</value>
                 <value>An unsightly scar</value>
                 <value>A look of determination</value>
@@ -48,7 +48,7 @@
                 <value>A look of sadness</value>
                 <value>An eager grin</value>
             </table>
-            <table name="The guard carries...">
+            <table name="The guard carries..." id="carries">
                 <value>A blade with soft leather tassels dangling from the pommel</value>
                 <value region_start="16" region_end="27" region_include="__noun__">A blade with an inscription</value>
                 <value>A highly polished blade</value>

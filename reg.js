@@ -18,6 +18,7 @@ class RandomEverythingGenerator extends FormApplication{
     XML;
     Choices = {};
     Path = '';
+    OnLoadChildCallback = () => {}
 
     constructor(object, options) {
         super(object, options);
@@ -62,6 +63,7 @@ class RandomEverythingGenerator extends FormApplication{
             let REGWindow = new RandomEverythingGenerator();
             REGWindow.XML = this.XML;
             REGWindow.Choices = choices;
+            REGWindow.OnLoadChildCallback = this.OnLoadChildCallback;
             REGWindow.render(true);
         } else {
             if (!document.RandomEverythingGeneratorData['top'])
@@ -75,6 +77,8 @@ class RandomEverythingGenerator extends FormApplication{
                         success: xmlStr => {
                             if (this.Path)
                                 document.RandomEverythingGeneratorData[this.Path] = formData.category;
+                            this.OnLoadChildCallback(this, category.attr('name'), formData.category, xmlStr);
+                            console.log(this.Path)
                             let regChild = new REGChild(category.attr('name'));
                             regChild.XML = xmlStr;
                             regChild.Path = this.Path + '.' + formData.category;

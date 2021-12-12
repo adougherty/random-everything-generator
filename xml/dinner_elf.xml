@@ -1,5 +1,5 @@
         <category name="Elvish Dinner" id="dinner_elf">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -28,7 +28,7 @@
                     <item>red beans</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_with">
                 <value>Green cabbage.</value>
                 <value>Sweet cabbage.</value>
                 <value>Wild arugula.</value>
@@ -42,7 +42,7 @@
                 <value>Wild mushrooms.</value>
                 <value>Cave mushrooms.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Apples.</value>
                 <value>Pears.</value>
                 <value>Lemons.</value>
@@ -56,7 +56,7 @@
                 <value>Grapes.</value>
                 <value>Plums.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="dine_side">
                 <value>Crispy bread.</value>
                 <value>Fluffy bread.</value>
                 <value>Oat cake.</value>
@@ -65,7 +65,7 @@
                 <value>Assorted fruit.</value>
                 <value>Assorted cheese.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Spring water.</value>
                 <value>Sweet water.</value>
                 <value>Floral tea.</value>
@@ -79,7 +79,7 @@
                 <value>Ancient wine.</value>
                 <value>Young wine.</value>
             </table>
-            <table name="...that leaves you feeling...">
+            <table name="...that leaves you feeling..." id="feeling">
                 <value>Refreshed.</value>
                 <value>Peaceful.</value>
                 <value>Content.</value>

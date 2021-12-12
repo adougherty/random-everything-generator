@@ -1,5 +1,5 @@
         <category name="Dinner among Desert Nomads..." id="dinner_desert">
-            <table name="Main course...">
+            <table name="Main course..." id="main">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -28,7 +28,7 @@
                     <item>beetles</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="main_with">
                 <value>Chickpeas.</value>
                 <value>White beans.</value>
                 <value>Red beans.</value>
@@ -40,7 +40,7 @@
                 <value>Flat bread.</value>
                 <value>Dry crackers.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="main_and">
                 <value>Wild mushrooms.</value>
                 <value>Almond butter.</value>
                 <value>Cashew butter.</value>
@@ -54,7 +54,7 @@
                 <value>Green olives.</value>
                 <value>Red olives.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Almonds.</value>
                 <value>Cashews.</value>
                 <value>Pistachios.</value>
@@ -68,7 +68,7 @@
                 <value>Sun-dried tomatoes.</value>
                 <value>Dried root vegetables.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Skunky beer.</value>
                 <value>Cornmeal ale.</value>
                 <value>Golden ale.</value>

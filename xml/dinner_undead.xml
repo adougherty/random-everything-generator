@@ -1,5 +1,5 @@
         <category name="Dinner at an Undead Feasthall" id="dinner_undead">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -40,7 +40,7 @@
                     <item>halfling</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_wth">
                 <value>Mushy cabbage.</value>
                 <value>Weepy cabbage.</value>
                 <value>Rubbery leeks.</value>
@@ -62,7 +62,7 @@
                 <value>Radishes.</value>
                 <value>Beets.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Wormy apples.</value>
                 <value>Moldy cherries.</value>
                 <value>Over-ripe tomatoes.</value>
@@ -76,7 +76,7 @@
                 <value>Moldy cheese.</value>
                 <value>Stinky cheese.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Mice.</value>
                 <value>Leeches.</value>
                 <value>Maggots.</value>
@@ -90,7 +90,7 @@
                 <value>Whole brains.</value>
                 <value>Mysterious sausages.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Still water.</value>
                 <value>White ale.</value>
                 <value>Black ale.</value>

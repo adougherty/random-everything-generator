@@ -1,6 +1,6 @@
             <category name="Druid" id="druid">
                 <name name="The druid's name is..."/>
-                <table name="The druid is...">
+                <table name="The druid is..." id="is">
                     <value>A wildling orphan</value>
                     <value>A seasoned herbalist</value>
                     <value>A militant environmentalist</value>
@@ -22,7 +22,7 @@
                     <value>A savage priest or priestess</value>
                     <value region_start="2" region_end="9" region_include="village">A village elder</value>
                 </table>
-                <table name="The druid learned the craft from...">
+                <table name="The druid learned the craft from..." id="craft">
                     <value region_start="27" region_end="32" region_include="witch">Apprenticing to a woodland witch</value>
                     <value region_start="31" region_end="38" region_include="__noun__">Studying wilderness lore at an academy</value>
                     <value region_start="2" region_end="8" region_include="druid">A parent who was also a druid</value>
@@ -36,7 +36,7 @@
                     <value region_start="13" region_end="20" region_include="village">A mysterious village elder</value>
                     <value region_start="23" region_end="43" region_include="wilderness">Time spent stranded in a wild, foreign land</value>
                 </table>
-                <table name="Eyes: The druid has...">
+                <table name="Eyes: The druid has..." id="eyes">
                     <value>Sky blue eyes</value>
                     <value>Deep sea blue eyes</value>
                     <value>Bright grass green eyes</value>
@@ -48,7 +48,7 @@
                     <value>Dusty brown eyes</value>
                     <value>Stony grey eyes</value>
                 </table>
-                <table name="The druid has...">
+                <table name="The druid has..." id="has">
                     <value>An earthy scent</value>
                     <value>Bits of green underneath its fingernails</value>
                     <value>Stains of bird droppings on his/her clothes</value>
@@ -60,7 +60,7 @@
                     <value>Beautiful, healthy skin</value>
                     <value>A greenish, mossy beard</value>
                 </table>
-                <table name="The druid...">
+                <table name="The druid..." id="does">
                     <value>Stares hungrily like a wolf</value>
                     <value>Stares suspiciously like a cat</value>
                     <value>Hisses like a snake when he/she laughs</value>
@@ -74,7 +74,7 @@
                     <value>Pounces like a lion</value>
                     <value>Move like a bear</value>
                 </table>
-                <table name="The druid shares an especially close connection with...">
+                <table name="The druid shares an especially close connection with..." id="connection">
                     <value>Aquatic mammals</value>
                     <value>Bears</value>
                     <value>Birds of prey</value>
@@ -96,7 +96,7 @@
                     <value>Deserts and sand</value>
                     <value>Swamps and marshes</value>
                 </table>
-                <table name="The druid wields...">
+                <table name="The druid wields..." id="weilds">
                     <value>A wooden staff</value>
                     <value>A wooden club</value>
                     <value>A club and a wooden shield</value>
@@ -108,7 +108,7 @@
                     <value>A thorny whop made from a tough vine</value>
                     <value>Tooth and claw</value>
                 </table>
-                <table name="The druid carries...">
+                <table name="The druid carries..." id="carries">
                     <value>A sprig of holly</value>
                     <value>A sprig of mistletoe</value>
                     <value region_start="6" region_end="10" region_include="wands">A yew wand</value>
@@ -132,7 +132,7 @@
                     <value>A totem rod adorned with berries</value>
                     <value>A totem rod adorned with seeds and tree sap</value>
                 </table>
-                <table name="The druid also carries...">
+                <table name="The druid also carries..." id="also_carrries">
                     <value>A small knife</value>
                     <value>A wooden flute</value>
                     <value>A hunting horn</value>
@@ -146,7 +146,7 @@
                     <value>A book of Elvish poems and songs</value>
                     <value>Several vials of healing potions</value>
                 </table>
-                <table name="The druid wears...">
+                <table name="The druid wears..." id="wears">
                     <value>Robes of earth tones</value>
                     <value>A dark green cape</value>
                     <value>Shiny leather boots with fur</value>
@@ -159,7 +159,7 @@
                     <value>A robe with vines growing from its pockets</value>
                     <value>Only what nature gave him/her</value>
                 </table>
-                <table name="The druid is looking to...">
+                <table name="The druid is looking to..." id="looking">
                     <value>Find a place where a rare herb grows</value>
                     <value region_start="14" region_end="32" region_include="__noun__">Drive away an unnatural intruder</value>
                     <value region_start="22" region_end="26" region_include="traps">Lead intruders into a trap</value>
@@ -174,7 +174,7 @@
                     <value>Drink some tea mixed with strong spirits</value>
                     <value>Live in peace</value>
                 </table>
-                <table name="You have heard of this adventurer because...">
+                <table name="You have heard of this adventurer because..." id="heard">
                     <value region_start="30" region_end="34" region_include="__noun__">He's a wise leader of a small sect of like minded druids.</value>
                     <value region_start="32" region_end="50" region_include="__noun__">He's a legendary protector of a secluded community.</value>
                     <value region_start="71" region_end="78" region_include="__noun__">He's an emissary who acts as a go-between for the men and elves of the kingdom, solving disputes and keeping the peace.</value>

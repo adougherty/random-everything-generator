@@ -61,6 +61,7 @@ class REGChild extends Application{
                         index: m[1],
                         label,
                         path: this.Path + `._member.${m[1]}.${m[2]}`,
+                        file: m[2],
                         xml: (new XMLSerializer()).serializeToString(xml)
                     });
                 });
@@ -565,17 +566,21 @@ class REGChild extends Application{
         };
     }
 
+    onMemberClick(member) {
+        let regChild = new REGChild(member.label)
+        regChild.XML = member.xml;
+        regChild.Path = member.path
+        regChild.Markov = this.Markov;
+        regChild.render(true);
+    }
+
     activateListeners(html) {
         super.activateListeners(html);
         html.find(`#${this.id}-add-member`).change(ev => this.addMember(html));
 
         for (let member of this.LinkedMembers) {
             html.find(`#${this.id}-member-${member.index}`).click(ev => {
-                let regChild = new REGChild(member.label)
-                regChild.XML = member.xml;
-                regChild.Path = member.path
-                regChild.Markov = this.Markov;
-                regChild.render(true);
+                onMemberClick(member)
             });
         }
 
@@ -603,7 +608,6 @@ class REGChild extends Application{
     nextMemberIndex(base) {
         let idx = 0;
         let re = new RegExp(base + '(\\d+)');
-        console.log(base + '(\\d+)')
         for (let key of Object.keys(document.RandomEverythingGeneratorData)) {
             let m = key.match(re)
             if (m) {
@@ -614,23 +618,62 @@ class REGChild extends Application{
     }
 
     addMember(html) {
-        let path = this.Path + '._member.'+this.nextMemberIndex(this.Path + '._member.');
+        let index = this.nextMemberIndex(this.Path + '._member.');
+        let path = this.Path + '._member.'+index;
         let markov = this.Markov;
         let option = html.find(`#${this.id}-add-member option:selected`);
         let div = document.createElement('DIV');
         $(div).addClass('reg-member')
-        $(div).text(option.text());
         let container = html.find(`#${this.id}-members-list`);
         container.append(div);
         $.ajax({
             url: `/modules/random-everything-generator/xml/${option.val()}.xml`,
             dataType: 'text',
             success: xmlStr => {
-                let regChild = new REGChild(option.text())
-                regChild.XML = xmlStr;
-                regChild.Path = path + '.' + option.val();
-                regChild.Markov = markov;
-                regChild.render(true);
+                let xml = $.parseXML(xmlStr)
+                if ($(xml).find('categories').length > 0) {
+                    // Prompt user for a category selection
+                    const categories = $(xml).find('categories')[0];
+                    // This is a container for other categories
+                            
+                    let reg = new RandomEverythingGenerator();
+                    for (const cat of categories.children) {
+                        reg.Choices[$(cat).attr('id')] = $(cat).attr('name')
+                    }
+                    reg.XML = this.xmlToString(xml);
+                    reg.Categories = $(xml).find('categories');
+                    reg.Path = path;
+                    reg.OnLoadChildCallback = (container, name, file, srcXml) => {
+                        container.Path = path;
+                        $(div).text(name);
+                        $(div).click(ev => {
+                            let member = {
+                                index,
+                                label: name,
+                                xml: srcXml,
+                                path: path + '.' + file
+                            }
+                            this.onMemberClick(member)
+                        })
+                    }
+                    reg.render(true);
+                } else {
+                    $(div).text(option.text());
+                    $(div).click(ev => {
+                        let member = {
+                            index,
+                            label: option.text(),
+                            xml: xmlStr,
+                            path: path + '.' + option.val()
+                        }
+                        this.onMemberClick(member)
+                    })
+                    let regChild = new REGChild(option.text())
+                    regChild.XML = xmlStr;
+                    regChild.Path = path + '.' + option.val();
+                    regChild.Markov = markov;
+                    regChild.render(true);
+                }
             }
         });
     }

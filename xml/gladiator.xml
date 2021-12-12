@@ -1,7 +1,7 @@
         <category name="Gladiator" id="gladiator">
             <name name="The gladiator's name is..."/>
             <include name="Race" include="npc_race" />
-            <table name="The gladiator is armored in...">
+            <table name="The gladiator is armored in..." id="armor">
                 <value>Nothing</value>
                 <value>A leather vest</value>
                 <value>A leather jerkin</value>
@@ -11,7 +11,7 @@
                 <value region_start="17|25" region_end="24|34" region_include="nation|npc">The costume of a foreign adversary</value>
                 <value region_start="26" region_end="30" region_include="soldier">The costume of a military hero</value>
             </table>
-            <table name="The gladiator is wielding...">
+            <table name="The gladiator is wielding..." id="weild">
                 <value>A spear</value>
                 <value>A gladius (short sword)</value>
                 <value>Two short swords</value>
@@ -25,7 +25,7 @@
                 <value>A net and trident</value>
                 <value>An exotic, curved blade</value>
             </table>
-            <table name="The gladiator fights with...">
+            <table name="The gladiator fights with..." id="fight">
                 <value>Hit-and-run tactics</value>
                 <value>Making a direct assault</value>
                 <value>Making a mad charge</value>
@@ -37,7 +37,7 @@
                 <value>Lots of screaming and shouting</value>
                 <value>Lots of head-butting</value>
             </table>
-            <table name="The gladiator is...">
+            <table name="The gladiator is..." id="is">
                 <value>A well-trained slave</value>
                 <value>A poorly-trained slave</value>
                 <value>A seasoned veteran of the arena</value>
@@ -51,7 +51,7 @@
                 <value region_start="13" region_end="19" region_include="priest">A de-frocked priest</value>
                 <value>A favorite among the ladies</value>
             </table>
-            <table name="The gladiator fights for...">
+            <table name="The gladiator fights for..." id="for">
                 <value>The love of the sport</value>
                 <value region_start="12" region_end="34" region_include="__noun__">The love of someone he cannot have</value>
                 <value>Pure bloodlust</value>
@@ -65,7 +65,7 @@
                 <value>Fortune and glory</value>
                 <value>Strength and honor</value>
             </table>
-            <table name="On the gladiator's face is...">
+            <table name="On the gladiator's face is..." id="face">
                 <value>A nose ring</value>
                 <value>A garish earring</value>
                 <value>An empty eye socket</value>
@@ -79,7 +79,7 @@
                 <value>An unruly beard</value>
                 <value>An intimidating mustache</value>
             </table>
-            <table name="On the gladiator's body is...">
+            <table name="On the gladiator's body is..." id="body">
                 <value>A tattoo of a fish</value>
                 <value>A tattoo of a kraken</value>
                 <value>A tattoo of a mermaid</value>

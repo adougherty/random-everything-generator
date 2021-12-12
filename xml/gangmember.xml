@@ -1,6 +1,6 @@
         <category name="Gang Member" id="gangmember">
             <name name="The gang member's name is..."/>
-            <table name="Distinguishing feature: The gang member has...">
+            <table name="Distinguishing feature: The gang member has..." id="has">
                 <value>A nose ring</value>
                 <value>Shiny leather boots</value>
                 <value>A hole in the toe of one boot</value>

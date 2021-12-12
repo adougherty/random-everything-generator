@@ -166,6 +166,7 @@
         <value>Investigator</value>
         <value>Izzet Engineer</value>
         <value region_start="0" region_end="6" region_include="knight">Knight</value>
+        <value>Lorehold Studen</value>
         <value>Marine</value>
         <value>Mercenary Veteran</value>
         <value region_start="0" region_end="5" region_include="noble">Noble</value>
@@ -173,12 +174,15 @@
         <value>Outlander</value>
         <value region_start="0" region_end="6" region_include="pirate">Pirate</value>
         <value>Plaintiff</value>
+        <value>Prismari Student</value>
+        <value>Quandrix Student</value>
         <value>Rakdos Cultist</value>
         <value>Rival Intern</value>
         <value>Sage</value>
         <value region_start="0" region_end="6" region_include="sailor">Sailor</value>
         <value>Selesnya Initiate</value>
         <value>Shipwright</value>
+        <value>Silverquill Student</value>
         <value>Simic Scientist</value>
         <value>Smuggler</value>
         <value region_start="0" region_end="7" region_include="soldier">Soldier</value>
@@ -189,6 +193,7 @@
         <value>Volstrucker Agent</value>
         <value>Waterdhavian Noble</value>
         <value>Witchlight Hand</value>
+        <value>Withcerbloom Student</value>
     </table>
     <table name="The character's gender is..." id="npc_gender" short="Gender">
         <value>Male</value>

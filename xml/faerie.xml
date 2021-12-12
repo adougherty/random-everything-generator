@@ -1,6 +1,6 @@
         <category name="Faeriefolk" id="faerie">
             <name name="The faerie's name is..." />
-            <table name="The faerie is...">
+            <table name="The faerie is..." id="is">
                 <value>A capricious nymph</value>
                 <value>An apprehensive nymph</value>
                 <value>A nervous pixie</value>
@@ -12,7 +12,7 @@
                 <value>A salty bully</value>
                 <value>A sharp-witted satyr</value>
             </table>
-            <table name="The faerie has...">
+            <table name="The faerie has..." id="has">
                 <value>Black hair</value>
                 <value>Copper hair</value>
                 <value>Golden blonde hair</value>
@@ -34,7 +34,7 @@
                 <value>Black hair with a blue streak</value>
                 <value>Black hair with a white streak</value>
             </table>
-            <table name="The faerie has...">
+            <table name="The faerie has..." id="has2">
                 <value>Pale golden eyes</value>
                 <value>Bright golden eyes</value>
                 <value>Brilliant green eyes</value>
@@ -53,7 +53,7 @@
                 <value>Pale pink eyes</value>
                 <value>Silver eyes</value>
             </table>
-            <table name="Mannerisms: The faerie has...">
+            <table name="Mannerisms: The faerie has..." id="mannerism">
                 <value>A likable grin</value>
                 <value>A delicate laugh</value>
                 <value>A playful laugh</value>
@@ -67,7 +67,7 @@
                 <value>A habit of winking</value>
                 <value>A seductive sway of the lips</value>
             </table>
-            <table name="The faerie is looking for...">
+            <table name="The faerie is looking for..." id="looking">
                 <value region_start="57" region_end="63" region_include="forest">An unnatural creature that has taken up residence in the forest</value>
                 <value>Ways to cause mischief for travelers</value>
                 <value region_start="21" region_end="33" region_include="__noun__">Worthy visitors of a secret grove</value>
@@ -81,7 +81,7 @@
                 <value>A dance partner</value>
                 <value>A drinking partner</value>
             </table>
-            <table name="The faerie carries...">
+            <table name="The faerie carries..." id="carries">
                 <value>A delicate wreath of flowers</value>
                 <value>A gem glowing with moonlight or starlight</value>
                 <value>A finely-crafted bow or knife</value>

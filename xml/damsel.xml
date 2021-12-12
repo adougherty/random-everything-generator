@@ -1,9 +1,9 @@
         <category name="Damsel in distress" id="damsel">
-            <table name="The noble is...">
+            <table name="The noble is..." id="is">
                 <value region_start="0" region_end="4" region_include="nobleman">Male</value>
                 <value region_start="0" region_end="6" region_include="noblewoman">Female</value>
             </table>
-            <table name="The party...">
+            <table name="The party..." id="party">
                 <value>Finds a hastily scrawled note that used finger tips as the pen and blood as the ink</value>
                 <value>Experiences a vision of the keep and noble has been reoccurring in their dreams</value>
                 <value region_start="55" region_end="61" region_include="noblehouse" saveas="noblefamily">Is shown a missing person notice posted by the noble's family</value>
@@ -14,7 +14,7 @@
                 <value region_start="30" region_end="48" region_include="seer">Is told about the scenario by a traveling oracle</value>
                 <value>Is captured and taken by the keeper's henchmen</value>
             </table>
-            <table name="The noble is being kept in...">
+            <table name="The noble is being kept in..."  id="kept">
                 <value region_start="20" region_end="26" region_include="castle">A large magnificent castle on the mountainside</value>
                 <value region_start="2" region_end="6" region_include="cavern">A cave burrowed into the side of a hill</value>
                 <value>A pocket dimension that opens only on the full moon</value>
@@ -27,7 +27,7 @@
                 <value>A magical prison inside an amulet worn by the keeper</value>
                 <value>A hidden kingdom under the ground</value>
             </table>
-            <table name="The noble is being held by...">
+            <table name="The noble is being held by..." id="held">
                 <value region_start="7" region_end="12" region_include="witch">An old witch with imps for henchmen</value>
                 <value region_start="2" region_end="9" region_include="vampire">A vampire lord with thrall for henchmen</value>
                 <value>A beholder with nothic henchmen</value>
@@ -39,7 +39,7 @@
                 <value>A satyr prince hand his satyr henchmen</value>
                 <value region_start="24" region_end="36" region_include="orcclan">An orc warchief and his orc henchmen</value>
             </table>
-            <table name="The keeper wants...">
+            <table name="The keeper wants..." id="wants">
                 <value>Gold in exchange</value>
                 <value>The noble as a slave</value>
                 <value region_start="35" region_end="38" region_include="deity">To make a blood sacrifice to their god</value>
@@ -51,7 +51,7 @@
                 <value>To keep the noble even though taking them happened by accident</value>
                 <value>To fulfill tradition, it's nothing personal</value>
             </table>
-            <table name="The noble in question is...">
+            <table name="The noble in question is..." id="noble_is">
                 <value>Beautiful/handsome beyond expression</value>
                 <value>Ugly as sin</value>
                 <value>Quite overweight</value>
@@ -64,7 +64,7 @@
                 <value>Just a child</value>
                 <value>Exceptionally obese</value>
             </table>
-            <table name="The real problem is...">
+            <table name="The real problem is..."  id="problem">
                 <value>The noble wants to stay</value>
                 <value region_start="18" region_end="30" region_include="noblehouse" saveas="noblefamily">The noble insists their family doesn't really want them to come back</value>
                 <value>The noble has been placed into a catatonic dream state</value>
@@ -76,7 +76,7 @@
                 <value>The noble attacks the pantry in a frenzy and won't stop until calmed down or knocked unconscious</value>
                 <value>The noble gets captured again by someone else on the way back [Start over at The damsel is being kept in]</value>
             </table>
-            <table name="Not until much later the party discovers that...">
+            <table name="Not until much later the party discovers that..." id="discover">
                 <value>It was the wrong noble. Oops</value>
                 <value region_start="54" region_end="60" region_include="noblehouse" saveas="noblefamily">The noble is a doppleganger looking to infiltrate the family</value>
                 <value region_start="4" region_end="10" region_include="noblehouse" saveas="noblefamily">The family did it as a publicity stunt to gain attention and sympathy</value>

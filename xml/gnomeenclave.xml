@@ -1,6 +1,6 @@
         <category name="Gnome Enclave" id="gnomeenclave">
             <name name="The enclave's name is..." src="cities" />
-            <table name="Vignettes, encounters, and color">
+            <table name="Vignettes, encounters, and color" id="vignette">
             <value>A machine, equal parts steam and brass, goes careening past with a flustered gnome in hot pursuit</value>
             <value>A persistent turnip salesman espouses the virtue of his wares and won't tel you leave till you buy some</value>
             <value>Gnomes, stacked 6 high are holding up a 7th who is tinkering with the insides of a clock tower</value>

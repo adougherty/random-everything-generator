@@ -1,5 +1,5 @@
         <category name="Dinner at a Seaside Cafe" id="dinner_seasidecafe">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -38,7 +38,7 @@
                     <item>spicy sausage</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_wtih">
                 <value>Golden potatoes.</value>
                 <value>Red potatoes.</value>
                 <value>Long, thin pasta.</value>
@@ -50,7 +50,7 @@
                 <value>Garbanzo beans.</value>
                 <value>Rice.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Asparagus.</value>
                 <value>Broccoli.</value>
                 <value>Capers.</value>
@@ -64,7 +64,7 @@
                 <value>Carrots.</value>
                 <value>Arugula.</value>
             </table>
-            <table name="...dressed with...">
+            <table name="...dressed with..." id="dressed">
                 <value>Olive oil and basil.</value>
                 <value>Olive oil and oregano.</value>
                 <value>Olive oil and garlic.</value>
@@ -78,7 +78,7 @@
                 <value>Tomato sauce with basil.</value>
                 <value>Tomato sauce with garlic.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Fresh bread.</value>
                 <value>Crusty bread.</value>
                 <value>Buttered bread.</value>
@@ -88,7 +88,7 @@
                 <value>A plate of pistachios.</value>
                 <value>A plate of cheeses.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Mediocre ale.</value>
                 <value>Strong coffee.</value>
                 <value>Coffee with milk.</value>

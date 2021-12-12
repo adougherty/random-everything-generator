@@ -1,7 +1,7 @@
         <category name="Grave Robber" id="graverobber">
             <name name="The graverobber's name is..."/>
             <include name="Race" include="npc_race" />
-            <table name="The graverobber is...">
+            <table name="The graverobber is..." id="is">
                 <value region_start="10" region_end="25" region_include="__noun__">A veteran treasure hunter</value>
                 <value region_start="12" region_end="17" region_include="thief">A desperate thief</value>
                 <value>A reckless fortune seeker</value>
@@ -13,7 +13,7 @@
                 <value>A combat veteran</value>
                 <value region_start="2" region_end="9" region_include="nation">A foreign refugee</value>
             </table>
-            <table name="The graverobber has...">
+            <table name="The graverobber has..." id="has">
                 <value>A long, hooked nose</value>
                 <value>A cute button nose</value>
                 <value>A broad, flat nose</value>
@@ -25,7 +25,7 @@
                 <value>A jagged scar above one eye</value>
                 <value>Extremely bushy eyebrows</value>
             </table>
-            <table name="The graverobber wears...">
+            <table name="The graverobber wears..." id="wears">
                 <value>A flashy earring</value>
                 <value>A dark grey cape</value>
                 <value>Filthy leather boots</value>
@@ -44,7 +44,7 @@
                 <value>An open shirt and a very hairy chest</value>
                 <value>Unruly mustaches</value>
             </table>
-            <table name="The graverobber...">
+            <table name="The graverobber..." id="does">
                 <value>Hums or sings while digging</value>
                 <value>Constantly brushes the hair back from out of his or her face</value>
                 <value>Laughs maniacally at everything</value>
@@ -54,7 +54,7 @@
                 <value>Picks at his or her teeth after meals</value>
                 <value>Is fond of placing corpses in rude poses</value>
             </table>
-            <table name="The graverobber carries...">
+            <table name="The graverobber carries..." id="carries">
                 <value>A sturdy shovel and a dirty handkerchief</value>
                 <value>A blunt pick-ax and several torches</value>
                 <value>A narrow shovel and a length of hemp rope</value>
@@ -66,7 +66,7 @@
                 <value>A pocketbook of notes on gravesites</value>
                 <value>A dagger and a crossbow</value>
             </table>
-            <table name="The graverobber is looking for...">
+            <table name="The graverobber is looking for..." id="looking">
                 <value>A fresh grave</value>
                 <value region_start="16" region_end="32" region_include="tomb">The entrance to an ancient crypt</value>
                 <value>A pair of strong arms to help dig</value>

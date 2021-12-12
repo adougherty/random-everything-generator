@@ -1,5 +1,5 @@
         <category name="Dinner at a Country Inn" id="dinner_inn">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -30,7 +30,7 @@
                     <item>duck sausage</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_with">
                 <value>Dumplings.</value>
                 <value>Red cabbage.</value>
                 <value>White cabbage.</value>
@@ -52,7 +52,7 @@
                 <value>Golden potatoes.</value>
                 <value>Yams.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Carrots.</value>
                 <value>Apples.</value>
                 <value>Cherries.</value>
@@ -66,7 +66,7 @@
                 <value>Sweet onions.</value>
                 <value>Red onions.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="dine_side">
                 <value>Corn bread.</value>
                 <value>Corn mash.</value>
                 <value>Fresh bread.</value>
@@ -80,7 +80,7 @@
                 <value>Sharp cheese.</value>
                 <value>Soft cheese.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Water.</value>
                 <value>Wheat ale.</value>
                 <value>Porter.</value>

@@ -1,5 +1,5 @@
         <category name="Dinner among Easterlings" id="dinner_eastern">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -30,7 +30,7 @@
                     <item>duck sausage</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_with">
                 <value>Dumplings.</value>
                 <value>Egg noodles.</value>
                 <value>Rice noodles.</value>
@@ -44,7 +44,7 @@
                 <value>Red beans.</value>
                 <value>Mushrooms.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Carrots.</value>
                 <value>Cabbage.</value>
                 <value>Onions.</value>
@@ -58,7 +58,7 @@
                 <value>Hot peppers.</value>
                 <value>Oranges.</value>
             </table>
-            <table name="...doused with...">
+            <table name="...doused with..." id="doused">
                 <value>Soy sauce.</value>
                 <value>Sweet-and-sour sauce.</value>
                 <value>Spicy vinegar.</value>
@@ -70,7 +70,7 @@
                 <value>Spicy curry.</value>
                 <value>Hot curry.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Raw tuna.</value>
                 <value>Raw skate.</value>
                 <value>Raw trout.</value>
@@ -92,7 +92,7 @@
                 <value>Balut.</value>
                 <value>Bird's nest soup.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Water.</value>
                 <value>White tea.</value>
                 <value>Green tea.</value>

@@ -1,5 +1,5 @@
         <category name="Merchant Caravan" id="caravan">
-            <table name="The caravan is...">
+            <table name="The caravan is..." id="is">
                 <value>A wagon train</value>
                 <value>A long wagon train</value>
                 <value>A small train of pack animals</value>
@@ -7,7 +7,7 @@
                 <value>A train of pack animals with livestock</value>
                 <value>Traveling on foot with a few animals</value>
             </table>
-            <table name="The caravan's pack animals are...">
+            <table name="The caravan's pack animals are..." id="animals">
                 <value>One-humped camels</value>
                 <value>Two-humped camels</value>
                 <value>Large draft horses</value>
@@ -23,7 +23,7 @@
                 <value>Lizards</value>
                 <value>Zebras</value>
             </table>
-            <table name="The caravan is transporting...">
+            <table name="The caravan is transporting..." id="transporting">
                 <value>Cotton cloth</value>
                 <value>Linen cloth</value>
                 <value>Silk cloth</value>
@@ -48,7 +48,7 @@
                 <value>Spices and teas</value>
                 <value>Wine and spirits</value>
             </table>
-            <table name="The caravan's general mood is...">
+            <table name="The caravan's general mood is..." id="mood">
                 <value>Desperate; a calamity has befallen them</value>
                 <value>Foul; morale is bad, and provisions are low</value>
                 <value>Tired; the journey is long and longer yet</value>

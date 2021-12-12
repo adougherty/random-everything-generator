@@ -1,5 +1,5 @@
         <category name="Dinner at a Hunters' Lodge" id="dinner_hunter">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -38,7 +38,7 @@
                     <item>mockingbird</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_with">
                 <value>Potatoes.</value>
                 <value>Red cabbage.</value>
                 <value>White cabbage.</value>
@@ -52,7 +52,7 @@
                 <value>Chives.</value>
                 <value>Onions.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Carrots.</value>
                 <value>Apples.</value>
                 <value>Cherries.</value>
@@ -66,7 +66,7 @@
                 <value>Pine nuts.</value>
                 <value>Raisins.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Rye bread.</value>
                 <value>Wheat bread.</value>
                 <value>Crusty bread.</value>
@@ -80,7 +80,7 @@
                 <value>Boar's feet.</value>
                 <value>Sow's ear.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..."  id="beverage">
                 <value>Dark ale.</value>
                 <value>Pale ale.</value>
                 <value>Lager.</value>

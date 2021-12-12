@@ -1,5 +1,5 @@
         <category name="Unusual Crime" id="crime">
-            <table name="Victim type">
+            <table name="Victim type" id="victim_type">
                 <value>A group of travelers lead by a...</value>
                 <value region_start="2" region_end="9" region_include="caravan">A caravan lead by a...</value>
                 <value>An adventuring party lead by a...</value>
@@ -21,13 +21,13 @@
                 <value>An extravagantly dressed...</value>
                 <value>A commonly dressed...</value>
             </table>
-            <table name="Origin">
+            <table name="Origin" id="origin">
                 <value>Local...</value>
                 <value>Foreign...</value>
                 <value>Exotic looking...</value>
                 <value>Unknown...</value>
             </table>
-            <table name="Victim">
+            <table name="Victim" id="victim">
                 <value>Man</value>
                 <value>Woman</value>
                 <value>Craftsman</value>
@@ -49,7 +49,7 @@
                 <value>Art collector</value>
                 <value>Archivist</value>
             </table>
-            <table name="Crime">
+            <table name="Crime" id="crime">
                 <value>Killed</value>
                 <value>Robbed</value>
                 <value>Kidnapped</value>
@@ -75,7 +75,7 @@
                 <value>Stabbed</value>
                 <value>Tortured</value>
             </table>
-            <table name="Location">
+            <table name="Location" id="location">
                 <value>At home</value>
                 <value>In the street in broad daylight</value>
                 <value>In a dark alley</value>
@@ -112,7 +112,7 @@
                 <value>In the catacombs</value>
                 <value>At an undisclosed location</value>
             </table>
-            <table name="Investigators: The case is being investigated by...">
+            <table name="Investigators: The case is being investigated by..." id="investigators">
                 <value region_start="4" region_end="8" region_include="city">The city guard</value>
                 <value>Royal guard</value>
                 <value>A fearsome crew with obvious scars of battle</value>
@@ -127,7 +127,7 @@
                 <value region_start="4" region_end="8" region_include="town">The town's best men</value>
                 <value>No one. It was dropped</value>
             </table>
-            <table name="Interest in solving it">
+            <table name="Interest in solving it" id="interest">
                 <value>keen on solving it</value>
                 <value>not very interested in solving it</value>
                 <value>doing all they can in solving it</value>
@@ -135,7 +135,7 @@
                 <value>not doing so much for solving it</value>
                 <value>clearly making sure nothing is done in solving it</value>
             </table>
-            <table name="Willingness to share details">
+            <table name="Willingness to share details" id="share">
                 <value>are hostile when asked to share details</value>
                 <value>are in no way willing to share details</value>
                 <value>Are very skeptical to share details</value>
@@ -148,7 +148,7 @@
                 <value>way too willing to share details</value>
                 <value>yelling to everyone trying to share details</value>
             </table>
-            <table name="Source">
+            <table name="Source" id="source">
                 <value region_start="39" region_end="45" region_include="tavern">According to your sources at the local tavern, there's...</value>
                 <value region_start="23" region_end="28" region_include="__noun__">A less-reputable local paper writes about...</value>
                 <value region_start="10" region_end="20" region_include="__noun__">A scrawny town crier tells passers-by of...</value>
@@ -159,7 +159,7 @@
                 <value region_start="31" region_end="48" region_include="__noun__">At the scene of the crime is a verse from a poem, written with intestines laid out in beautiful cursive. It has...</value>
                 <value region_start="2" region_end="6" region_include="__noun__">A note on a player's bed speaks of...</value>
             </table>
-            <table name="Clue">
+            <table name="Clue" id="clue">
                 <value>A local cult with rather extreme beliefs</value>
                 <value>A lock of strange fur</value>
                 <value>A rumored jealous lover</value>

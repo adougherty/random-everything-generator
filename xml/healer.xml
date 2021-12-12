@@ -1,5 +1,5 @@
         <category name="Healer" id="healer">
-            <table name="Profession: The healer is...">
+            <table name="Profession: The healer is..." id="is">
                 <value region_start="10" region_end="17" region_include="__noun__">A devoted acolyte.</value>
                 <value region_start="9" region_end="16" region_include="__noun__">A silent acolyte.</value>
                 <value region_start="10" region_end="19" region_include="alchemist">A skilled alchemist.</value>
@@ -21,7 +21,7 @@
                 <value region_start="17" region_end="24" region_include="merchant">A silver-tongued peddler.</value>
                 <value region_start="15" region_end="26" region_include="__noun__">A sharp-witted potionmaker.</value>
             </table>
-            <table name="Mannerism: The healer has...">
+            <table name="Mannerism: The healer has..." id="mannerism">
                 <value>A likeable grin.</value>
                 <value>Kind eyes.</value>
                 <value>Alert eyes.</value>
@@ -33,7 +33,7 @@
                 <value>A habit of sighing.</value>
                 <value>A habit of muttering to himself or herself.</value>
             </table>
-            <table name="Apparel: The healer wears...">
+            <table name="Apparel: The healer wears..." id="wears">
                 <value>A threadbare robe.</value>
                 <value>A sturdy wool cloak.</value>
                 <value>A hooded traveller's cloak.</value>
@@ -45,7 +45,7 @@
                 <value>Patchwork armor of leather and steel.</value>
                 <value region_start="21" region_end="31" region_include="armorsmith">A chain mail shirt. (Crafted by)</value>
             </table>
-            <table name="Possessions: The healer carries...">
+            <table name="Possessions: The healer carries..." id="possession">
                 <value>A clean, sharp knife.</value>
                 <value>A wooden staff.</value>
                 <value>A sturdy cudgel.</value>
@@ -57,7 +57,7 @@
                 <value>A small field guide to diagnosing illnesses.</value>
                 <value>A wineskin.</value>
             </table>
-            <table name="Goal: The healer is looking for...">
+            <table name="Goal: The healer is looking for..." id="looking">
                 <value region_start="22" region_end="34" region_include="__noun__">The translation of an ancient text.</value>
                 <value>Individuals in need of his or her services.</value>
                 <value>Someone to purchase a potion or two.</value>

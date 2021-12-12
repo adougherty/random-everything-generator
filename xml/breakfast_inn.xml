@@ -1,5 +1,5 @@
         <category name="Breakfast at a Country Inn" id="breakfast_inn">
-            <table name="Main course...">
+            <table name="Main course..." id="main">
                 <value>Scrambled eggs.</value>
                 <value>Fried eggs.</value>
                 <value>Boiled eggs.</value>
@@ -13,7 +13,7 @@
                 <value>Thin porridge.</value>
                 <value>Warm gruel.</value>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="main_with">
                 <value>Soggy bacon.</value>
                 <value>Chewy bacon.</value>
                 <value>Crispy bacon.</value>
@@ -25,7 +25,7 @@
                 <value>Sour yogurt.</value>
                 <value>Sweetened yogurt.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="main_and">
                 <value>Fried potatoes.</value>
                 <value>Boiled potatoes.</value>
                 <value>Tomatoes.</value>
@@ -35,7 +35,7 @@
                 <value>Sweet onions.</value>
                 <value>Red onions.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Corn bread.</value>
                 <value>Corn mash.</value>
                 <value>Fresh bread.</value>
@@ -49,7 +49,7 @@
                 <value>Sharp cheese.</value>
                 <value>Pungent cheese.</value>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="side_with">
                 <value>Apples.</value>
                 <value>Cherries.</value>
                 <value>Blueberries.</value>
@@ -57,7 +57,7 @@
                 <value>Pears.</value>
                 <value>Blackberries.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Water.</value>
                 <value>Brown ale.</value>
                 <value>Red ale.</value>

@@ -53,6 +53,11 @@
         <category id="miner" name="Miner" />
         <category id="monk" name="Monk" />
         <category id="monsterhunter" name="Monster Hunter" />
+        <category id="noble" name="Noble">
+            <category name="Nobleman" id="nobleman" />
+            <category name="Noblewoman" id="noblewoman" />
+            <category name="Princess" id="princess" />            
+        </category>
         <category id="necromancer" name="Necromancer" />
         <category id="pirate" name="Pirate"/>
         <category id="poacher" name="Poacher" />
@@ -139,5 +144,12 @@
     <category name="Rooms" id="rooms">
         <category name="Castle Dungeon" id="room_castledungeon" />
         <category name="Castle Chamber" id="room_castlechamber" />
+    </category>
+    <category name="Misc" id="misc">
+        <category name="Guilds" id="guilds">
+            <category name="Assassins' Guild" id="guild_assassin" />
+            <category name="Crafting Guild" id="guild_crafting" />
+            <category name="Merchants' Guild" id="guild_merchant" />
+        </category>
     </category>
 </categories>

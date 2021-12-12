@@ -1,5 +1,5 @@
             <category name="Celestial Beast" id="celestial_beast">
-                <table name="The celestial beast appears in the form of...">
+                <table name="The celestial beast appears in the form of..." id="form">
                     <value>A badger.</value>
                     <value>A bull.</value>
                     <value>A dove.</value>
@@ -13,7 +13,7 @@
                     <value>A swan.</value>
                     <value>A unicorn.</value>
                 </table>
-                <table name="The beast has...">
+                <table name="The beast has..." id="has">
                     <value>Shining golden eyes.</value>
                     <value>Sympathetic pale blue or grey eyes.</value>
                     <value>Eyes full of knowledge and judgement.</value>
@@ -23,7 +23,7 @@
                     <value>An aura of glowing light.</value>
                     <value>An aura of peacefulness.</value>
                 </table>
-                <table name="...and...">
+                <table name="...and..." id="has_and">
                     <value>Moves gracefully, almost gliding.</value>
                     <value>Carries itself proudly.</value>
                     <value>Has a gentle manner.</value>
@@ -31,7 +31,7 @@
                     <value>Speaks in poetic riddles.</value>
                     <value>Fills you with a sense of peace.</value>
                 </table>
-                <table name="The beast is looking for...">
+                <table name="The beast is looking for..." id="looking">
                     <value region_start="15" region_end="28" region_include="__noun__">An answer to a cosmic riddle.</value>
                     <value>A mortal worthy of its service.</value>
                     <value>A mortal worthy of serving its master.</value>

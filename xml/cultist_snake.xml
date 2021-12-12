@@ -1,5 +1,5 @@
         <category name="Cultist, Snake" id="cultist_snake" hasa="cult">
-            <table name="The cultist is...">
+            <table name="The cultist is..." id="is">
                 <value region_start="10" region_end="17" region_include="fighter">A cunning warrior</value>
                 <value region_start="16" region_end="23" region_include="soldier">A battle-tested soldier</value>
                 <value region_start="11" region_end="19" region_include="assassin">A stealthy assassin</value>
@@ -11,7 +11,7 @@
                 <value>A scaly shapeshifter</value>
                 <value>An enthusiastic poison maker</value>
             </table>
-            <table name="Scaly Obsession: The cultist is particularly fond of or fearful of...">
+            <table name="Scaly Obsession: The cultist is particularly fond of or fearful of..." id="obsession">
                 <value>Cobras and asps</value>
                 <value>Rattlers and sidewinders</value>
                 <value>Pythons and boas</value>
@@ -24,7 +24,7 @@
                 <value>Yuan-ti abominations</value>
                 <value>Yuan-ti halfbloods</value>
             </table>
-            <table name="Distinguishing Feature: The cultist has...">
+            <table name="Distinguishing Feature: The cultist has..." id="feature">
                 <value>A bandaged thumb</value>
                 <value region_start="2" region_end="8" region_include="__noun__">A tattoo on the face</value>
                 <value>A tear at the knee of his or her robe</value>
@@ -36,14 +36,14 @@
                 <value>A profuse amount of sweat soaking through his or her robes</value>
                 <value>A hissing lisp when he or she speaks</value>
             </table>
-            <table name="The cultist is looking to...">
+            <table name="The cultist is looking to..." id="looking">
                 <value>Recruit new members to the cult</value>
                 <value>Warn outsiders away from the cult</value>
                 <value region_start="22" region_end="26" region_include="traps">Lead travelers into a trap near the cult's shrine or temple</value>
                 <value region_start="32" region_end="36" region_include="cult">Escape from the clutches of the cult's leadership</value>
                 <value region_start="10" region_end="16" region_include="poisons">Slip some poison unto someone's drink</value>
             </table>
-            <table name="The cultist carries or wears">
+            <table name="The cultist carries or wears" id="wears">
                 <value>Several eggs stolen from a snake's nest</value>
                 <value>A necklace or bracelet of snake fangs</value>
                 <value region_start="17" region_end="27" region_include="armorer">Snakeskin armor (crafted by)</value>

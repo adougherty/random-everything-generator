@@ -1,6 +1,6 @@
             <category name="Fighter" id="fighter">
                 <name name="The fighter's name is..." />
-                <table name="You have heard of this fighter because...">
+                <table name="You have heard of this fighter because..." id="heard">
                     <value region_start="26" region_end="30" region_include="nobleman">He was drummed out of the king's legion and was sent to prison by a military court.</value>
                     <value>His skills are rumored to be a fraud, but no one has come forward with proof.</value>
                     <value>He's a dangerous hired killer. For the right price he'll take any dirty job.</value>

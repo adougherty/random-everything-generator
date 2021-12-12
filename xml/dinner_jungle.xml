@@ -1,5 +1,5 @@
         <category name="Dinner among Jungle Dwellers" id="dinner_jungle">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -32,7 +32,7 @@
                     <item>boar</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_with">
                 <value>Casava.</value>
                 <value>Taro.</value>
                 <value>Lettuce.</value>
@@ -46,7 +46,7 @@
                 <value>Coconut.</value>
                 <value>Yams.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Banana.</value>
                 <value>Mango.</value>
                 <value>Guava.</value>
@@ -54,7 +54,7 @@
                 <value>Mixed nuts.</value>
                 <value>Mixed berries.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="dine_side">
                 <value>Cockroaches.</value>
                 <value>Beetles.</value>
                 <value>Oysters.</value>
@@ -64,7 +64,7 @@
                 <value>Crayfish.</value>
                 <value>Grubs.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Black tea.</value>
                 <value>Sweet tea.</value>
                 <value>Pale ale.</value>

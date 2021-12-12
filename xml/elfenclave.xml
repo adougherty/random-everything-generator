@@ -1,6 +1,6 @@
         <category name="Elf Enclave" id="elfenclave">
             <name name="The enclave's name is..." src="cities" />
-            <table name="Vignettes, encounters, and color">
+            <table name="Vignettes, encounters, and color" id="vignette">
                 <value>A lane, marked with carefully trimmed trees</value>
                 <value>A single early blooming flower with the snow carefully pushed away</value>
                 <value>A group of birds, twittering in tune with a druid's flute</value>

@@ -1,5 +1,5 @@
         <category name="Dinner at a Mining Town Pub" id="dinner_mining">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -29,7 +29,7 @@
                 </list>
 
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_wth">
                 <value>Golden potatoes.</value>
                 <value>Red potatoes.</value>
                 <value>Beets.</value>
@@ -43,7 +43,7 @@
                 <value>White onions.</value>
                 <value>Yellow onions.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Carrots.</value>
                 <value>Red cabbage.</value>
                 <value>Green cabbage.</value>
@@ -55,7 +55,7 @@
                 <value>Radishes.</value>
                 <value>Peas.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Hard tack.</value>
                 <value>Fresh bread.</value>
                 <value>Crusty bread.</value>
@@ -67,7 +67,7 @@
                 <value>Goat cheese.</value>
                 <value>Sheep's milk cheese.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Bitter ale.</value>
                 <value>Wheat ale.</value>
                 <value>Black ale.</value>

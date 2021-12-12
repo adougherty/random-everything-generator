@@ -1,5 +1,5 @@
         <category name="Treasure Chest" id="chests">
-            <table name="The chest's style is..." id="chest_">
+            <table name="The chest's style is..." id="chest_is">
                 <value>Crude</value>
                 <value>Standard</value>
                 <value>Fancy</value>

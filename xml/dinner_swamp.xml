@@ -1,5 +1,5 @@
         <category name="Dinner among Swampfolk" id="dinner_swamp">
-            <table name="Tonight, you dine on...">
+            <table name="Tonight, you dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -40,7 +40,7 @@
                     <item>carp</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_with">
                 <value>Potatoes.</value>
                 <value>Red cabbage.</value>
                 <value>Leeks.</value>
@@ -54,7 +54,7 @@
                 <value>Bitter greens.</value>
                 <value>Chopped tomatoes.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Sweet onions.</value>
                 <value>Green onions.</value>
                 <value>Mushrooms.</value>
@@ -66,7 +66,7 @@
                 <value>Pecans.</value>
                 <value>Mixed berries.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Crusty bread.</value>
                 <value>Honey cake.</value>
                 <value>Corn bread.</value>
@@ -80,7 +80,7 @@
                 <value>Fried egg.</value>
                 <value>Turtle soup.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Black tea.</value>
                 <value>Sweet tea.</value>
                 <value>Pale ale.</value>
