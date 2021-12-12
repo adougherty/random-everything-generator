@@ -6,7 +6,6 @@ V0.1
 * Support setting of values from links (See wizard.xml line 10 books/book_subject/outerplanes)
 * When loading a story, show the story name not the categoryId
 * click outside of dropdown options window to close it (or an x at the top?)
-* Bug: Adding a wilderness to a nation should bring up the wilderness chooser
 
 V1
 * Save NPCs to character sheets
