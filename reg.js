@@ -157,7 +157,6 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
             categories.push(buildCategory(nodeCategories));
             RandomEverythingGenerator.log(true, categories);
 
-            // Most of the work is going to be performed in random-everything-generator.hbs
             document.RandomEverythingGeneratorData = {};
             let reg = new RandomEverythingGenerator();
             reg.Categories = categories[0];
@@ -186,7 +185,8 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
                     url: `/modules/random-everything-generator/xml/${story.top}.xml`,
                     dataType: 'text',
                     success: xmlStr => {
-                        let regChild = new REGChild(story.top);
+                        console.log(story.top)
+                        let regChild = new REGChild(story.save);
                         regChild.XML = xmlStr;
                         regChild.path = '';
                         regChild.Markov = markov;

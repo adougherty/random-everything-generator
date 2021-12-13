@@ -264,6 +264,14 @@ class REGChild extends Application{
                     });
                     $(div).append(input);
 
+                    const x = $('<i class="far fa-window-close"></i>');
+                    $(x).click(ev => {
+                        ev.preventDefault();
+                        $(div).empty();
+                        $(div).css('display', 'none')
+                    })
+                    $(div.append(x))
+
                     for (let i = 0; i < values.length; i++) {
                         const value = values[i];
                         let divOption = $('<div></div>');
@@ -509,7 +517,7 @@ class REGChild extends Application{
                 case 'table': {
                     let result = {};
                     result['id'] = this.Path + '.' + $(child).attr('id');
-                    result['key'] = $(child).attr('name').replace(/(\.\.\.|:)$/,'');
+                    result['key'] = $(child).attr('short') || $(child).attr('name').replace(/(\.\.\.|:)$/,'');
                     result['value'] = this.valueFromTable(child, this.Path)
                     r.push(result);
                     break;

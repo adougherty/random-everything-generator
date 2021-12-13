@@ -1,12 +1,5 @@
 TODO
 
-V0.1
-* Support __noun__
-* Re-add support for regen everything
-* Support setting of values from links (See wizard.xml line 10 books/book_subject/outerplanes)
-* When loading a story, show the story name not the categoryId
-* click outside of dropdown options window to close it (or an x at the top?)
-
 V1
 * Save NPCs to character sheets
 * Save Stories to Journals (with links)
@@ -17,6 +10,11 @@ V1
 * Let user create a completely random world
 * Add api hooks
 * Add chat hook
+* randomly roll stuff in the middle of a value. For example, Dwarf "A traveler's cloak with a gold hood." The gold should come from a random table of colors.
+* Create a list of precious gems. Update Dwarf, "Find a new source for precious gems"
+* Support setting of values from links (See wizard.xml line 10 books/book_subject/outerplanes)
+* Bug linking to a category (such as caves, located: Deep within a forst) links to the category, not the final result
+* Support __noun__
 
 V2
 * Generate Random Maps
