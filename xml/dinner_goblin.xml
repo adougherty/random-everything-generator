@@ -1,5 +1,5 @@
         <category name="Dinner at a Goblin Hideout" id="dinner_goblin">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -28,7 +28,7 @@
                     <item>mystery meat</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_wth">
                 <value>Potatoes.</value>
                 <value>Red cabbage.</value>
                 <value>White cabbage.</value>
@@ -42,7 +42,7 @@
                 <value>Red onions.</value>
                 <value>Yellow onions.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Stale bread.</value>
                 <value>Crusty biscuits.</value>
                 <value>Hard tack.</value>
@@ -56,7 +56,7 @@
                 <value>Blue mold.</value>
                 <value>Green mold.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Mice.</value>
                 <value>Toad legs.</value>
                 <value>Crickets.</value>
@@ -70,7 +70,7 @@
                 <value>Snakes.</value>
                 <value>Bitter roots.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Foul ale.</value>
                 <value>Skunky ale.</value>
                 <value>Stolen ale.</value>

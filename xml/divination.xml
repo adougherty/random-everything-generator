@@ -1,5 +1,5 @@
         <category name="Divination" id="divination">
-            <table name="The target">
+            <table name="The target" id="target">
                 <value>Faint. Barely audible, ominous whispers are heard revealing the prophecy</value>
                 <value region_start="69" region_end="73" region_include="seer">Scarring. Thin painful cuts begin appearing all over the body of the seer, revealing the message</value>
                 <value region_start="10|37" region_end="19|41" region_include="__noun__|seer">Herald. A messenger seen only by the seer begins telling the prophecy</value>
@@ -11,7 +11,7 @@
                 <value region_start="15" region_end="19" region_include="seer">Possessed. The seer's eyes roll back and they mechanically start reciting</value>
                 <value region_start="13" region_end="17" region_include="seer">Violent. The seer begins convulsing and screaming the prophecy in agony</value>
             </table>
-            <table name="Subject">
+            <table name="Subject" id="subject">
                 <value region_start="2" region_end="5" region_include="deity">A god</value>
                 <value region_start="6" region_end="12" region_include="wizard">A Mad wizard</value>
                 <value region_start="13" region_end="18" region_include="noble">A well known ruler</value>
@@ -24,7 +24,7 @@
                 <value region_start="11" region_end="17" region_include="dragon">An ancient dragon</value>
                 <value region_start="2" region_end="9" region_include="vampire">A vampire lord</value>
             </table>
-            <table name="The subject will...">
+            <table name="The subject will..." id="subject_will">
                 <value>be reborn</value>
                 <value>die</value>
                 <value>gain incredible power</value>
@@ -36,7 +36,7 @@
                 <value region_start="16" region_end="26" region_include="villain">give birth to a great evil</value>
                 <value region_start="26" region_end="31" region_include="__noun__">open a gateway to another plane</value>
             </table>
-            <table name="Helped / prevent by...">
+            <table name="Helped / prevent by..." id="help">
                 <value region_start="26" region_end="31" region_include="__noun__">preventing the birth of a child</value>
                 <value>the seer to stand up to the subject</value>
                 <value region_start="13" region_end="18" region_include="__noun__">protecting a child until he becomes a man</value>
@@ -48,7 +48,7 @@
                 <value>convincing the gods to intervene</value>
                 <value>cannot be avoided, only prepare for the inevitable</value>
             </table>
-            <table name="The seer experiences">
+            <table name="The seer experiences" id="experience">
                 <value>Infrequent hand/eye twitching</value>
                 <value>Can be heard speaking the prophecy in their sleep</value>
                 <value>Convulsing during rests</value>

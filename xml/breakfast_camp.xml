@@ -1,5 +1,5 @@
         <category name="Breakfast at a Camp Fire" id="breakfast_camp">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -28,7 +28,7 @@
                     <item>lamb</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_with">
                 <value>Potatoes.</value>
                 <value>Lentils.</value>
                 <value>White beans.</value>
@@ -38,7 +38,7 @@
                 <value>Turnips.</value>
                 <value>Onions.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Carrots.</value>
                 <value>Raisins.</value>
                 <value>Dried cherries.</value>
@@ -52,7 +52,7 @@
                 <value>Dried berries.</value>
                 <value>Sunflower seeds.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Rye bread.</value>
                 <value>Hard tack.</value>
                 <value>Crusty bread.</value>
@@ -60,7 +60,7 @@
                 <value>Hard cheese.</value>
                 <value>Sharp cheese.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Water.</value>
                 <value>Watery ale.</value>
                 <value>Strong ale.</value>

@@ -1,28 +1,20 @@
 TODO
 
-V0.1
-* Support __noun__
-* Support <member> tags
-* Exclude current result from possible re-rolls
-* Let user make a completely random anything from a top-level category
-* Let user create a completely random world
-* Let user select a specific result (and type in a specific result)
-* Let user delete results (They may not care what the alchemist is currently brewing, and don't want to save it to journal/character sheet)
-* Add all WotC Races
-* Add all WotC Classes
-* Wizard Class needs to support Chonurgy and Graviturgy
-* NPC background needs to support all backgrounds
-* Figure out how to handle "noble" where it could be male or female. See castle.xml "A beloved sovereign"
-* Figure out how to handle "forest" where it could be any forest type in forest.xml
-* Bug: Generating a continent will have a lot of <pattern>s treated as <name>s
-* Support setting of values from links (See wizard.xml line 10 books/book_subject/outerplanes)
-
 V1
 * Save NPCs to character sheets
 * Save Stories to Journals (with links)
 * Save Items to items directory
 * Update markov to determine name length based on change based on supplied lengths
 * Roll NPC age based on age tables
+* Let user make a completely random anything from a top-level category
+* Let user create a completely random world
+* Add api hooks
+* Add chat hook
+* randomly roll stuff in the middle of a value. For example, Dwarf "A traveler's cloak with a gold hood." The gold should come from a random table of colors.
+* Create a list of precious gems. Update Dwarf, "Find a new source for precious gems"
+* Support setting of values from links (See wizard.xml line 10 books/book_subject/outerplanes)
+* Bug linking to a category (such as caves, located: Deep within a forst) links to the category, not the final result
+* Support __noun__
 
 V2
 * Generate Random Maps

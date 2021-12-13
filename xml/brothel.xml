@@ -1,5 +1,5 @@
         <category name="Brothel" id="brothel">
-            <table name="The place is called...">
+            <table name="The place is called..." id="called">
                 <value>Daises</value>
                 <value>The Don</value>
                 <value>Blinkers</value>
@@ -205,7 +205,7 @@
                 <value>The Pink Window</value>
                 <value>The Welcoming Window</value>
             </table>
-            <table name="The brothel is located...">
+            <table name="The brothel is located..." id="located">
                 <value>In the slums</value>
                 <value>In a shantytown</value>
                 <value>In a well-to-do residential neighborhood</value>
@@ -228,7 +228,7 @@
                 <value>On a street with many other brothels</value>
                 <value>In a house in a park, garden, or forest</value>
             </table>
-            <table name="In addition to the &quot;usual&quot; everyday brother fare, here you can procure...">
+            <table name="In addition to the &quot;usual&quot; everyday brother fare, here you can procure..." id="procure">
                 <value>Really weird stuff for those with the most interesting fetishes</value>
                 <value>Illegal stuff. If this is found out, the place would be burnt down and the owners hung. It is clearly kept in great secret</value>
                 <value>Performances involving food</value>
@@ -240,7 +240,7 @@
                 <value>Stuff with exotic/magical ingredients, potions, etc</value>
                 <value>Magical delights</value>
             </table>
-            <table name="The place is run by...">
+            <table name="The place is run by..." id="runby">
                 <value>A collective of the inmates themselves</value>
                 <value>A mean old madam</value>
                 <value>A large madam with a no-nonsense attitude</value>
@@ -250,7 +250,7 @@
                 <value>A sultry seductress</value>
                 <value region_start="11" region_end="16" region_include="witch">A charming witch</value>
             </table>
-            <table name="To eat, the place serves...">
+            <table name="To eat, the place serves..." id="eat">
                 <value>Simple snacks</value>
                 <value>Banquets</value>
                 <value>Peasant food</value>
@@ -264,7 +264,7 @@
                 <value>Simple stew and bread</value>
                 <value>Nothing; it satisfies other appetities</value>
             </table>
-            <table name="To drink, the place serves...">
+            <table name="To drink, the place serves..." id="drink">
                 <value>Ales</value>
                 <value>Cocktails</value>
                 <value>Grog, and nothing byt grog</value>
@@ -274,7 +274,7 @@
                 <value>Lagers</value>
                 <value>Nothing; inebriation is not tolerated</value>
             </table>
-            <table name="People talk about this place; they say...">
+            <table name="People talk about this place; they say..." id="people_say">
                 <value>The girls are underpaid and poorly treated</value>
                 <value>Nothing really; it's a neighborhood brothel</value>
                 <value region_start="12" region_end="17" region_include="nobleman">A prominent noble is a regular</value>
@@ -292,7 +292,7 @@
                 <value>You can pay for services with secrets</value>
                 <value>You can pay for services with stock</value>
             </table>
-            <table name="People talk about this place; rumors suggest that recently...">
+            <table name="People talk about this place; rumors suggest that recently..." id="rumors">
                 <value region_start="0" region_end="10" region_include="nobleman">A nobleman got one of the girls with child, but refuses to acknowledge her or the baby</value>
                 <value>Someone slaughtered half of the workers and clients in the night</value>
                 <value>A client was stabbed with a letter opener</value>
@@ -304,7 +304,7 @@
                 <value>A sinkhole has appeared in teh basement. No one can see the bottom, and the boss worries it might grow and do more damage</value>
                 <value region_start="30" region_end="37" region_include="disease">Several clients have caught a disease</value>
             </table>
-            <table name="Room Furnishings: This room has...">
+            <table name="Room Furnishings: This room has..." id="furnishings">
                 <value>A four-poster bed with velvet curtains</value>
                 <value>A four-posted bed with lacy curtains</value>
                 <value>A soft, leather chaise lounge</value>
@@ -316,7 +316,7 @@
                 <value>A large mirror against one wall</value>
                 <value>A large mirror on the ceiling over the bed</value>
             </table>
-            <table name="Features: You notice...">
+            <table name="Features: You notice..." id="notice">
                 <value>The scent of lavender</value>
                 <value>The scent of lilac perfume</value>
                 <value>The scent of ginger and cinnamon</value>
@@ -338,7 +338,7 @@
                 <value>A lengthy, shrill scream</value>
                 <value>A long moan</value>
             </table>
-            <table name="You have heard of this place before because..." id="reputation">
+            <table name="You have heard of this place before because..." id="reputation" id="heard">
                 <value region_start="30" region_end="41" region_include="__noun__">It's a barbaric monument to a dead people</value>
                 <value>It's unmistakable as anything else</value>
                 <value>It is dangerous to go there and extremely spooky</value>

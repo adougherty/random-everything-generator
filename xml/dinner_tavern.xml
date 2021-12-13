@@ -1,5 +1,5 @@
         <category name="Dinner at a Dockside Tavern" id="dinner_tavern">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -38,7 +38,7 @@
                     <item>mutton.</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_with">
                 <value>Golden potatoes.</value>
                 <value>Red potatoes.</value>
                 <value>Beets.</value>
@@ -50,7 +50,7 @@
                 <value>Diced turnips.</value>
                 <value>Wild rice.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Carrots.</value>
                 <value>Red cabbage.</value>
                 <value>Green cabbage.</value>
@@ -64,7 +64,7 @@
                 <value>Green onions.</value>
                 <value>Yellow onions.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Sourdough bread.</value>
                 <value>Fresh bread.</value>
                 <value>Crusty bread.</value>
@@ -74,7 +74,7 @@
                 <value>Pumpernickel bread.</value>
                 <value>Beer bread.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Bitter ale.</value>
                 <value>Wheat ale.</value>
                 <value>Steam beer.</value>

@@ -1,5 +1,5 @@
         <category name="Breakfast at a City Cafe" id="breakfast_cafe">
-            <table name="Main course...">
+            <table name="Main course..." id="main">
                 <value>Scrambled eggs.</value>
                 <value>Fried eggs.</value>
                 <value>Boiled eggs.</value>
@@ -13,7 +13,7 @@
                 <value>A chocolate croissant.</value>
                 <value>An almond croissant.</value>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="main_with">
                 <value>Crispy bacon.</value>
                 <value>Thick-cut bacon.</value>
                 <value>Mild sausage.</value>
@@ -21,7 +21,7 @@
                 <value>Sour yogurt.</value>
                 <value>Sweetened yogurt.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="main_and">
                 <value>Tomatoes.</value>
                 <value>Mushrooms.</value>
                 <value>Sweet peppers.</value>
@@ -29,7 +29,7 @@
                 <value>Green onions.</value>
                 <value>Red onions.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Fresh bread.</value>
                 <value>Buttered toast.</value>
                 <value>Pumpernickel bread.</value>
@@ -37,7 +37,7 @@
                 <value>Sharp cheese.</value>
                 <value>Pungent cheese.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="side_and">
                 <value>Apples.</value>
                 <value>Cherries.</value>
                 <value>Blueberries.</value>
@@ -45,7 +45,7 @@
                 <value>Pears.</value>
                 <value>Blackberries.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Water.</value>
                 <value>Brown ale.</value>
                 <value>Red ale.</value>
@@ -55,7 +55,7 @@
                 <value>Orange juice.</value>
                 <value>Apple juice.</value>
             </table>
-            <table name="...and a cup of...">
+            <table name="...and a cup of..." id="beverage_and">
                 <value>Green tea.</value>
                 <value>Black tea.</value>
                 <value>Light-roasted coffee.</value>
@@ -63,7 +63,7 @@
                 <value>Strong coffee.</value>
                 <value>Weak coffee.</value>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="beverage_with">
                 <value>Milk.</value>
                 <value>Sugar.</value>
                 <value>Cream.</value>

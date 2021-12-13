@@ -1,6 +1,6 @@
         <category name="Goblin" id="goblin" hasa="goblingang">
             <name name="The goblin's name is..." src="goblins" />
-            <table name="This goblin is...">
+            <table name="This goblin is..." id="is">
                 <value region_start="2" region_end="7" region_include="miner">A miner.</value>
                 <value>A forager.</value>
                 <value region_start="2" region_end="9" region_include="warrior">A warrior.</value>
@@ -22,7 +22,7 @@
                 <value>A blackblade.</value>
                 <value>A worthless nobody.</value>
             </table>
-            <table name="The goblin is particularly skilled at...">
+            <table name="The goblin is particularly skilled at..." id="skilled">
                 <value>Being sneaky</value>
                 <value>Not being seen</value>
                 <value>Tracking foes</value>
@@ -36,7 +36,7 @@
                 <value>Crushing skulls</value>
                 <value>Cutting throats</value>
             </table>
-            <table name="The goblin wields...">
+            <table name="The goblin wields..." id="weilds">
                 <value>A rusty sword</value>
                 <value>A finely-made sword</value>
                 <value>A spiked club</value>
@@ -50,7 +50,7 @@
                 <value>Arrows fletched with crow feathers</value>
                 <value>Arrows fletched with hawk feathers</value>
             </table>
-            <table name="The goblin wears...">
+            <table name="The goblin wears..." id="wears">
                 <value region_start="26" region_end="36" region_include="armorer">Armor with greasy stains (crafted by)</value>
                 <value>Patched leather armor</value>
                 <value region_start="23" region_end="33" region_include="armorer">Piecemeal chain armor (crafted by)</value>
@@ -64,7 +64,7 @@
                 <value>A black cloak with a hood</value>
                 <value>A large belt purse</value>
             </table>
-            <table name="The goblin's face has...">
+            <table name="The goblin's face has..." id="face">
                 <value>Blue warpaint</value>
                 <value>An eyepatch</value>
                 <value>Burn scars</value>
@@ -78,7 +78,7 @@
                 <value>A wisp of a mustache</value>
                 <value>Amazing sideburns</value>
             </table>
-            <table name="The goblin has...">
+            <table name="The goblin has..." id="has">
                 <value>An unsettling stare</value>
                 <value>A lean and hungry look</value>
                 <value>A maniacal laugh</value>
@@ -92,7 +92,7 @@
                 <value>An unsavory habit of drooling</value>
                 <value>A habit of sniffing loudly</value>
             </table>
-            <table name="Presently, the goblin is looking to...">
+            <table name="Presently, the goblin is looking to..." id="looking">
                 <value>Find something to eat.</value>
                 <value>Find something to drink.</value>
                 <value>Find some coins or gems to steal.</value>

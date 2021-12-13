@@ -1,7 +1,7 @@
         <category name="Fisher Folk" id="fisherfolk">
             <name name="The fisherman's name is..."/>
             <include name="Race" include="npc_race" />
-            <table name="The fisherman fishes in...">
+            <table name="The fisherman fishes in..." id="fish_in">
                 <value region_start="8" region_end="13" region_include="__noun__">A quiet creek</value>
                 <value region_start="7" region_end="12" region_include="__noun__">A wide river</value>
                 <value region_start="8" region_end="12" region_include="__noun__">A small pond</value>
@@ -12,7 +12,7 @@
                 <value region_start="9" region_end="16" region_include="__noun__">A narrow channel</value>
                 <value region_start="9" region_end="14" region_include="__noun__">The open ocean</value>
             </table>
-            <table name="The fisherman typically fishes from...">
+            <table name="The fisherman typically fishes from..." id="fish_from">
                 <value region_start="17" region_end="22" region_include="__noun__">A sandy or rocky beach</value>
                 <value region_start="14" region_end="30" region_include="__noun__">An embankment sandbar or levee</value>
                 <value region_start="2" region_end="16" region_include="__noun__">A pier or bridge</value>
@@ -20,7 +20,7 @@
                 <value region_start="2|16" region_end="6|28" region_include="ship|__noun__">A boat owned by someone else</value>
                 <value>Wherever the fish can be reached</value>
             </table>
-            <table name="The fisherman uses">
+            <table name="The fisherman uses" id="uses">
                 <value>A rod and reel with a baited hook</value>
                 <value>A rod and reel with a lure</value>
                 <value>Baited lines</value>
@@ -33,7 +33,7 @@
                 <value>Bare hands</value>
                 <value region_start="10" region_end="15" region_include="__noun__">A trained beast</value>
             </table>
-            <table name="The fisherman prefers to fish...">
+            <table name="The fisherman prefers to fish..." id="prefer">
                 <value>Alone, in silence</value>
                 <value>Alone, while whistling or humming</value>
                 <value>Alone, but withen earshot of other fishermen</value>
@@ -41,7 +41,7 @@
                 <value region_start="5" region_end="28" region_include="fisherfolk">With an apprentice fisherman</value>
                 <value region_start="5" region_end="29" region_include="fisherfolk">With an experienced fisherman</value>
             </table>
-            <table name="The fisherman is seeking...">
+            <table name="The fisherman is seeking..." id="seeking">
                 <value>A new apprentice</value>
                 <value region_start="16" region_end="22" region_include="__noun__">The answer to a riddle</value>
                 <value>To tell the tale of the one that got away</value>
@@ -51,7 +51,7 @@
                 <value>Fishing companions</value>
                 <value>Drinking companions</value>
             </table>
-            <table name="The fisherman has...">
+            <table name="The fisherman has..." id="has">
                 <value>An anchor tattoo</value>
                 <value>A pair of crossed boanes tattoo</value>
                 <value>A fish tattoo</value>
@@ -61,7 +61,7 @@
                 <value>A mermaid tattoo</value>
                 <value>A dragon tattoo</value>
             </table>
-            <table name="Distinguishing feature: The fisherman has...">
+            <table name="Distinguishing feature: The fisherman has..." id="feature">
                 <value>A wooden pipe</value>
                 <value>Rotten teeth</value>
                 <value>A gold tooth</value>

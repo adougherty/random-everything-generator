@@ -1,5 +1,5 @@
         <category name="Goblin Gang" id="goblingang">
-            <table name="The goblin's primary business involves...">
+            <table name="The goblin's primary business involves..." id="business">
                 <value>Raiding villages and farms</value>
                 <value>Burglarizing storehouses and shops</value>
                 <value>Harassing anyone who passes through their territory</value>
@@ -18,7 +18,7 @@
                 <value>Pranks and hijinks</value>
                 <value>Slaving</value>
             </table>
-            <table name="The goblin gang's symbol is...">
+            <table name="The goblin gang's symbol is..." id="symbol">
                 <value>A skull</value>
                 <value>An arrow</value>
                 <value>A dagger</value>
@@ -30,7 +30,7 @@
                 <value region_start="2" region_end="6" region_include="wolf">A wolf</value>
                 <value region_start="2" region_end="5" region_include="bat">A bat</value>
             </table>
-            <table name="The goblin gang's colors are...">
+            <table name="The goblin gang's colors are..." id="colors">
                 <value>Black</value>
                 <value>Dark brown</value>
                 <value>Crimson</value>
@@ -51,7 +51,7 @@
                 <value>Khaki and dark green</value>
                 <value>Dark green and crimson</value>
             </table>
-            <table name="The goblin's lair is located...">
+            <table name="The goblin's lair is located..." id="lair">
                 <value region_start="14" region_end="28" region_include="hauntedforest">In a dark and haunted forest</value>
                 <value region_start="6" region_end="22" region_include="enchantedforest">In an enchanted forest</value>
                 <value region_start="8" region_end="16" region_include="mountain">Along a mountain pass</value>
@@ -60,7 +60,7 @@
                 <value region_start="18" region_end="25" region_include="village">Near a quiet farm village</value>
                 <value>In the underdark</value>
             </table>
-            <table name="The goblin's lair is...">
+            <table name="The goblin's lair is..." id="lair_is">
                 <value region_start="20" region_end="27" region_include="cavern">A series of natural caverns</value>
                 <value region_start="13" region_end="17" region_include="mine">An abandoned mine</value>
                 <value region_start="2" region_end="6" region_include="mine">A mine in which the goblins are actively digging</value>
@@ -68,7 +68,7 @@
                 <value region_start="26" region_end="36" region_include="__noun__">A semi-organized military encampment</value>
                 <value region_start="8" region_end="18" region_include="mine">A crude encampment</value>
             </table>
-            <table name="The goblins are particularly fond of picking on...">
+            <table name="The goblins are particularly fond of picking on..." id="fond">
                 <value>Fishermen and sailors</value>
                 <value>Beggars and drunks</value>
                 <value>Merchants and moneychangers</value>
@@ -89,7 +89,7 @@
                 <value>Elves and rangers</value>
                 <value>Dwarves and gnomes</value>
             </table>
-            <table name="The goblins are currently planning a raid on...">
+            <table name="The goblins are currently planning a raid on..." id="raid">
                 <value region_start="21" region_end="27" region_include="goblin">The residence of the leader</value>
                 <value region_start="19" region_end="37" region_include="goblin">The residence of a senior gang member</value>
                 <value region_start="3" region_end="12" region_include="crafter_artisan">An artisan's shop</value>
@@ -106,7 +106,7 @@
                 <value region_start="4|19" region_end="13|37" region_include="__noun__|__noun__">The residence of a wealthy individual</value>
                 <value region_start="4|19" region_end="13|36" region_include="__noun__|__noun__">The residence of a prominent citizen</value>
             </table>
-            <table name="The goblins' boss is...">
+            <table name="The goblins' boss is..." id="boss">
                 <value region_start="22" region_end="29" region_include="fighter">An egotistical goblin warrior</value>
                 <value region_start="21" region_end="26" region_include="rogue">A charismatic goblin rogue</value>
                 <value region_start="20" region_end="26" region_include="__noun__">A mysterious goblin shaman</value>
@@ -118,7 +118,7 @@
                 <value region_start="22" region_end="29" region_include="barbarian">A brilliant hobgoblin warlord</value>
                 <value region_start="22" region_end="30" region_include="assassin">A calculating bugbear assassin</value>
             </table>
-            <table name="The goblin's goal include (boss and rank-and-file members could have different goals)...">
+            <table name="The goblin's goal include (boss and rank-and-file members could have different goals)..." id="goal">
                 <value region_start="18" region_end="24" region_include="__noun__">Disruption of the region's politics</value>
                 <value region_start="18" region_end="24" region_include="__noun__">Disruption of the region's trade</value>
                 <value region_start="27" region_end="39" region_include="__noun__">Revenge against a specific organization</value>
@@ -126,7 +126,7 @@
                 <value>Spreading chaos and destruction</value>
                 <value region_start="25" region_end="33" region_include="artifacts">Possession of a powerful artifact</value>
             </table>
-            <table name="The goblins typically fight with...">
+            <table name="The goblins typically fight with..." id="fight">
                 <value>Swarm tactics</value>
                 <value>Hit-and-run tactics</value>
                 <value>Ambush tactics</value>
@@ -140,7 +140,7 @@
                 <value>Lots of biting and scratching</value>
                 <value>Laying traps</value>
             </table>
-            <table name="As enforcers or extra muscle, the goblins sometimes hire...">
+            <table name="As enforcers or extra muscle, the goblins sometimes hire..." id="muscle">
                 <value>Hobgoblin mercenaries</value>
                 <value>Bugbear thugs</value>
                 <value>Ogre savages</value>
@@ -148,7 +148,7 @@
                 <value>Trolls</value>
                 <value>Other goblin gangs</value>
             </table>
-            <table name="As guardians or pets, the goblins sometimes keep...">
+            <table name="As guardians or pets, the goblins sometimes keep..." id="pets">
                 <value>Wolves</value>
                 <value>Wargs</value>
                 <value>Giant spiders</value>

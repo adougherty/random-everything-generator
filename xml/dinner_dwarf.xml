@@ -1,5 +1,5 @@
         <category name="Dwarven Dinner" id="dinner_dwarf">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -32,7 +32,7 @@
                     <item>pheasant</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_with">
                 <value>Red potatoes.</value>
                 <value>Golden potatoes.</value>
                 <value>Red cabbage.</value>
@@ -44,7 +44,7 @@
                 <value>White onions.</value>
                 <value>Red onions.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Carrots.</value>
                 <value>Apples.</value>
                 <value>Cherries.</value>
@@ -56,7 +56,7 @@
                 <value>Rich gravy.</value>
                 <value>Garlic.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Rye bread.</value>
                 <value>Wheat bread.</value>
                 <value>Crusty bread.</value>
@@ -70,7 +70,7 @@
                 <value>Bacon.</value>
                 <value>Ham.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Black ale.</value>
                 <value>Pale ale.</value>
                 <value>Brown ale.</value>
@@ -84,7 +84,7 @@
                 <value>Black porter.</value>
                 <value>Brown porter.</value>
             </table>
-            <table name="...this is just a bit...">
+            <table name="...this is just a bit..." id="bit">
                 <value>Too dark in color.</value>
                 <value>Too light in color.</value>
                 <value>Too strong in flavor.</value>

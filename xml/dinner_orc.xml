@@ -1,5 +1,5 @@
         <category name="Dinner at an Orcish Camp" id="dinner_orc">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -40,7 +40,7 @@
                     <item>halfling</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_wth">
                 <value>Soft potatoes.</value>
                 <value>Hard potatoes.</value>
                 <value>White beans.</value>
@@ -52,7 +52,7 @@
                 <value>Onions.</value>
                 <value>Turnips.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Stale bread.</value>
                 <value>Crusty biscuits.</value>
                 <value>Hard tack.</value>
@@ -64,7 +64,7 @@
                 <value>Thin gravy.</value>
                 <value>Moldy fruit.</value>
             </table>
-            <table name="...Side dish...">
+            <table name="...Side dish..." id="side">
                 <value>Roasted rats.</value>
                 <value>Raw rat tails.</value>
                 <value>Maggots.</value>
@@ -78,7 +78,7 @@
                 <value>Frogs or toads.</value>
                 <value>Pig's feet.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Foul ale.</value>
                 <value>Skunky ale.</value>
                 <value>Stolen ale.</value>

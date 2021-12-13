@@ -1,5 +1,5 @@
         <category name="Dinner at a Mages' Academy Dining Hall" id="dinner_mage">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -28,7 +28,7 @@
                     <item>meat pie</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_with">
                 <value>Dumplings.</value>
                 <value>Sweet cabbage.</value>
                 <value>Caramelized onions.</value>
@@ -50,7 +50,7 @@
                 <value>Cucumber.</value>
                 <value>Pickles.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Carrots.</value>
                 <value>Apples.</value>
                 <value>Cherries.</value>
@@ -64,7 +64,7 @@
                 <value>Parsley.</value>
                 <value>Turnips.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Elvish bread.</value>
                 <value>Chocolate molded into the shape of frogs.</value>
                 <value>Cinnamon bread.</value>
@@ -78,7 +78,7 @@
                 <value>Pumpkin pie.</value>
                 <value>Blueberry pie.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Pumpkin juice.</value>
                 <value>Buttery ale.</value>
                 <value>Root beer.</value>

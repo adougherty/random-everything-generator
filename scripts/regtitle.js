@@ -1,5 +1,5 @@
-const STORAGE_STORIES = "stories";
-const MODULE_NAME = "random-everything-generator";
+//const STORAGE_STORIES = "stories";
+//const MODULE_NAME = "random-everything-generator";
 class REGTitle extends FormApplication {
     static get defaultOptions() {
         const overrides = {

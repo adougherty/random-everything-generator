@@ -1,5 +1,5 @@
         <category name="Dinner at a Witch's Hovel" id="dinner_witch">
-            <table name="Tonight, we dine on...">
+            <table name="Tonight, we dine on..." id="dine">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
@@ -40,7 +40,7 @@
                     <item>halfling</item>
                 </list>
             </table>
-            <table name="...with...">
+            <table name="...with..." id="dine_with">
                 <value>Dumplings.</value>
                 <value>Red cabbage.</value>
                 <value>Green cabbage.</value>
@@ -62,7 +62,7 @@
                 <value>Potatoes.</value>
                 <value>Yams.</value>
             </table>
-            <table name="...and...">
+            <table name="...and..." id="dine_and">
                 <value>Carrots.</value>
                 <value>Apples.</value>
                 <value>Cherries.</value>
@@ -84,7 +84,7 @@
                 <value>Fire peppers.</value>
                 <value>Garlic.</value>
             </table>
-            <table name="Side dish...">
+            <table name="Side dish..." id="side">
                 <value>Rum cakes.</value>
                 <value>Honey cakes.</value>
                 <value>Oat cakes.</value>
@@ -106,7 +106,7 @@
                 <value>Unidentifiable brains.</value>
                 <value>Mysterious sausages.</value>
             </table>
-            <table name="Beverage...">
+            <table name="Beverage..." id="beverage">
                 <value>Pumpkin juice.</value>
                 <value>White tea.</value>
                 <value>Green tea.</value>
@@ -128,7 +128,7 @@
                 <value>Rum.</value>
                 <value>Black liquid served out of a human skull.</value>
             </table>
-            <table name="...that leaves you feeling...">
+            <table name="...that leaves you feeling..." id="feeling">
                 <value>Refreshed.</value>
                 <value>Peaceful.</value>
                 <value>Anxious.</value>

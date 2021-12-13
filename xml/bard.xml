@@ -22,7 +22,7 @@
                     <value>A master of riddles</value>
                     <value>A terrible singer</value>
                 </table>
-                <table name="Always prepared to make a melody or rhythm, the bard carries his/her...">
+                <table name="Always prepared to make a melody or rhythm, the bard carries his/her..." id="bard_instrument">
                     <value>Bagpipes</value>
                     <value>Bells</value>
                     <value>Castanets</value>
@@ -44,7 +44,7 @@
                     <value>Viol</value>
                     <value>Zither</value>
                 </table>
-                <table name="The bard's musical instrument is...">
+                <table name="The bard's musical instrument is..." id="bard_instrumentis">
                     <value region_start="14" region_end="28" region_include="__noun__">A gift from a wealthy patron</value>
                     <value>A family heirloom</value>
                     <value>Very old, but well maintained</value>
@@ -56,7 +56,7 @@
                     <value>Something the bard made</value>
                     <value region_start="18" region_end="34" region_include="bard">The instrument of a legendary bard</value>
                 </table>
-                <table name="If things get rough, the bard has...">
+                <table name="If things get rough, the bard has..." id="bard_weapon">
                     <value>Several sharp daggers</value>
                     <value>A lightweight saber</value>
                     <value>A finely-crafted shortsword</value>
@@ -70,7 +70,7 @@
                     <value region_start="2" region_end="6" region_include="books">A book of hexes and curses</value>
                     <value>Quick wits and a gift for lying</value>
                 </table>
-                <table name="The bard also carries...">
+                <table name="The bard also carries..." id="bard_carries">
                     <value region_start="15" region_end="26" region_include="__noun__">A compromising love letter</value>
                     <value region_start="20" region_end="26" region_include="__noun__">A lacy favor from a maiden</value>
                     <value>Some parchment with half-finished poems</value>
@@ -84,7 +84,7 @@
                     <value region_start="22" region_end="37" region_include="__noun__">A tome of legends and historical lore</value>
                     <value>A jar of mustache wax</value>
                 </table>
-                <table name="The bard is wearing...">
+                <table name="The bard is wearing..." id="bard_wearing">
                     <value>Tight-fitting pants</value>
                     <value>A low-cut shirt</value>
                     <value>A revealing set of breeches</value>
@@ -118,7 +118,7 @@
                     <value>Dancing shoes</value>
                     <value>Too much perfume</value>
                 </table>
-                <table name="The bard has...">
+                <table name="The bard has..." id="bard_has">
                     <value>A silver tongue</value>
                     <value>A gift for satire and wit</value>
                     <value>A beautiful face</value>
@@ -132,7 +132,7 @@
                     <value>An alluring quality</value>
                     <value>A handsome mustache</value>
                 </table>
-                <table name="The bard is looking for...">
+                <table name="The bard is looking for..." id="bard_looking">
                     <value>A new tale to tell</value>
                     <value>Inspiration for a song</value>
                     <value>A beautiful muse</value>
@@ -146,7 +146,7 @@
                     <value>A hero to immortalize in song</value>
                     <value>A night of drinking and merrymaking</value>
                 </table>
-                <table name="The bard is always a big hit among...">
+                <table name="The bard is always a big hit among..." id="bard_hit">
                     <value>Fisherman, sailors, and pirates</value>
                     <value>Farmers and herders</value>
                     <value>Miners and travelers</value>
@@ -158,7 +158,7 @@
                     <value>Pretty young maidens</value>
                     <value>Lonely wives</value>
                 </table>
-                <table name="The bard tells a tale of a recent visit to...">
+                <table name="The bard tells a tale of a recent visit to..." id="bard_tale">
                     <value region_start="2" region_end="13" region_include="__noun__">A royal court</value>
                     <value region_start="12" region_end="20" region_include="mountain">A dangerous mountain</value>
                     <value region_start="2" region_end="16" region_include="tomb">A legendary tomb</value>
@@ -172,7 +172,7 @@
                     <value region_start="13" region_end="22" region_include="wilderness">A savage and wild land</value>
                     <value region_start="10" region_end="16" region_include="castle">A haunted castle</value>
                 </table>
-                <table name="You have heard of this bard because...">
+                <table name="You have heard of this bard because..." id="bard_heard">
                     <value region_start="42" region_end="47" region_include="__noun__">He and his troop were sent up river for a crime they didn't commit.</value>
                     <value region_start="19" region_end="24" region_include="thief">He moonlights as a thief. Everyone knows, but so far no one has been able to catch him in the act.</value>
                     <value region_start="76" region_end="83" region_include="__noun__">He's on the run after using his honeyed words to cause a schism in the next kingdom.</value>

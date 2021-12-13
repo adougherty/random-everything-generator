@@ -1,5 +1,5 @@
         <category name="Herb Lore" id="herblore">
-            <table name="The herbal concoction will help...">
+            <table name="The herbal concoction will help..." id="help">
                 <value>A wound to heal more quickly</value>
                 <value>Reduce pain</value>
                 <value>Prevent infection in a wound</value>
@@ -12,7 +12,7 @@
                 <value>One fall asleep</value>
                 <value>Make one fertile or virile</value>
             </table>
-            <table name="The herbal concoction is...">
+            <table name="The herbal concoction is..." id="is">
                 <value>A thick paste</value>
                 <value>A thin paste</value>
                 <value>Specifically treated leaf</value>
@@ -24,7 +24,7 @@
                 <value>A strong tea</value>
                 <value>A fragrant tea</value>
             </table>
-            <table name="The herbal concoction's color could be described as...">
+            <table name="The herbal concoction's color could be described as..." id="color">
                 <value>Pale green</value>
                 <value>Dark green</value>
                 <value>Blue green</value>
@@ -46,7 +46,7 @@
                 <value>Dark brown</value>
                 <value>Reddish brown</value>
             </table>
-            <table name="The herbal concoction contains...">
+            <table name="The herbal concoction contains..." id="contains">
                 <value>Root hairs</value>
                 <value>Ground roots</value>
                 <value>Shredded roots</value>
@@ -68,7 +68,7 @@
                 <value>Seeds</value>
                 <value>A shrubbery</value>
             </table>
-            <table name="The herbal concoction preparation involves...">
+            <table name="The herbal concoction preparation involves..." id="involves">
                 <value>Vigorous mixing</value>
                 <value>Boiling slowly</value>
                 <value>Boiling rapidly</value>
@@ -80,7 +80,7 @@
                 <value>Brewing</value>
                 <value>Steeping</value>
             </table>
-            <table name="The herbal concoction must be...">
+            <table name="The herbal concoction must be..." id="must">
                 <value>Consumed immediately after preparation</value>
                 <value>Consumed after it ages for a few hours</value>
                 <value>Consumed after it ages for a few years</value>

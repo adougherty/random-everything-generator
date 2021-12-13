@@ -18,6 +18,7 @@ class RandomEverythingGenerator extends FormApplication{
     XML;
     Choices = {};
     Path = '';
+    OnLoadChildCallback = () => {}
 
     constructor(object, options) {
         super(object, options);
@@ -53,7 +54,6 @@ class RandomEverythingGenerator extends FormApplication{
     async _updateObject(event, formData) {
         let doc = $.parseXML(this.XML);
         let category = $(doc).find(`category[id='${formData.category}']`)
-        this.Path += '.' + formData.category;
 
         if (category.children().length > 0) {
             let choices = {}
@@ -63,6 +63,7 @@ class RandomEverythingGenerator extends FormApplication{
             let REGWindow = new RandomEverythingGenerator();
             REGWindow.XML = this.XML;
             REGWindow.Choices = choices;
+            REGWindow.OnLoadChildCallback = this.OnLoadChildCallback;
             REGWindow.render(true);
         } else {
             if (!document.RandomEverythingGeneratorData['top'])
@@ -74,9 +75,13 @@ class RandomEverythingGenerator extends FormApplication{
                         url: `/modules/random-everything-generator/xml/${formData.category}.xml`,
                         dataType: 'text',
                         success: xmlStr => {
+                            if (this.Path)
+                                document.RandomEverythingGeneratorData[this.Path] = formData.category;
+                            this.OnLoadChildCallback(this, category.attr('name'), formData.category, xmlStr);
+                            console.log(this.Path)
                             let regChild = new REGChild(category.attr('name'));
                             regChild.XML = xmlStr;
-                            regChild.path = this.Path;
+                            regChild.Path = this.Path + '.' + formData.category;
                             regChild.Markov = markov;
                             regChild.render(true);
                         }
@@ -152,7 +157,7 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
             categories.push(buildCategory(nodeCategories));
             RandomEverythingGenerator.log(true, categories);
 
-            // Most of the work is going to be performed in random-everything-generator.hbs
+            document.RandomEverythingGeneratorData = {};
             let reg = new RandomEverythingGenerator();
             reg.Categories = categories[0];
             reg.XML = xmlStr;
@@ -180,7 +185,8 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
                     url: `/modules/random-everything-generator/xml/${story.top}.xml`,
                     dataType: 'text',
                     success: xmlStr => {
-                        let regChild = new REGChild(story.top);
+                        console.log(story.top)
+                        let regChild = new REGChild(story.save);
                         regChild.XML = xmlStr;
                         regChild.path = '';
                         regChild.Markov = markov;
@@ -206,3 +212,34 @@ Hooks.on("init", async(app, hmtl) => {
         }
     });
 });
+
+Hooks.on('renderREGChild', (app, html, data) => {
+    let saveBtn = $(`<a class="reg-save"><i class="far fa-save"></i>Save</a>`);
+    saveBtn.click(ev => {
+        let saveApp = new REGTitle();
+        saveApp.render(true);
+    });
+    html.closest('.app').find('.reg-save').remove();
+    let titleElement = html.closest('.app').find('.window-title');
+    saveBtn.insertAfter(titleElement);
+
+    if (!app.Path && document.RandomEverythingGeneratorData.save) {
+        let delBtn = $(`<a class="reg-delete"><i class="far fa-trash-alt"></i>Delete</a>`);
+        delBtn.click(ev => {
+            let json = game.settings.get(MODULE_NAME, STORAGE_STORIES);
+            let stories = (json) ? JSON.parse(json) : {};
+            delete stories[document.RandomEverythingGeneratorData.save];
+            for (child of document.getElementById('reg-select-story').childNodes) {
+                if (child.value == document.RandomEverythingGeneratorData.save) {
+                    child.parentNode.removeChild(child);
+                }
+            }
+            document.RandomEverythingGeneratorData = {};
+            game.settings.set(MODULE_NAME, STORAGE_STORIES, JSON.stringify(stories));
+            app.close();
+        });
+        html.closest('.app').find('.reg-del').remove();
+        delBtn.insertAfter(titleElement);
+    }
+})
+

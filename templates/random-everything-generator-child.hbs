@@ -49,12 +49,52 @@
   section.reg-members select {
     width: 100%;
   }
+
+  li.reg-member:hover {
+    cursor: pointer;
+    background-color:  #C0C0C0;
+  }
+
+  div.reg-option-select {
+    position: absolute;
+    border: 1px solid #000;
+    height: calc(100% - 30px);
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100;
+    top: 30px;
+    left: 0px;
+    background-color: #D3D3D3;
+    padding: 5px;
+    overflow-y: auto;
+    text-overflow: auto;
+  }
+
+  div.reg-option-select input {
+    width: calc(100% - 25px);
+  }
+
+  div.reg-option-select i.far {
+    width:  20px;
+    marign-left:  5px;
+    display: inline-block;
+    padding-left:  5px;
+    cursor: pointer;
+  }
 </style>
 
 <form>
   <h2 class="reg-title" id='{{appid}}-reg-title'><b>{{title}}</b></h2>
   <div class="flexrow" id="{{appid}}-reg-row">
     <section id="{{appid}}-child-col1" class="reg-tables">
+      {{#each tableResults}}
+        <div>
+          <span>{{this.key}}: </span><span id="reg-val-{{this.id}}">{{{this.value}}}</span>
+          <a id="reg-regen-{{this.id}}"><i class="fas fa-sync-alt"></i></a>
+          <a id="reg-dd-{{this.id}}">&#9660;</a>
+          <a id="reg-delete-{{this.id}}"><i class="fas fa-minus"></i></a>
+        </div>
+      {{/each}}
     </section>
     <section id="{{appid}}-members" class="reg-members">
       <header>Members</header>
@@ -62,314 +102,12 @@
         {{selectOptions members blank="Add Member"}}
       </select>
       <ul id="{{appid}}-members-list">
+        {{#each linkedMembers}}
+          <li class="reg-member" id="{{../appid}}-member-{{this.index}}">{{this.label}}</li>
+        {{/each}}
       </ul>
     </section>
   </div>
+  <div id="{{appid}}-reg-option-select" class="reg-option-select" style="display:none">
+  </div>
 </form>
-
-<script type="text/javascript">
-  var doc = new DOMParser().parseFromString(`{{{xml}}}`, 'application/xml');
-  var markovJSON = JSON.parse(`{{{markov}}}`);
-
-  jQuery.fn.outerHTML = function() {
-    return (this[0]) ? this[0].outerHTML : '';
-  };
-
-  function getNextLetter(prev) {
-    // Get a capital letter to start
-    let nxt = markovJSON[prev];
-    let total = 0
-    Object.keys(nxt).forEach(letter => total += nxt[letter])
-    let rnd = Math.floor(Math.random() * total);
-    let r = '';
-    let i = 0;
-    Object.keys(nxt).every(letter => {
-      i += parseInt(nxt[letter]);
-      if (i > rnd) {
-        r += letter;
-        return false;
-      }
-      return true;
-    });
-    return r;
-  }
-
-  function processRegions(nodeValue, path) {
-    if (!nodeValue) {
-      console.error("nodeValue is empty")
-      return false
-    }
-    if (nodeValue.getAttribute('region_include')) {
-      let includes = nodeValue.getAttribute('region_include').split('|');
-      let starts = nodeValue.getAttribute('region_start').split('|');
-      let ends = nodeValue.getAttribute('region_end').split('|');
-
-      // When processing the textValue, it will change the position of the
-      // letters, so process it backwards, that way the start/stops do not
-      // get shifted when the string value changes.
-      let  r = nodeValue.textContent;
-      for (let i = includes.length - 1; i >= 0; i--){
-        let start = starts[i];
-        let end = ends[i];
-        let length = end-start;
-        let before = r.substr(0, start);
-        let at = r.substr(start, length);
-        let after = r.substr(end);
-        let linkId =  '{{appid}}' + path + '.' + i;
-        let link = $(`<a id='${linkId}' class='reg-link' onClick="openChildStory('${includes[i]}', this)">${at}</a>`);
-        if (includes[i] == '__noun__')
-          link.addClass('reg-is-noun');
-        r = before+link.outerHTML()+after;
-      }
-      return r;
-    } else {
-      return nodeValue.textContent;
-    }
-  }
-
-  function openChildStory(file, src) {
-    let path = src.id.replace(/^app-\d+/, '');
-    console.log(path);
-    if (file == '__noun__') {
-      let regChild = new REGChild(src.innerHTML, true);
-      regChild.Path = path
-      regChild.render(true);
-    } else {
-      document.RandomEverythingGeneratorData[path] = file;
-      let xhr = new XMLHttpRequest();
-      xhr.open('GET', `/modules/random-everything-generator/xml/${file}.xml`);
-      xhr.send();
-      xhr.onload = function() {
-        // Add a list item for every top-level category
-        const xmlStr = xhr.response;
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(xmlStr, 'application/xml');
-        const nodeTop = doc.getElementsByTagName('category')[0]; //Guaranteed top level node
-
-        // Most of the work is going to be performed in random-everything-generator-child.hbs
-        let regChild = new REGChild(nodeTop.getAttribute('name'));
-        regChild.XML = xmlStr;
-        regChild.Path = path
-        regChild.Markov = JSON.stringify(markovJSON);
-        regChild.render(true);
-      }
-    }
-  }
-
-  function createRegenButton(callback = ()=>{}) {
-    const aRegen = document.createElement('A');
-    aRegen.addEventListener('click', callback);
-    const iRegen = document.createElement('I');
-    $(iRegen).addClass('fas fa-sync-alt');
-    $(iRegen).css({'display': 'inline-block', 'margin-left': '5px'})
-    aRegen.appendChild(iRegen);
-    return aRegen;
-  }
-
-  function buildFromTable(node, regenAllButton, path) {
-    if (node.getAttribute("include")) return; // These shouldn't exist anymore
-
-    let div = document.createElement('DIV');
-    const tableName = node.getAttribute("name");
-    const tableId = node.getAttribute("id");
-    const tableType = node.getAttribute("type") || "standard";
-    switch (tableType) {
-      case "standard": {
-        const nodeValues = node.getElementsByTagName("value");
-        let localPath = path + '.' + node.getAttribute('id');
-        let randValue = (parseInt(document.RandomEverythingGeneratorData[localPath])==document.RandomEverythingGeneratorData[localPath])
-          ? parseInt(document.RandomEverythingGeneratorData[localPath])
-          : Math.floor(Math.random() * nodeValues.length);
-        const spanName = createElement('SPAN', tableName+' '); 
-        $(spanName).addClass('reg-tables-name')
-        div.appendChild(spanName)
-
-        document.RandomEverythingGeneratorData[path + '.' + node.getAttribute('id')] = randValue;
-        let value = processRegions(nodeValues[randValue], localPath + '.' + randValue);
-        if (value === false) {
-          console.error(`Could not process ${node.getAttribute('id')} value:${randValue}`)
-        }
-        const spanValue = createElement('SPAN', value)
-        $(spanValue).addClass('reg-tables-value')
-        div.appendChild(spanValue);
-
-        let regenFunction = () => {
-          let randValue = Math.floor(Math.random() * nodeValues.length);
-          let value = processRegions(nodeValues[randValue], localPath + '.' + randValue);
-          spanValue.innerHTML = value;
-          document.RandomEverythingGeneratorData[localPath] = randValue;
-        }
-        div.appendChild(createRegenButton(regenFunction));
-        regenAllButton.addEventListener('click', regenFunction)
-        break;
-      }
-      case "pattern":
-      case "name": {
-        let localPath = path + '.name';
-
-        let id = node.getAttribute('id') || 'name';
-        $(div).addClass('reg-name');
-        div.appendChild(createElement('SPAN', 'Name: '));
-
-        // Either use the saved name, or create a new one and save it
-        let name = document.RandomEverythingGeneratorData[localPath] || generateName(node);
-        const spanValue = createElement('SPAN', name);
-        document.RandomEverythingGeneratorData[path + '.name'] = name
-
-        div.appendChild(spanValue);
-
-        // Set regen functions
-        let regenFunction = () => {
-          let name = generateName(node);
-          spanValue.innerHTML = name;
-          document.RandomEverythingGeneratorData[path + '.name'] = name
-        }
-        div.appendChild(createRegenButton(regenFunction));
-        regenAllButton.addEventListener('click', regenFunction);
-      }
-    }
-    return div;
-  }
-
-  function buildFromInclude(node, rDiv, path, force = false) {
-    let include = node.getAttribute('include');
-    let localPath = path + '.' + include
-    if (force === false && document.RandomEverythingGeneratorData[localPath]) {
-      document.getElementById(rDiv).innerHTML = document.RandomEverythingGeneratorData[localPath];
-    } else {
-      $.get('/modules/random-everything-generator/xml/'+include+'.xml', data => {
-        const table = data.getElementsByTagName('table')[0];
-        const values = table.getElementsByTagName('value');
-        const value = values[Math.floor(Math.random() * values.length)];
-        document.getElementById(rDiv).innerHTML = value.textContent;
-        document.RandomEverythingGeneratorData[localPath] = value.textContent
-      });
-    }
-  }
-
-  function createElement(tag, value=null) {
-    const elem = document.createElement(tag)
-    elem.id = '{{appid}}-id_' + Math.floor(Math.random()*1000000);
-    if (value != null)
-      elem.innerHTML = value
-    return elem;
-  }
-
-  function fromMarkov() {
-    if (markovJSON == '')
-      return "Unknown";
-    let r = '';   
-    r = getNextLetter('');
-    while (r.length < 3 || r.substr(r.length-2) != '--') {
-      r += getNextLetter(r.substr(r.length-1))
-    }
-    r = r.substr(0, r.length-2);
-    return r;
-  }
-
-  /*
-   * Generates a name from a <table type="name">
-   *
-   * Arguments: [XMLNode] <table type="name"> node
-   * Returns:   [String]  generated name
-   */
-  function generateName(node) {
-    const nodePatterns = node.getElementsByTagName("patterns");
-    if (nodePatterns.length == 0)
-      return;
-    const nodePattern = nodePatterns[0].getElementsByTagName("pattern");
-    let htmlValue = '';
-    // Choose a random pattern
-    const pattern = nodePattern[Math.floor(Math.random()*nodePattern.length)]
-    let p = pattern.textContent;
-    let m = p.match(/\{(.*?)\}/);
-    while (m && m.length > 0) {
-      const listType = m[1];
-      switch (listType) {
-        case 'markov': {
-          p = p.replace('{markov}', fromMarkov);
-          break;
-        }
-        default: {
-          let values = []
-          const nodesList = node.getElementsByTagName("list");
-          for (let i = 0; i < nodesList.length; i++) {
-            if (nodesList[i].getAttribute("type") == listType) {
-              let items = nodesList[i].getElementsByTagName("item");
-              for (let j = 0; j < items.length; j++) {
-                values.push(items[j].textContent);
-              }
-            }
-          }
-          let r = values[Math.floor(Math.random()*values.length)];
-          p = p.replace('{'+m[1]+'}', r);
-          break;
-        }
-      }
-      m = p.match(/\{(.*?)\}/);
-    }
-    return p
-  }
-
-  function populateChildCategory() {
-    const xml = `{{{xml}}}`;
-    const path = `{{{path}}}`;
-    console.log(path);
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(xml, 'application/xml');
-    const nodeCategory = doc.getElementsByTagName('category')[0];
-    const nodeName = nodeCategory.getElementsByTagName('name')[0];
-    if (nodeName) {
-      const name = nodeName.getAttribute('name');
-    }
-
-    const div = document.getElementById('{{appid}}-child-col1');
-    const h2 = document.getElementById('{{appid}}-reg-title');
-    const regenAllButton = createRegenButton()
-    h2.appendChild(regenAllButton)
-
-    if (nodeName) {
-      const divName = document.createElement('DIV');
-      divName.appendChild(createElement('SPAN', 'Name: '));
-      let name = (document.RandomEverythingGeneratorData[path + '.name'])
-        ? document.RandomEverythingGeneratorData[path + '.name']
-        : fromMarkov();
-      document.RandomEverythingGeneratorData[path + '.name'] = name;
-      let spanValue = createElement('SPAN', name);
-      divName.appendChild(spanValue);
-      let regenFunction = () => {
-        let name = fromMarkov();
-        spanValue.innerHTML = name;
-        document.RandomEverythingGeneratorData[path + '.name'] = name
-      }
-      divName.appendChild(createRegenButton(regenFunction));
-      regenAllButton.addEventListener('click', regenFunction)
-      div.appendChild(divName);
-    }
-
-    for (const categoryChild of nodeCategory.children) {
-      switch(categoryChild.tagName) {
-        case 'table': {
-          div.appendChild(buildFromTable(categoryChild, regenAllButton, path));
-          break;
-        }
-        case 'include': {
-          let rDiv = document.createElement('DIV');
-          let spanName = createElement('SPAN', categoryChild.getAttribute('name') + ': ');
-          let spanValue = createElement('SPAN');
-          rDiv.appendChild(spanName);
-          rDiv.appendChild(spanValue);
-          div.appendChild(rDiv);
-          let regenFunction = () => buildFromInclude(categoryChild, spanValue.id, path, true);
-          buildFromInclude(categoryChild, spanValue.id, path);
-          rDiv.appendChild(createRegenButton(regenFunction));
-          regenAllButton.addEventListener('click', regenFunction)
-          break;
-        }
-      }
-    }  
-  }
-
-  populateChildCategory();
-</script>
-

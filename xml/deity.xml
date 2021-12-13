@@ -104,7 +104,7 @@
                 <value>Misfortune</value>
                 <value>Virtues</value>
             </table>
-            <table name="The deity's secondary domain is...">
+            <table name="The deity's secondary domain is..." id="secondary">
                 <value>Reconciliation</value>
                 <value>Nausea</value>
                 <value>Dignity</value>
@@ -126,7 +126,7 @@
                 <value>Learning</value>
                 <value>Absence and Presence</value>
             </table>
-            <table name="The deity is also possibly associated with...">
+            <table name="The deity is also possibly associated with..." id="assoc">
                 <value>Smoke and Ash, Contentment, Worry</value>
                 <value>Dust, Wasting, Earth</value>
                 <value>The Deep Ocean, Magic, Curses</value>
@@ -140,7 +140,7 @@
                 <value>Endless Birth, Endless Consumption</value>
                 <value>Tending to Fear, Comfort, Emotional Closeness</value>
             </table>
-            <table name="The deity can manifest as...">
+            <table name="The deity can manifest as..." id="manifest">
                 <value>Intangible Liquid</value>
                 <value>Shifting Mass</value>
                 <value>Large Cat</value>
@@ -154,7 +154,7 @@
                 <value>Instrument</value>
                 <value>Abomination</value>
             </table>
-            <table name="...with an aesthetic of...">
+            <table name="...with an aesthetic of..." id="aesthetic">
                 <value>Golden Bells</value>
                 <value>Knives, Too Many</value>
                 <value>Putridity</value>
@@ -176,7 +176,7 @@
                 <value>Hateful</value>
                 <value>Chimerical</value>
             </table>
-            <table name="The deity has a fixed, singular appearance...">
+            <table name="The deity has a fixed, singular appearance..." id="appearance">
                 <value>Affixed to a tree with nine nails through its fragile, frog-like body.</value>
                 <value>Vaguely-human mass of smoke and honeycombed muscle.</value>
                 <value>Silver-masked and bearlike and sodden, wailing to speak, crowned in rain.</value>
@@ -198,7 +198,7 @@
                 <value>Head like a weeping willow, long body made of carved articulated wood like an armless puppet.</value>
                 <value>Shifting pyramidal tumor, blubbery, with trunk-like extremities.</value>
             </table>
-            <table name="The deity desires, and will cooperate in exchange for...">
+            <table name="The deity desires, and will cooperate in exchange for..." id="desire">
                 <value>To write the book that ends everything; Ink and paper, print, letters, new and old language.</value>
                 <value>To consensually fuck itself to death; Aphrodisiacs, encouragements.</value>
                 <value>To distil rancid sunlight; Glass containers, fresh captured sunlight.</value>
@@ -220,7 +220,7 @@
                 <value>To categorize sin, call itself a sinner; New moral strictures, inquisitors, confessors, guidelines, depravities.</value>
                 <value>To escape into the unconscious world; Dreams themselves, the ability to sleep.</value>
             </table>
-            <table name="The deity is able to...">
+            <table name="The deity is able to..." id="able">
                 <value>Retrace fates of the dead, drown people on land.</value>
                 <value>Combust whole cities, divine and reveal personal secrets.</value>
                 <value>Incite homicide, make enemies into allies for a time.</value>
@@ -242,7 +242,7 @@
                 <value>Transmute metals into other metals, create sensory illusions.</value>
                 <value>Trade favors and debts from one person to another, teach divine nature.</value>
             </table>
-            <table name="The deity's nature and behavior is generally">
+            <table name="The deity's nature and behavior is generally" id="nature">
                 <value>Introspective, mind-ruining.</value>
                 <value>Sulking, vengeful, innocent.</value>
                 <value>Belligerent, cold, patient.</value>
@@ -264,7 +264,7 @@
                 <value>Attentive, crafty, manipulative, useless.</value>
                 <value>Inactive, incurious, conspiratorial.</value>
             </table>
-            <table name="If brought into contract or exchange, the deity maintains this taboo...">
+            <table name="If brought into contract or exchange, the deity maintains this taboo..." id="taboo">
                 <value>Beg No Mercy</value>
                 <value>Leave No Evidence</value>
                 <value>Keep No Secrets</value>

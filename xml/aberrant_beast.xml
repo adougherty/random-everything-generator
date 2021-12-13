@@ -1,5 +1,5 @@
             <category name="Aberrant Beast" id="aberrant_beast" short="Looks like">
-                <table name="The aberrant beast looks a good bit like">
+                <table name="The aberrant beast looks a good bit like" id="like">
                     <value>an ape</value>
                     <value>a bat</value>
                     <value>a centipede</value>
@@ -13,7 +13,7 @@
                     <value region_start="2" region_end="8" region_include="spider">a spider</value>
                     <value>a vulture</value>
                 </table>
-                <table name="It has" short="Has">
+                <table name="It has" short="Has" id="has">
                     <value>tentacles where you expect eyes</value>
                     <value>a blind, jawed worm for a tongue</value>
                     <value>a large single, lidless eye</value>
@@ -23,7 +23,7 @@
                     <value>dexterous tentacles it uses like hands</value>
                     <value>an unpleasant, briny odour</value>
                 </table>
-                <table name="and" short="Special quality">
+                <table name="and" short="Special quality" id="hasand">
                     <value>moves by floating eerily in air or water</value>
                     <value>moves by slithering or scuttling</value>
                     <value>can teleport in a swirl of shadows</value>
@@ -33,7 +33,7 @@
                     <value>mutters darkly to itself</value>
                     <value>whispers strange desires to mortals</value>
                 </table>
-                <table name="The beast is looking for" short="Looking for">
+                <table name="The beast is looking for" short="Looking for" id="looking">
                     <value>a brain to devour</value>
                     <value>a host to infect with its parasitic larva</value>
                     <value>a mortal to enslave</value>

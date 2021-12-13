@@ -1,5 +1,5 @@
         <category name="Golem" id="golem">
-            <table name="The golem is...">
+            <table name="The golem is..." id="is">
                 <value>Tiny.</value>
                 <value>Compact.</value>
                 <value>Humanoid.</value>
@@ -13,7 +13,7 @@
                 <value>Paunchy.</value>
                 <value>Slight.</value>
             </table>
-            <table name="The golem is made of...">
+            <table name="The golem is made of..." id="made">
                 <value>Clay.</value>
                 <value>Rock.</value>
                 <value>Iron.</value>
@@ -85,7 +85,7 @@
                 <value>Vegetables.</value>
                 <value>Sponge.</value>
             </table>
-            <table name="The golem is powered by...">
+            <table name="The golem is powered by..." id="powered">
                 <value>Clockwork.</value>
                 <value>Steam.</value>
                 <value>Bound souls.</value>
@@ -107,7 +107,7 @@
                 <value>The wind.</value>
                 <value>Liquid pumps.</value>
             </table>
-            <table name="The golem...">
+            <table name="The golem..." id="age">
                 <value>Is brand new.</value>
                 <value>Is recent.</value>
                 <value>Has been around for a while.</value>
@@ -115,7 +115,7 @@
                 <value>Is very old.</value>
                 <value>Is ancient.</value>
             </table>
-            <table name="The golem was built for...">
+            <table name="The golem was built for..." id="built">
                 <value>Mining.</value>
                 <value>Guarding.</value>
                 <value>Soldiering.</value>
@@ -187,7 +187,7 @@
                 <value>Enchanting.</value>
                 <value>Grinding.</value>
             </table>
-            <table name="The golem was created by...">
+            <table name="The golem was created by..." id="created">
                 <value region_start="2" region_end="8" region_include="priest">A priest.</value>
                 <value region_start="2" region_end="6" region_include="undead">A lich.</value>
                 <value region_start="2" region_end="6" region_include="wizard">A mage.</value>
@@ -208,7 +208,7 @@
                 <value region_start="2" region_end="10" region_include="criminal">A criminal.</value>
                 <value region_start="3" region_end="18" region_include="__noun__">An experimentalist.</value>
             </table>
-            <table name="...who imbued it with...">
+            <table name="...who imbued it with..." id="imbued">
                 <value>Knowledge of magic</value>
                 <value>Knowledge of creatures and plants </value>
                 <value>Knowledge of alchemy and medicine</value>
@@ -258,7 +258,7 @@
                 <value>alternate form</value>
                 <value>gain additional armour or summon a protective force field.</value>
             </table>
-            <table name="Distinguishing Feature: The golem has or is...">
+            <table name="Distinguishing Feature: The golem has or is..." id="feature">
                 <value>An extra pair of limbs.</value>
                 <value region_start="22" region_end="28" region_include="__noun__">A vibrant and unusual colour.</value>
                 <value>The complete lack of any facial features.</value>
@@ -301,7 +301,7 @@
                 <value region_start="28" region_end="45" region_include="__noun__">It's designed to resemble a mythical creature.</value>
                 <value>A strange hum emanating from its core.</value>
             </table>
-            <table name="The golem defends itself with...">
+            <table name="The golem defends itself with..." id="defend">
                 <value region_start="10" region_end="16" region_include="__noun__">A massive hammer</value>
                 <value>Unarmed combat</value>
                 <value region_start="11" region_end="17" region_include="__noun__">sharp twin blades</value>
@@ -323,7 +323,7 @@
                 <value>wild power.</value>
                 <value>Nothing; it can't defend itself.</value>
             </table>
-            <table name="The golem's condition might be described as...">
+            <table name="The golem's condition might be described as..." id="condition">
                 <value>Pristine.</value>
                 <value>Well-maintained.</value>
                 <value>Showing a little wear from active duty.</value>
