@@ -119,13 +119,13 @@
         <value region_start="8" region_end="14" region_include="undead">A bound wraith</value>
     </table>
     <table name="Rumor has it that within the walls of the tower, the mage keeps..." id="rumor">
-        <value region_start="4|24" region_end="10|28" region_include="legendary_weapon|class">The weapon of a storied hero.</value>
+        <value region_start="4|24" region_end="10|28" region_include="legendary_weapon|npc_class">The weapon of a storied hero.</value>
         <value region_start="25" region_end="36" region_include="necromancer">The staff of an infamous necromancer.</value>
         <value region_start="25" region_end="33" region_include="sorcerer">The staff of an infamous sorcerer.</value>
         <value region_start="4|21" region_end="8|26" region_include="wand|witch">The wand of a famous witch.</value>
         <value region_start="4|21" region_end="8|27" region_include="wand|wizard">The wand of a famous wizard.</value>
         <value region_start="29" region_end="39" region_include="wizard">The spellbook of a notorious magic-user.</value>
-        <value region_start="4|27" region_end="13|31" region_include="artifacts|class">The artifacts of an elvish hero.</value>
+        <value region_start="4|27" region_end="13|31" region_include="artifacts|npc_class">The artifacts of an elvish hero.</value>
         <value region_start="0|21" region_end="13|25" region_include="__noun__|wizard">Monstrosities of the mage's own creation.</value>
         <value region_start="57" region_end="62" region_include="world">A legendary stone, mirror, or pool used for watching the world from afar.</value>
         <value>A fabled book of demonology</value>

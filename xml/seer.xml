@@ -78,7 +78,7 @@
         <value>A dowsing rod</value>
         <value>A large, sharp-pointed knife</value>
         <value>Several star charts</value>
-        <value region_start="12" region_end="16" region_include="books">A dusty old book</value>
+        <value region_start="12" region_end="16" region_include="book">A dusty old book</value>
         <value>A bundle of notes, quills and inks</value>
         <value>A purse jingling with coins</value>
         <value>A garish, bejeweled ring</value>

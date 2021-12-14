@@ -440,7 +440,7 @@
         <value region_start="0|12" region_end="6|29" region_include="legendary_weapon|fighter">Weapon of a legendary warrior.</value>
         <value region_start="0|17" region_end="4|22" region_include="wands|witch">Wand of a famous witch.</value>
         <value region_start="0|17" region_end="4|23" region_include="wands|wizard">Wand of a famous wizard.</value>
-        <value region_start="0|25" region_end="9|29" region_include="books|wizard">Spellbook of a notorious mage.</value>
+        <value region_start="0|25" region_end="9|29" region_include="book|wizard">Spellbook of a notorious mage.</value>
         <value region_start="0|28" region_end="14|34" region_include="__noun__|pirate">Treasure stash of a notable pirate.</value>
         <value region_start="0|16" region_end="5|22" region_include="__noun__|dragon">Hoard of an old dragon.</value>
         <value region_start="0|23" region_end="8|37" region_include="__noun__|__noun__">Treasury of an ancient dwarvish realm</value>
@@ -481,7 +481,7 @@
             <value>A small fountain or reflecting pool</value>
             <value>The sound of a gong from another room</value>
             <value region_start="8" region_end="19" region_include="__noun__">A large holy symbol embedded in the wall</value>
-            <value region_start="7" region_end="11" region_include="books">A huge book of sacred texts or prayers</value>
+            <value region_start="7" region_end="11" region_include="book">A huge book of sacred texts or prayers</value>
             <value>The scent of incense burning nearby</value>
             <value region_start="26" region_end="40" region_include="__noun__">A kneeler beneath a small statue or icon</value>
             <value>An oil lamp with colored glass panels</value>

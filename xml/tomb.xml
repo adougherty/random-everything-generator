@@ -6,8 +6,8 @@
         <value region_start="11" region_end="19" region_include="sorcerer">An ancient sorcerer</value>
         <value region_start="9" region_end="16" region_include="barbarian">A mighty warrior</value>
         <value region_start="11" region_end="18" region_include="villain">A terrible villain</value>
-        <value region_start="12" region_end="22" region_include="class">A legendary adventurer</value>
-        <value region_start="13" region_end="21" region_include="class">A celebrated war hero</value>
+        <value region_start="12" region_end="22" region_include="npc_class">A legendary adventurer</value>
+        <value region_start="13" region_end="21" region_include="npc_class">A celebrated war hero</value>
         <value region_start="16" region_end="20" region_include="nobleman">An unscrupulous king</value>
         <value region_start="16" region_end="21" region_include="noblewoman">An unscrupulous queen</value>
         <value region_start="7" region_end="12" region_include="__noun__">A vain mayor or town master</value>
@@ -155,7 +155,7 @@
         <value region_start="0|12" region_end="6|29" region_include="legendary_weapon|fighter">Weapon of a legendary warrior.</value>
         <value region_start="0|17" region_end="4|22" region_include="wands|witch">Wand of a famous witch.</value>
         <value region_start="0|17" region_end="4|23" region_include="wands|wizard">Wand of a famous wizard.</value>
-        <value region_start="0|25" region_end="9|29" region_include="books|wizard">Spellbook of a notorious mage.</value>
+        <value region_start="0|25" region_end="9|29" region_include="book|wizard">Spellbook of a notorious mage.</value>
         <value region_start="0|28" region_end="14|34" region_include="__noun__|pirate">Treasure stash of a notable pirate.</value>
         <value region_start="0|16" region_end="5|22" region_include="__noun__|dragon">Hoard of an old dragon.</value>
         <value region_start="0|23" region_end="8|37" region_include="__noun__|__noun__">Treasury of an ancient dwarvish realm</value>
@@ -277,7 +277,7 @@
             <value>The scent of decaying flesh</value>
             <value region_start="20" region_end="38" region_include="__noun__">A mural depicting a mythological scene</value>
             <value>A small fountain or reflecting pool</value>
-            <value region_start="7" region_end="11" region_include="books">A huge book of sacred texts or prayers</value>
+            <value region_start="7" region_end="11" region_include="book">A huge book of sacred texts or prayers</value>
             <value>An ornate oil lamp</value>
             <value region_start="2" region_end="8" region_include="__noun__">A mosaic set into the floor of the room</value>
             <value region_start="35" region_end="67" region_include="__noun__">A wide fresco or mural depicting a mythological or historical scene</value>

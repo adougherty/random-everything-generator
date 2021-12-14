@@ -191,7 +191,7 @@
         <value>A pixie</value>
         <value>A sprite</value>
         <value>A talking songbird</value>
-        <value region_start="2|21" region_end="7|25" region_include="__noun__|books">A demon trapped in a book</value>
+        <value region_start="2|21" region_end="7|25" region_include="__noun__|book">A demon trapped in a book</value>
         <value region_start="2|21" region_end="7|24" region_include="__noun__|__noun__">A devil trapped in a gem</value>
         <value>An imp</value>
         <value>A quasit</value>

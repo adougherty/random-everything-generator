@@ -67,7 +67,7 @@
                     <value>A short sword of dwarvish make</value>
                     <value>A heavy wooden staff</value>
                     <value>A dagger in each boot</value>
-                    <value region_start="2" region_end="6" region_include="books">A book of hexes and curses</value>
+                    <value region_start="2" region_end="6" region_include="book">A book of hexes and curses</value>
                     <value>Quick wits and a gift for lying</value>
                 </table>
                 <table name="The bard also carries..." id="bard_carries">

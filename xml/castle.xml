@@ -56,7 +56,7 @@
         <value region_start="8" region_end="14" region_include="__noun__">An evil tyrant</value>
         <value region_start="9" region_end="16" region_include="fighter">A mighty warrior</value>
         <value region_start="9" region_end="16" region_include="barbarian">A mighty warlord</value>
-        <value region_start="10" region_end="20" region_include="class">A retired adventurer</value>
+        <value region_start="10" region_end="20" region_include="npc_class">A retired adventurer</value>
         <value region_start="13" region_end="21" region_include="__noun__">A celebrated war hero</value>
         <value region_start="16" region_end="19" region_include="nobleman">An unscrupulous king</value>
         <value region_start="16" region_end="21" region_include="noblewoman">An unscrupulous queen</value>
@@ -98,7 +98,7 @@
         <value region_start="10" region_end="18" region_include="merchant">A wealthy merchant</value>
         <value region_start="10" region_end="16" region_include="pirate">A retired pirate</value>
         <value region_start="10" region_end="15" region_include="rogue">A retired thief</value>
-        <value region_start="9" region_end="19" region_include="class">A former adventurer</value>
+        <value region_start="9" region_end="19" region_include="npc_class">A former adventurer</value>
         <value region_start="18" region_end="22" region_include="nobleman">An absentee noble lord</value>
         <value region_start="4" region_end="9" region_include="noble">The crown, but the king or queen rarely stays here</value>
         <value region_start="12" region_end="18" region_include="criminal">A dangerous outlaw</value>
@@ -167,8 +167,8 @@
         <value region_start="12" region_end="30" region_include="artifacts">A long-lost religious artifact</value>
         <value region_start="10" region_end="14" region_include="nobleman">A missing lord</value>
         <value region_start="10" region_end="14" region_include="noblewoman">A missing lord</value>
-        <value region_start="2" region_end="6" region_include="books">A book of vile curses</value>
-        <value region_start="2" region_end="6" region_include="books">A book of dark and ancient secrets</value>
+        <value region_start="2" region_end="6" region_include="book">A book of vile curses</value>
+        <value region_start="2" region_end="6" region_include="book">A book of dark and ancient secrets</value>
         <value region_start="9" region_end="23" region_include="__noun__">A cursed treasure hoard</value>
         <value region_start="39" region_end="43" region_include="__noun__">The last bottle of a famous vintage of wine</value>
         <value region_start="2|28" region_end="11|34" region_include="__noun__|__noun__">A lost work of a celebrated artist</value>
@@ -177,11 +177,11 @@
         <value region_start="0|12" region_end="6|29" region_include="legendary_weapon|fighter">Weapon of a legendary warrior.</value>
         <value region_start="0|17" region_end="4|22" region_include="wands|witch">Wand of a famous witch.</value>
         <value region_start="0|17" region_end="4|23" region_include="wands|wizard">Wand of a famous wizard.</value>
-        <value region_start="0|25" region_end="9|29" region_include="books|wizard">Spellbook of a notorious mage.</value>
+        <value region_start="0|25" region_end="9|29" region_include="book|wizard">Spellbook of a notorious mage.</value>
         <value region_start="0|28" region_end="8|34" region_include="__noun__|pirate">Treasure stash of a notable pirate.</value>
         <value region_start="0|16" region_end="5|22" region_include="__noun__|dragon">Hoard of an old dragon.</value>
         <value region_start="0|23" region_end="8|37" region_include="__noun__|__noun__">Treasury of an ancient dwarvish realm</value>
-        <value region_start="0|16|23" region_end="9|22|27" region_include="artifacts|highelf|class">Artifacts of an elvish hero.</value>
+        <value region_start="0|16|23" region_end="9|22|27" region_include="artifacts|highelf|npc_class">Artifacts of an elvish hero.</value>
         <value region_start="0|23" region_end="6|29" region_include="__noun__|priest">Relics of a celebrated priest.</value>
         <value region_start="35" region_end="39" region_include="ship">Chests of silver carried by a lost ship</value>
         <value region_start="35" region_end="42" region_include="caravan">Chests of silver carried by a lost caravan.</value>

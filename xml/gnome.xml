@@ -75,8 +75,8 @@
         <value>Several spare gears and springs.</value>
         <value>A flute.</value>
         <value>A tambourine.</value>
-        <value region_start="2" region_end="6" region_include="books">A book of tales.</value>
-        <value region_start="2" region_end="6" region_include="books">A book of poems.</value>
+        <value region_start="2" region_end="6" region_include="book">A book of tales.</value>
+        <value region_start="2" region_end="6" region_include="book">A book of poems.</value>
         <value>A well-used lantern.</value>
         <value>A field guide to flora and fauna.</value>
         <value>A field guide to herbs and poisons.</value>
@@ -86,7 +86,7 @@
         <value region_start="27" region_end="34" region_include="goblinclan">Protection from some tricky goblins.</value>
         <value region_start="7|24" region_end="17|30" region_include="__noun__|potions">A rare ingredient for a potion</value>
         <value region_start="7|24" region_end="17|30" region_include="__noun__|poisons">A rare ingredient for a poison</value>
-        <value region_start="7" region_end="11" region_include="books">A lost book of arcane secrets.</value>
+        <value region_start="7" region_end="11" region_include="book">A lost book of arcane secrets.</value>
         <value region_start="20" region_end="27" region_include="potions">Someone to buy some potions.</value>
         <value>Someone from whom to palm a few coins.</value>
         <value region_start="31" region_end="37" region_include="__noun__">An opinion on some plans for a device.</value>
@@ -97,7 +97,7 @@
     <table name="...but the gnome is also interested in finding..." is="gnome_finding">
         <value region_start="24" region_end="30" region_include="potions">The recipe for a potent potion.</value>
         <value region_start="24" region_end="30" region_include="poisons">The recipe for a potent poison.</value>
-        <value region_start="12" region_end="16" region_include="books">A copy of a book of lore on dangerous beasts.</value>
+        <value region_start="12" region_end="16" region_include="book">A copy of a book of lore on dangerous beasts.</value>
         <value>Something with which to tinker.</value>
         <value region_start="26" region_end="30" region_include="mine">The location of a storied mine.</value>
         <value region_start="12" region_end="20" region_include="__noun__">A legendary gemstone.</value>

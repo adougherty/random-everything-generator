@@ -111,7 +111,7 @@
         <value region_start="2" region_end="13" region_include="__noun__">A mass escape in the past</value>
         <value region_start="16" region_end="31" region_include="criminal">The escape of a famous criminal</value>
         <value region_start="26" region_end="41" region_include="criminal">Being the final home of a famous criminal</value>
-        <value region_start="26" region_end="39" region_include="class">Being the final home of a legendary hero</value>
+        <value region_start="26" region_end="39" region_include="npc_class">Being the final home of a legendary hero</value>
         <value region_start="26" region_end="32" region_include="undead">Being haunted by vengeful ghosts</value>
         <value region_start="13" region_end="25" region_include="__noun__">Its horrific torture pits</value>
         <value>Never suffering a successful escape</value>

@@ -35,7 +35,7 @@
                     <value region_start="16" region_end="30" region_include="__noun__">An answer to an ancient riddle.</value>
                     <value>A mortal worthy of its service.</value>
                     <value>A mortal to torment and to tease.</value>
-                    <value region_start="3|25" region_end="11|29" region_include="artifacts|class">An artifact of an elvish hero of a past age.</value>
+                    <value region_start="3|25" region_end="11|29" region_include="artifacts|npc_class">An artifact of an elvish hero of a past age.</value>
                     <value region_start="4|28" region_end="12|39" region_include="wilderness|elfenclaev">The location of an ancient, elvish ruin.</value>
                     <value region_start="4|34" region_end="10|38" region_include="__noun__|__noun__">The source of corruption near its home.</value>
                     <value region_start="29" region_end="43" region_include="__noun__">The recipient of a specific, secret message.</value>

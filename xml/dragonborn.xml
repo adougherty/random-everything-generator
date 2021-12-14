@@ -61,7 +61,7 @@
                     <value region_start="24" region_end="28" region_include="__noun__">Regain respect from its clan</value>
                     <value region_start="8" region_end="19" region_include="__noun__">Guard a sacred site from outsiders</value>
                     <value region_start="37" region_end="51" region_include="__noun__">Find some knowledge about an ancient event or place</value>
-                    <value region_start="43" region_end="47" region_include="books">Find one of the last copies of a legendary book</value>
+                    <value region_start="43" region_end="47" region_include="book">Find one of the last copies of a legendary book</value>
                     <value region_start="12" region_end="19" region_include="__noun__">Protect the secrets of his or her people at all costs</value>
                 </table>
                 <table name="The dragonborn carries" id="carries">

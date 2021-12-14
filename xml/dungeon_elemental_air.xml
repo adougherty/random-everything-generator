@@ -78,7 +78,7 @@
                 <value region_start="0" region_end="14" region_include="__noun__">Infamous giant’s treasure hoard.</value>
                 <value region_start="21" region_end="28" region_include="__noun__">Wreck of a legendary airship.</value>
                 <value>Rod of elemental power.</value>
-                <value region_start="32" region_end="36" region_include="class">Bow that belonged to an ancient hero.</value>
+                <value region_start="32" region_end="36" region_include="npc_class">Bow that belonged to an ancient hero.</value>
                 <value region_start="9" region_end="15" region_include="wizard">Powerful wizard’s lost spellbook.</value>
                 <value region_start="11" region_end="17" region_include="cultist">Imprisoned dragon.</value>
             </table>
