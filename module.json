@@ -5,7 +5,11 @@
 	"authors": [
 		{
 			"name": "DarthCluck",
-			"url": "https://github.com/adougherty"
+			"url": "https://github.com/adougherty",
+			"reddit": "u/DarthCluck",
+			"discord": "DarthCluck#3518"
+			"patreon": "DarthCluck",
+			"twitter": "@DarthCluck"
 		}
 	],
 	"version": "0.1.1",
