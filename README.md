@@ -2,6 +2,11 @@
  
 Random Everything Generator gives the user acccess to nearly 250 collections of random tables to describe just about anything.
 
+## Support
+If you like this module, and would like to support my efforts, please visiy my **[Patreon](https://www.patreon.com/darthcluck)**. Patreon supporters will have access to even more tables!
+
+If you would like to contact me, you can find me on Discord `DarthCluck#3518`
+
 ## Generating Something
 
 To get started, click on the Rollable Tables tab in Foundry, and click on the new button "Randomly Generate."
