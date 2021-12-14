@@ -153,7 +153,7 @@ class REGChild extends Application{
                         document.RandomEverythingGeneratorData[localPath] != parseInt(document.RandomEverythingGeneratorData[localPath])) {
                         // There is already a selected value for this category
                         file = document.RandomEverythingGeneratorData[localPath];
-                        localPath += '.' + file;
+                        //localPath += '.' + file;
                     }
                     document.RandomEverythingGeneratorData[localPath] = file;
                     $.get(`/modules/random-everything-generator/xml/${file}.xml`, xml => {
