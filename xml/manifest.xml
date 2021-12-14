@@ -341,7 +341,7 @@
 			<category id="vampire" />
 		</category>
 		<category name="Objects, Items and Misc" id="items">
-			<category id="books" />
+			<category id="book" />
 			<category id="coins" />
 			<category id="disease" />
 			<category id="charm" />

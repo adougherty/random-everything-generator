@@ -80,7 +80,7 @@
         <value region_start="38" region_end="46" region_include="merchant">A planar being disguised as a wealthy merchant</value>
         <value>A joint council of Masters of Coin from all civilized kingdoms of the world</value>
         <value region_start="2" region_end="15" region_include="goblin">A savant goblin who has achieved immortality by divine blessing</value>
-        <value region_start="11" region_end="24" region_include="class">A grizzled ex-adventurer</value>
+        <value region_start="11" region_end="24" region_include="npc_class">A grizzled ex-adventurer</value>
         <value>A council of investors</value>
         <value>An argumentative mass democracy of all the company's merchants</value>
         <value region_start="20" region_end="34" region_include="caravan_master">A massively wealthy caravan master who found a lost city of gold</value>

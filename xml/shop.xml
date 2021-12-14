@@ -33,7 +33,7 @@
         <value>Hunting Tools</value>
         <value>Herbs</value>
         <value>Remedies and tonics</value>
-        <value region_start="0" region_end="5" region_include="books">Books</value>
+        <value region_start="0" region_end="5" region_include="book">Books</value>
         <value>Dolls</value>
         <value>Toys</value>
         <value>Exotic animals</value>

@@ -33,7 +33,7 @@
                 <value region_start="0" region_end="4" region_include="coins">Coin</value>
                 <value>Gem</value>
                 <value>Piece of twine</value>
-                <value region_start="0" region_end="4" region_include="books">Book</value>
+                <value region_start="0" region_end="4" region_include="book">Book</value>
                 <value>Trinket of unknown origin, and alien design</value>
                 <value>Children's toy</value>
                 <value region_start="14" region_end="23" region_include="__noun__">Letter from a loved one</value>

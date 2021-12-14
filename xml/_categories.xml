@@ -102,7 +102,7 @@
         <category id="vampire" name="Vampire"/>
     </category>
     <category name="Objects, Items and Misc" id="items">
-        <category id="books" name="Books" />
+        <category id="book" name="Books" />
         <category id="coins" name="Coins" />
         <category id="disease" name="Disease" />
         <category id="charm" name="Charms" />

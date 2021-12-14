@@ -22,7 +22,7 @@
             </table>
             <table name="The cultist has..." id="has">
                 <value>A ceremonial dagger in hand</value>
-                <value region_start="2" region_end="6" region_include="books">A book protruding from his or her pocket</value>
+                <value region_start="2" region_end="6" region_include="book">A book protruding from his or her pocket</value>
                 <value>A large scar on the throat</value>
                 <value>Scraggly matted hair</value>
                 <value>A shaved head</value>

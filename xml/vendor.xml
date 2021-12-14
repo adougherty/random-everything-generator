@@ -34,7 +34,7 @@
         <value>Live animals.</value>
         <value>Raw materials.</value>
         <value region_start="0" region_end="15" region_include="seer">Fortune telling</value>
-        <value region_start="0" region_end="5" region_include="books">Books</value>
+        <value region_start="0" region_end="5" region_include="book">Books</value>
         <value region_start="0" region_end="5" region_include="coins">Coins</value>
         <value region_start="12" region_end="18" region_include="chests">Finely made chests</value>
         <value>Slaves</value>

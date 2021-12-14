@@ -100,8 +100,8 @@
         <value region_start="38" region_end="43" region_include="__noun__">The key to the gates of a destructive realm.</value>
         <value>A key to the gates of the realm of the dead.</value>
         <value region_start="29" region_end="40" region_include="city">Knowledge of the location of a lost city.</value>
-        <value region_start="2" region_end="6" region_include="books">A book of morbid omens and prophecies.</value>
-        <value region_start="2" region_end="6" region_include="books">A book of foul summoning rituals.</value>
+        <value region_start="2" region_end="6" region_include="book">A book of morbid omens and prophecies.</value>
+        <value region_start="2" region_end="6" region_include="book">A book of foul summoning rituals.</value>
     </table>
     <table name="Weapons/Attacks: The fiend prefers to fight with..." id="fiend_weapons">
         <value>A whip of pure flame.</value>
