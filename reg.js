@@ -81,7 +81,7 @@ class RandomEverythingGenerator extends FormApplication{
                             console.log(this.Path)
                             let regChild = new REGChild(category.attr('name'));
                             regChild.XML = xmlStr;
-                            regChild.Path = this.Path + '.' + formData.category;
+                            regChild.Path = (this.Path) ? this.Path + '.' + formData.category : '';
                             regChild.Markov = markov;
                             regChild.render(true);
                         }
@@ -144,14 +144,8 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
 
         RandomEverythingGenerator.log(true, "Opening RandomEverythingGenerator Form");
 
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', '/modules/random-everything-generator/xml/_categories.xml');
-        xhr.send();
-        xhr.onload = function() {
-            // Add a list item for every top-level category
-            const xmlStr = xhr.response;
-            const doc = new DOMParser().parseFromString(xmlStr, 'application/xml');
-            const nodeTop = doc.getElementsByTagName('categories')[0]; // Guaranteed top level node
+        $.get('/modules/random-everything-generator/xml/_categories.xml', xml => {
+            const nodeTop = $(xml).find('categories')[0]; // Guaranteed top level node
             const nodeCategories = nodeTop.children;
             const categories = [];
             categories.push(buildCategory(nodeCategories));
@@ -160,14 +154,15 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
             document.RandomEverythingGeneratorData = {};
             let reg = new RandomEverythingGenerator();
             reg.Categories = categories[0];
-            reg.XML = xmlStr;
+            reg.XML = (new XMLSerializer()).serializeToString(xml);
 
             for (const node of nodeCategories) {
                 reg.Choices[node.getAttribute('id')] = node.getAttribute('name')
             }
 
             reg.render(true);
-        }
+
+        })
     });
 
     const regStorySelect = html.find("select.reg");
