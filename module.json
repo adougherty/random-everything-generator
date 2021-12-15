@@ -38,6 +38,6 @@
 		"scripts/regtitle.js"
 	],
 	"url": "https://github.com/adougherty/random-everything-generator",
-	"manifest": "https://raw.githubusercontent.com/adougherty/random-everything-generator/master/module.json",
+	"manifest": "https://raw.githubusercontent.com/adougherty/random-everything-generator/main/module.json",
 	"download": "https://github.com/adougherty/random-everything-generator/archive/refs/heads/main.zip"
 }
