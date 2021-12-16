@@ -291,7 +291,7 @@
         </list>
     </table>
     <table name="The temple was built by..." id="temple_builtby">
-        <value region_start="11" region_end="24" region_include="__noun__">An ancient dwarvish clan.</value>
+        <value region_start="11" region_end="24" region_include="dwarfclan">An ancient dwarvish clan.</value>
         <value region_start="11|15" region_end="14|21" region_include="highelf|nobleman">An ancient elf prince.</value>
         <value region_start="11" region_end="17" region_include="wizard">A powerful wizard.</value>
         <value region_start="7" region_end="16" region_include="sorcerer">A dark sorceress.</value>

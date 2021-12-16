@@ -27,7 +27,7 @@
                 <value region_start="24" region_end="30" region_include="castle">Long before most of the castle</value>
             </table>
             <table name="The dungeon was built by..." short="Built by" id="dungeon_builtby">
-                <value region_start="11" region_end="24" region_include="__noun__">An ancient dwarvish clan.</value>
+                <value region_start="11" region_end="24" region_include="dwarfclan">An ancient dwarvish clan.</value>
                 <value region_start="11|15" region_end="14|21" region_include="highelf|nobleman">An ancient elf prince.</value>
                 <value region_start="11" region_end="17" region_include="wizard">A powerful wizard.</value>
                 <value region_start="7" region_end="16" region_include="sorcerer">A dark sorceress.</value>

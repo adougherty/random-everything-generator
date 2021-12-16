@@ -5,6 +5,7 @@ Note: Random Everything Generator is currently in beta.
 ## [Bugs]
 - Clicking on a randomly generated race (For example, with Assassin) does not load the race child
 - The initially loaded race (For example, with Assassin) does not link properly
+- Selecting a value from dropdown does not create links
 
 ## [Version 1.0]
 - Temporarily remove blue links until Editor issues resolved
@@ -20,6 +21,9 @@ Note: Random Everything Generator is currently in beta.
 - Allow naming of Members. See: [Issue #5](https://github.com/adougherty/random-everything-generator/issues/5)
 - Add titles to regen button, dropdown button, and delete button
 - Allow for the tables to be weighted. See [Issue #6](https://github.com/adougherty/random-everything-generator/issues/6)
+- Let users filter lists for their worlds. For example, only have certain races available in the race table, or certain classes.
+- Consider: Having some system specific tables. Races just for 5e, or just for Pathfinder
+- Split races off from mutations, such as vamprie, werewolf, etc.
 
 
 ## [Version 1.1]
