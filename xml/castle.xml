@@ -126,8 +126,8 @@
         <value region_start="4" region_end="14" region_include="__noun__">The wild lands beyond are full of threats</value>
         <value region_start="4" region_end="21" region_include="__noun__">The surrounding lands are part of a long-standing territorial dispute</value>
         <value region_start="4" region_end="20" region_include="__noun__">The surrounding land is held sacred</value>
-        <value region_start="4|36|50" region_end="16|40|62" region_include="__noun__|__noun__|__noun__">The nearby lands are home to a rare herb that has magical uses</value>
-        <value region_start="4|36|50" region_end="16|40|62" region_include="__noun__|__noun__|__noun__">The nearby lands are home to a rare tree that has magical uses</value>
+        <value region_start="4|31" region_end="16|62" region_include="wilderness|__noun__|__noun__">The nearby lands are home to a rare herb that has magical uses</value>
+        <value region_start="4|36|50" region_end="16|40|62" region_include="wilderness|__noun__|__noun__">The nearby lands are home to a rare tree that has magical uses</value>
         <value region_start="4|36|54" region_end="16|44|66" region_include="__noun__|__noun__|__noun__">The nearby lands are home to a rare creature that has magical uses</value>
     </table>
     <table name="The inner keep's defenses include:" short="Defenses" id="castle_defenses">

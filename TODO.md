@@ -2,7 +2,12 @@ These are improvements that I intend to make in the future. If you would like to
 
 Note: Random Everything Generator is currently in beta.
 
+## [Bugs]
+- Clicking on a randomly generated race (For example, with Assassin) does not load the race child
+- The initially loaded race (For example, with Assassin) does not link properly
+
 ## [Version 1.0]
+- Temporarily remove blue links until Editor issues resolved
 - Save NPCs to Character Sheets
 - Save Stories to JournalEntries
 - Save Items to ItemsDirectory
@@ -11,6 +16,11 @@ Note: Random Everything Generator is currently in beta.
 - Add API hooks
 - Add Chat hooks
 - Source partial values from another tables. Ex: "A gold cloak." The color should come from another table. The cloak should come from a 3rd table
+- Add "Catch Phrases," voice sounds, accents, manner of speach, vocal ticks, and physical ticks to the various npc tables (Patreon?). Thanks for /u/deadlyllama for the suggestion
+- Allow naming of Members. See: [Issue #5](https://github.com/adougherty/random-everything-generator/issues/5)
+- Add titles to regen button, dropdown button, and delete button
+- Allow for the tables to be weighted. See [Issue #6](https://github.com/adougherty/random-everything-generator/issues/6)
+
 
 ## [Version 1.1]
 - Add a button to NPC character sheets to randomly detail that character

@@ -122,10 +122,11 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
     }
 
     const headerActions = html.find('div.header-actions');
-    const buttonLabel = game.i18n.localize('RandomEverythingGenerator.button-title')
+    const buttonLabel = game.i18n.localize('RandomEverythingGenerator.button-label')
+    const buttonTitle = game.i18n.localize('RandomEverythingGenerator.button-title')
     const regButtonHtml =
         `<div class="header-reg action-buttons flexrow">
-            <button class="reg" title="${buttonLabel}">${buttonLabel}</button>
+            <button class="reg" title="${buttonTitle}" stlye="max-width:20px">${buttonLabel}</button>
             <select id="reg-select-story" class="reg" style="background-color:rgba(255,255,245,0.8);height:24px;margin:6px 6px 0px 6px;max-width:125px"">
                 <option value="">Stories</option>
                 ${story_options.join()}
