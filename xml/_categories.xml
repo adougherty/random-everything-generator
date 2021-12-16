@@ -27,6 +27,7 @@
         <category id="secretsociety" name="Secret Society" />
         <category id="gang" name="Gang" />
         <category id="watchmen" name="Watchmen" />
+        <category id="dwarfclan" name="Dwarf Clan" patreon="true" />
     </category>
     <category name="Food" id="food">
         <category id="breakfast_camp" name="Breakfast in Camp"/>

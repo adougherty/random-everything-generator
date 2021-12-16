@@ -268,7 +268,7 @@
 		<value>Waxxed and perfectly straight</value>
 		<value>Permmed with chemicals and hot steel</value>
 	</table>
-	<table name="The clan's attitude is" name="attitude">
+	<table name="The clan's attitude is" id="attitude">
 		<value>Cheery and full of song</value>
 		<value>Glum and dour</value>
 		<value>Anti-social</value>

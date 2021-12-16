@@ -1,6 +1,6 @@
 {
-  "name": "random-everything-generator",
-  "title": "Random Everything Generator",
+  "name": "random-everything-generator-patreon",
+  "title": "Random Everything Generator (Patreon)",
   "description": "Stuck with writer's block? Let us create the story for you",
   "authors": [
     {
@@ -12,7 +12,7 @@
       "twitter": "@DarthCluck"
     }
   ],
-  "url": "https://github.com/adougherty/random-everything-generator",
+  "url": "https://darthcluck.com/random-everything-generator/ELb5HkC9dr/",
   "flags": {},
   "version": "0.1.1",
   "minimumCoreVersion": "0.8.0",
@@ -45,8 +45,8 @@
   "system": [],
   "dependencies": [],
   "socket": false,
-  "manifest": "https://raw.githubusercontent.com/adougherty/random-everything-generator/main/module.json",
-  "download": "https://github.com/adougherty/random-everything-generator/archive/refs/heads/main.zip",
+  "manifest": "https://darthcluck.com/random-everything-generator/ELb5HkC9dr/module.json",
+  "download": "https://darthcluck.com/random-everything-generator/ELb5HkC9dr/main.zip",
   "protected": false,
   "coreTranslation": false,
   "library": false
