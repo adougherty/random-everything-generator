@@ -1,0 +1,368 @@
+<category name="Dwarf Clan" id="dwarfclan">
+	<table name="The dwarfs are" id="are">
+		<value>Consumate diggers. They dig for little reason other than the pleasure of the craft</value>
+		<value>Prolific miners. Tracking all of the minerals they can find, common or rare</value>
+		<value>Recluses. They have little desire to have contact with others.</value>
+		<value>Warriors. Always prepared for the next glorious battle</value>
+		<value>Drunks. Nothing matters more than a good ale</value>
+		<value>Explorers. Whether within or above the dirt, there are always new lands, and new peoples to discover</value>
+		<value region_start="16" region_stop="21" region_include="wilderness">Refugees. These lands are not their home</value>
+		<value>Under the thumb of a powerful king</value>
+		<value>A loose collection of independant tribes</value>
+        <value>Disorganized; a clan of competing warriors</value>
+        <value>A tight-knit war band</value>
+		<value>Treasure hunters.</value>
+		<value>Master crafters.</value>
+		<value>Struggling crafters.</value>
+	</table>
+	<table name="The dwarfs value" id="value">
+		<value>Anything that glitters</value>
+		<value>Only the finest of craftsmanship</value>
+		<value>A strong drink</value>
+		<value>Anyone that can walk straight after a night of drinking</value>
+		<value>Brotherhood</value>
+		<value>Family</value>
+		<value>Rare gems</value>
+		<value>Brute Strength</value>
+		<value>Honor in battle</value>
+		<value>Bravery</value>
+		<value>Virility</value>
+		<value>Honoring the gods</value>
+		<value>Battle scars</value>
+		<value>A good story</value>
+		<value>A long beard</value>
+		<value>A well groomed beard</value>
+	</table>
+	<table name="The clan's iconography features" id="iconography">
+        <value>Symbols of death and destruction (blood)</value>
+        <value>Symbols of death and destruction (bones)</value>
+        <value>Symbols of death and destruction (flames)</value>
+        <value>Symbols of death and destruction (skulls)</value>
+        <value>Symbols of strength and weaponry (arrows)</value>
+        <value>Symbols of strength and weaponry (spears)</value>
+        <value>Symbols of strength and weaponry (stones)</value>
+        <value>Symbols of strength and weaponry (bows and arrows)</value>
+        <value>Wolf's head.</value>
+        <value>A skull.</value>
+        <value>An animal skull.</value>
+        <value>A bear</value>
+        <value>A boar</value>
+        <value>An eagle</value>
+        <value>A horse</value>
+        <value>A lion</value>
+        <value>A gryphon</value>
+        <value>A hippogrif</value>
+        <value>Two axes.</value>
+        <value>An axe.</value>
+        <value>Two swords.</value>
+        <value>Crossed bones.</value>
+        <value>A laughing face.</value>
+        <value>A fist.</value>
+        <value>A dragon.</value>
+        <value>A wolf.</value>
+        <value region_start="4|25" region_end="15|28" region_include="__noun__|deity">The holy symbol of their god.</value>
+        <value>An 8 pointed star.</value>
+        <value>A claw.</value>
+        <value>A shield.</value>
+        <value>A cross pattern.</value>
+        <value>A spotted pattern.</value>
+        <value>A bloody hand.</value>
+        <value>Teeth.</value>
+        <value>Eyes.</value>
+        <value>A boot.</value>
+        <value>Several green figures.</value>
+        <value>A strange geometric shape.</value>
+        <value>A beholder.</value>
+        <value>A drake.</value>
+        <value>A tiger.</value>
+        <value>A shark.</value>
+        <value>Waves.</value>
+        <value>A volcano.</value>
+        <value>A forest.</value>
+        <value>A large tree.</value>
+        <value>The four forces of nature.</value>
+        <value>Fire.</value>
+        <value>Water.</value>
+        <value>Earth.</value>
+        <value>Air.</value>
+        <value>An angry face.</value>
+        <value>Several different faces.</value>
+        <value>Two hands.</value>
+        <value>A strange twenty sided shape with a 20 on one side.</value>
+        <value>A square.</value>
+        <value>A triangle.</value>
+        <value>Some scribble that looks like a toddler made it.</value>
+        <value>A river.</value>
+        <value>The surrounding region.</value>
+        <value>A nude woman.</value>
+        <value>A strong man.</value>
+        <value region_start="6" region_end="9" region_include="deity">Their god.</value>
+        <value>Just black.</value>
+        <value>Just red.</value>
+        <value>Just white.</value>
+        <value>Just green.</value>
+        <value>Just blue.</value>
+        <value>Just yellow.</value>
+        <value>A variance of striped colours.</value>
+        <value>Half and half two colours.</value>
+        <value>Tusks.</value>
+        <value>The area the dwarfs came from.</value>
+        <value>A cliff.</value>
+        <value>A tower.</value>
+        <value>A fortress.</value>
+        <value>A monster.</value>
+        <value>Armour.</value>
+        <value>A helmet.</value>
+        <value>A spear.</value>
+        <value>Two spears.</value>
+        <value>Several spears.</value>
+        <value>A long spiked sword.</value>
+        <value>A bow.</value>
+        <value>An arrow.</value>
+        <value>A crossbow.</value>
+        <value>A cannon.</value>
+        <value>A catapult.</value>
+        <value>A trebuchet.</value>
+        <value>A dark circle.</value>
+        <value>A hand print.</value>
+        <value>A footprint.</value>
+        <value>A potion.</value>
+        <value>Runic symbols.</value>
+        <value>Some face that looks so strangely like the DM.</value>
+        <value>A crown</value>
+        <value>A mace</value>
+        <value>A pick</value>
+        <value>A shovel</value>
+        <value>Dynamite</value>
+        <value>Mining tools</value>
+        <value>A cave</value>
+        <value>A mug</value>
+        <value>A barrel</value>
+        <value>A foaming mug</value>
+        <value>Coins</value>
+        <value>Jewels</value>
+	</table>
+	<table name="The dwarf's king is" id="king">
+		<value>A tyrant</value>
+		<value>Young and inexperienced</value>
+		<value>A valued member of society elected to his position</value>
+		<value>A warlord</value>
+		<value>The oldest dwarf in the clan</value>
+		<value>Not a dwarf</value>
+		<value>Scarred from decades of war</value>
+		<value>Hidden from his subjects</value>
+		<value>A strong diplomant</value>
+		<value>A greedy merchant</value>
+		<value>Extremely sick</value>
+		<value>Has not been seen in over a month</value>
+		<value>said to be crafting a legendary magical item</value>
+		<value>preparing for war</value>
+		<value>also the king of another clan</value>
+		<value>A con artist</value>
+		<value>not the rightful sovereign</value>
+		<value>planning a great hunt</value>
+		<value>The decendant of a powerful hero</value>
+		<value>The heir to a great forture</value>
+		<value>guilty of patricide</value>
+		<value>Sporting the longest beard in the clan</value>
+		<value>Proud of having the heaviest beard in the clan</value>
+	</table>
+	<table name="The clan's favorite brew is made from" id="brew">
+		<value>Pine nuts</value>
+		<value>Honey</value>
+		<value>Rotting meat</value>
+		<value>Blood</value>
+		<value>The blood of their enemies</value>
+		<value>Mineral dust</value>
+		<value>A glowing fungus</value>
+		<value>A tall mushroom</value>
+		<value>Cocoa beans</value>
+		<value>Tabacco leaves</value>
+		<value>A halucinatory substance</value>
+		<value>Magical means</value>
+		<value>Ground up bugs</value>
+		<value>Waters bubbling up from the underdark</value>
+		<value>Sugar</value>
+		<value>Carrots</value>
+		<value>Cabbage</value>
+		<value>Apples</value>
+		<value>Oranges</value>
+		<value>Lemons</value>
+		<value>Maple Syrup</value>
+		<value>A vegetable not native to these lands</value>
+	</table>
+	<table name="...and has hints of" id="hints">
+		<value>More alcohol</value>
+		<value>Cinnamon</value>
+		<value>Cloves</value>
+		<value>Peppermint</value>
+		<value>Anise</value>
+		<value>Rasperries</value>
+		<value>Nutmeg</value>
+		<value>Nutmeg</value>
+		<value>An indiscernable spice</value>
+		<value>Green tea</value>
+		<value>Grape</value>
+	</table>
+	<table name="The dwarfs fear" id="fear">
+		<value>Nothing</value>
+		<value>Strangers</value>
+		<value>Dark Elves</value>
+		<value>Dark Dwarves</value>
+		<value>Spellcasters</value>
+		<value>Dragons</value>
+		<value>Giants</value>
+		<value>Daylight</value>
+		<value>Lava</value>
+		<value>Storms</value>
+		<value>Lightning</value>
+		<value>Thunder</value>
+		<value>Vampires</value>
+		<value>Ghosts</value>
+		<value>Witches</value>
+		<value>The Gods</value>
+		<value>A neighboring clan</value>
+		<value>Earthquakes</value>
+		<value>Floods</value>
+		<value>Volcanoes</value>
+		<value>The beardless</value>
+	</table>
+	<table name="The clan is known for" id="known">
+		<value>Burning everything after a war</value>
+		<value>Stealing everything of value from nearby towns</value>
+		<value>Wiping out an entire clan of goblins</value>
+		<value>Defending the region against giants</value>
+		<value>Their modern marvels of industry</value>
+		<value>The art of their craftsmanship</value>
+		<value>The power of their magical artifacts</value>
+		<value>Being able to withstand a lengthy seige</value>
+		<value>The vast quantity of rare gems they are able to produce</value>
+		<value>Their ferocity in battle</value>
+		<value>Their strong beverages</value>
+		<value>Their stubbornness</value>
+		<value>Their devotion to their god</value>
+		<value>Their amazing beards</value>
+	</table>
+	<table name="The dwarfs beards are" id="beard">
+		<value>Cut short</value>
+		<value>Long. Nearly touching the ground</value>
+		<value>Very long. They drag along the ground behind them</value>
+		<value>Very well kept. Shampooed, conditions, oiled...</value>
+		<value>Colored brown and black</value>
+		<value>Colored with bright colors such as yellow and pink</value>
+		<value>Ornamented with gems</value>
+		<value>Ornamented with baubles</value>
+		<value>Disgustingly dirty</value>
+		<value>Infested with lice</value>
+		<value>Infested with spiders and roaches</value>
+		<value>White as snow</value>
+		<value>Extremely thick</value>
+		<value>Whispy but long</value>
+		<value>Non-existant</value>
+		<value>Curly</value>
+		<value>Braided in a long strand</value>
+		<value>Braided in two strands</value>
+		<value>Braided in many long strands</value>
+		<value>Braided and flipped over their back</value>
+		<value>Greased and slick</value>
+		<value>Waxxed and perfectly straight</value>
+		<value>Permmed with chemicals and hot steel</value>
+	</table>
+	<table name="The clan's attitude is" name="attitude">
+		<value>Cheery and full of song</value>
+		<value>Glum and dour</value>
+		<value>Anti-social</value>
+		<value>Rowdy and Festive</value>
+		<value>Relaxed and Carefree</value>
+		<value>Suspicious</value>
+		<value>Guarded</value>
+		<value>Frightened</value>
+		<value>Unnaturally Welcoming</value>
+		<value>Eager for a fight</value>
+		<value>Mournful</value>
+	</table>
+	<table name="The clan's goals include" id="goal">
+		<value>Crafting a legendary magical weapon</value>
+		<value>Crafting the perfect brew</value>
+		<value>Getting revenge on a giant</value>
+		<value>Slaying a mighty dragon</value>
+		<value>Fidning a legendary gem</value>
+		<value>Defending their home against a Giant threat</value>
+		<value>Finding a permanent home</value>
+		<value>Revenge against a rival dwarvish clan</value>
+		<value>Establishing order in the region</value>
+		<value>Establishing the right to rule in the region</value>
+		<value>Building architecture that will stand the test of time</value>
+	</table>
+	<table name="The clan loves to fight" id="fight">
+		<value>Giants</value>
+		<value>Dragons</value>
+		<value>Other Dwarves</value>
+		<value>Elves</value>
+		<value>Dark Dwarves</value>
+		<value>Dark Elves</value>
+		<value>Purple Wurms</value>
+		<value>Anything and Everything</value>
+		<value>Goblins</value>
+		<value>Orcs</value>
+		<value>Humans</value>
+	</table>
+	<table name="When fighting, the clan" id="whenfight">
+		<value>Roars praises to their god</value>
+		<value>Shouts insults at their foes</value>
+		<value>Uses overwhelming numbers</value>
+		<value>Attacks from below</value>
+		<value>Prefers ranged combat</value>
+		<value>Attacks only at night</value>
+		<value>Is blood-thirsty, killing everyone, including animals</value>
+		<value>Is slow and surgical</value>
+		<value>Gives ample warning so non-combatants can leave</value>
+		<value>Enlists the aid of neighbors</value>
+		<value>Uses war machines to aid them</value>
+	</table>
+	<table name="Most of the dwarves are weilding" id="weild">
+		<value>Hand Axes</value>
+		<value>War Picks</value>
+		<value>Battleaxes</value>
+		<value>Spears</value>
+		<value>Spears and Shields</value>
+		<value>Hand Axes and Shields</value>
+		<value>Swords</value>
+		<value>Flails</value>
+		<value>Spiked Clubs</value>
+		<value>Nothing but two strong fists</value>
+		<value>Maces</value>
+		<value>Daggers</value>
+		<value>Crossbows</value>
+	</table>
+	<table name="The clans primary soldiers are" id="soldier">
+		<value>Young enlisted soldiers</value>
+		<value>Veterans with a wealth of experience</value>
+		<value>Everyone in the clan. The whole clan is prepared to pick up arms at a moment's notice</value>
+		<value>A part of the matriarchy. Only women are soldiers</value>
+		<value>Beat and bruised from a recent battle</value>
+		<value>Lazy and only fight if they really have to</value>
+		<value>Bullies that have their way with the rest of the clan</value>
+		<value>Backed by powerful spellcasters</value>
+		<value>Lead by a legendary hero</value>
+		<value>Supported by fierce war dogs</value>
+		<value>Often rowdy and drunk</value>
+	</table>
+	<table name="The clan is based out of" is="base">
+		<value>A deep cavern that snakes into the underdark</value>
+		<value>A volcanic cavern</value>
+		<value>A cavern behind a waterfall</value>
+		<value>A ancient gem mine that has long since run dry</value>
+		<value>A sectioned off area of a larger city</value>
+		<value>A single massive cavern that has been built into</value>
+		<value>An artificial cave system</value>
+		<value>A series of caves in the side of a mountain</value>
+		<value>An artifical hill built over the top of above-ground dwellings</value>
+		<value>An ancient and forgotten city</value>
+		<value>A goblin cave system that was taken over</value>
+		<value>An abandonded fire giant stronghold</value>
+		<value>The home of their ancestors</value>
+	</table>
+	<include name="Enclave" id="dwarfenclave" />
+    <member name="Dwarf" include="dwarf" />
+</category>
