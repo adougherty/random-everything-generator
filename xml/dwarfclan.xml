@@ -363,6 +363,5 @@
 		<value region_start="25" region_end="35" region_include="__noun__">An abandonded fire giant stronghold</value>
 		<value>The home of their ancestors</value>
 	</table>
-	<include name="Enclave" id="dwarfenclave" />
     <member name="Dwarf" include="dwarf" />
 </category>
