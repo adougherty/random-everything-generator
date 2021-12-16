@@ -7,7 +7,7 @@
 		<value>Drunks. Nothing matters more than a good ale</value>
 		<value>Explorers. Whether within or above the dirt, there are always new lands, and new peoples to discover</value>
 		<value region_start="16" region_stop="21" region_include="wilderness">Refugees. These lands are not their home</value>
-		<value>Under the thumb of a powerful king</value>
+		<value region_start="30" region_end="34" region_include="nobleman">Under the thumb of a powerful king</value>
 		<value>A loose collection of independant tribes</value>
         <value>Disorganized; a clan of competing warriors</value>
         <value>A tight-knit war band</value>
@@ -48,18 +48,18 @@
         <value>A bear</value>
         <value>A boar</value>
         <value>An eagle</value>
-        <value>A horse</value>
+        <value region_start="2" region_end="7" region_include="horse">A horse</value>
         <value>A lion</value>
         <value>A gryphon</value>
-        <value>A hippogrif</value>
+        <value>A hippogriff</value>
         <value>Two axes.</value>
         <value>An axe.</value>
         <value>Two swords.</value>
         <value>Crossed bones.</value>
         <value>A laughing face.</value>
         <value>A fist.</value>
-        <value>A dragon.</value>
-        <value>A wolf.</value>
+        <value region_start="2" region_end="8" region_include="dragon">A dragon.</value>
+        <value region_start="2" region_end="6" region_include="wolf">A wolf.</value>
         <value region_start="4|25" region_end="15|28" region_include="__noun__|deity">The holy symbol of their god.</value>
         <value>An 8 pointed star.</value>
         <value>A claw.</value>
@@ -106,11 +106,11 @@
         <value>A variance of striped colours.</value>
         <value>Half and half two colours.</value>
         <value>Tusks.</value>
-        <value>The area the dwarfs came from.</value>
+        <value region_start="4" region_end="8" region_include="nation">The area the dwarfs came from.</value>
         <value>A cliff.</value>
         <value>A tower.</value>
         <value>A fortress.</value>
-        <value>A monster.</value>
+        <value region_start="2" region_end="9" region_include="monsters">A monster.</value>
         <value>Armour.</value>
         <value>A helmet.</value>
         <value>A spear.</value>
@@ -147,23 +147,23 @@
 		<value>Young and inexperienced</value>
 		<value>A valued member of society elected to his position</value>
 		<value>A warlord</value>
-		<value>The oldest dwarf in the clan</value>
+		<value region_start="11" region_end="16" region_include="dwarf">The oldest dwarf in the clan</value>
 		<value>Not a dwarf</value>
 		<value>Scarred from decades of war</value>
 		<value>Hidden from his subjects</value>
 		<value>A strong diplomant</value>
-		<value>A greedy merchant</value>
+		<value region_start="9" region_end="17" region_include="merchant">A greedy merchant</value>
 		<value>Extremely sick</value>
 		<value>Has not been seen in over a month</value>
-		<value>said to be crafting a legendary magical item</value>
-		<value>preparing for war</value>
-		<value>also the king of another clan</value>
+		<value region_start="22" region_end="46" region_include="legendary_weapon">Said to be crafting a legendary magical weapon</value>
+		<value>Preparing for war</value>
+		<value region_start="25" region_end="29" region_include="dwarfclan">Also the king of another clan</value>
 		<value>A con artist</value>
-		<value>not the rightful sovereign</value>
-		<value>planning a great hunt</value>
-		<value>The decendant of a powerful hero</value>
+		<value>Not the rightful sovereign</value>
+		<value>Planning a great hunt</value>
+		<value region_start="28" region_end="32" region_include="npc_class">The decendant of a powerful hero</value>
 		<value>The heir to a great forture</value>
-		<value>guilty of patricide</value>
+		<value>Guilty of patricide</value>
 		<value>Sporting the longest beard in the clan</value>
 		<value>Proud of having the heaviest beard in the clan</value>
 	</table>
@@ -202,7 +202,7 @@
 		<value>Nutmeg</value>
 		<value>An indiscernable spice</value>
 		<value>Green tea</value>
-		<value>Grape</value>
+		<value>Grapes</value>
 	</table>
 	<table name="The dwarfs fear" id="fear">
 		<value>Nothing</value>
@@ -230,7 +230,7 @@
 	<table name="The clan is known for" id="known">
 		<value>Burning everything after a war</value>
 		<value>Stealing everything of value from nearby towns</value>
-		<value>Wiping out an entire clan of goblins</value>
+		<value region_start="21" region_end="36" region_include="goblingang">Wiping out an entire clan of goblins</value>
 		<value>Defending the region against giants</value>
 		<value>Their modern marvels of industry</value>
 		<value>The art of their craftsmanship</value>
@@ -240,7 +240,7 @@
 		<value>Their ferocity in battle</value>
 		<value>Their strong beverages</value>
 		<value>Their stubbornness</value>
-		<value>Their devotion to their god</value>
+		<value region_start="24" region_end="27" region_include="deity">Their devotion to their god</value>
 		<value>Their amazing beards</value>
 	</table>
 	<table name="The dwarfs beards are" id="beard">
@@ -282,16 +282,16 @@
 		<value>Mournful</value>
 	</table>
 	<table name="The clan's goals include" id="goal">
-		<value>Crafting a legendary magical weapon</value>
+		<value region_start="11" region_end="35" region_include="legendary_weapon">Crafting a legendary magical weapon</value>
 		<value>Crafting the perfect brew</value>
 		<value>Getting revenge on a giant</value>
-		<value>Slaying a mighty dragon</value>
-		<value>Fidning a legendary gem</value>
-		<value>Defending their home against a Giant threat</value>
+		<value region_start="17" region_end="23" region_include="dragon">Slaying a mighty dragon</value>
+		<value region_start="10" region_end="23" region_include="__noun__">Fidning a legendary gem</value>
+		<value region_start="31" region_end="43" region_include="__noun__">Defending their home against a Giant threat</value>
 		<value>Finding a permanent home</value>
-		<value>Revenge against a rival dwarvish clan</value>
-		<value>Establishing order in the region</value>
-		<value>Establishing the right to rule in the region</value>
+		<value region_start="24" region_end="37" region_include="dwarfclan">Revenge against a rival dwarvish clan</value>
+		<value region_start="26" region_end="32" region_include="nation">Establishing order in the region</value>
+		<value region_start="38" region_end="44" region_include="nation">Establishing the right to rule in the region</value>
 		<value>Building architecture that will stand the test of time</value>
 	</table>
 	<table name="The clan loves to fight" id="fight">
@@ -344,23 +344,23 @@
 		<value>Lazy and only fight if they really have to</value>
 		<value>Bullies that have their way with the rest of the clan</value>
 		<value>Backed by powerful spellcasters</value>
-		<value>Lead by a legendary hero</value>
+		<value region_start="10" region_end="24" region_include="npc_class">Lead by a legendary hero</value>
 		<value>Supported by fierce war dogs</value>
 		<value>Often rowdy and drunk</value>
 	</table>
 	<table name="The clan is based out of" is="base">
-		<value>A deep cavern that snakes into the underdark</value>
-		<value>A volcanic cavern</value>
-		<value>A cavern behind a waterfall</value>
-		<value>A ancient gem mine that has long since run dry</value>
-		<value>A sectioned off area of a larger city</value>
-		<value>A single massive cavern that has been built into</value>
-		<value>An artificial cave system</value>
-		<value>A series of caves in the side of a mountain</value>
+		<value region_start="7" region_end="13" region_include="cavern">A deep cavern that snakes into the underdark</value>
+		<value region_start="11" region_end="17" region_include="cavern">A volcanic cavern</value>
+		<value region_start="2" region_end="8" region_include="cavern">A cavern behind a waterfall</value>
+		<value region_start="14" region_end="18" region_include="mine">A ancient gem mine that has long since run dry</value>
+		<value region_start="33" region_end="37" region_include="city">A sectioned off area of a larger city</value>
+		<value region_start="17" region_end="24" region_include="cavern">A single massive cavern that has been built into</value>
+		<value region_start="14" region_end="18" region_include="cavern">An artificial cave system</value>
+		<value region_start="35" region_end="43" region_include="mountain">A series of caves in the side of a mountain</value>
 		<value>An artifical hill built over the top of above-ground dwellings</value>
-		<value>An ancient and forgotten city</value>
-		<value>A goblin cave system that was taken over</value>
-		<value>An abandonded fire giant stronghold</value>
+		<value region_start="25" region_end="29" region_include="city">An ancient and forgotten city</value>
+		<value region_start="2|9" region_end="8|13" region_include="goblingang|cavern">A goblin cave system that was taken over</value>
+		<value region_start="25" region_end="35" region_include="__noun__">An abandonded fire giant stronghold</value>
 		<value>The home of their ancestors</value>
 	</table>
 	<include name="Enclave" id="dwarfenclave" />
