@@ -1,43 +1,53 @@
 {
-	"name": "random-everything-generator",
-	"title": "Random Everything Generator",
-	"description": "Stuck with writer's block? Let us create the story for you",
-	"authors": [
-		{
-			"name": "DarthCluck",
-			"url": "https://github.com/adougherty",
-			"reddit": "u/DarthCluck",
-			"discord": "DarthCluck#3518",
-			"patreon": "DarthCluck",
-			"twitter": "@DarthCluck"
-		}
-	],
-	"version": "0.1.1",
-	"minimumCoreVersion": "0.8.0",
-	"compatibleCoreVersion": "0.8.9",
-	"languages": [
-		{
-			"lang": "en",
-			"name": "English",
-			"path": "lang/en.json"
-		}
-	],
-	"packs": [
-		{
-			"name": "rolltables-reg",
-			"label": "RollTables (REG)",
-			"path":"packs/reg.db",
-			"entity":"RollTable",
-      		"private": false,
-      		"module":"random-everything-generator"
-		}
-	],
-	"scripts": [
-		"reg.js",
-		"scripts/regchild.js",
-		"scripts/regtitle.js"
-	],
-	"url": "https://github.com/adougherty/random-everything-generator",
-	"manifest": "https://raw.githubusercontent.com/adougherty/random-everything-generator/master/module.json",
-	"download": "https://github.com/adougherty/random-everything-generator/archive/refs/heads/main.zip"
+  "name": "random-everything-generator",
+  "title": "Random Everything Generator",
+  "description": "Stuck with writer's block? Let us create the story for you",
+  "authors": [
+    {
+      "name": "DarthCluck",
+      "url": "https://github.com/adougherty",
+      "reddit": "u/DarthCluck",
+      "discord": "DarthCluck#3518",
+      "patreon": "DarthCluck",
+      "twitter": "@DarthCluck"
+    }
+  ],
+  "url": "https://github.com/adougherty/random-everything-generator",
+  "flags": {},
+  "version": "0.1.1",
+  "minimumCoreVersion": "0.8.0",
+  "compatibleCoreVersion": "0.8.9",
+  "scripts": [
+    "reg.js",
+    "scripts/regchild.js",
+    "scripts/regtitle.js"
+  ],
+  "esmodules": [],
+  "styles": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "rolltables-reg",
+      "label": "RollTables (REG)",
+      "path": "packs/reg.db",
+      "entity": "RollTable",
+      "private": false,
+      "module": "random-everything-generator",
+      "type": "RollTable"
+    }
+  ],
+  "system": [],
+  "dependencies": [],
+  "socket": false,
+  "manifest": "https://raw.githubusercontent.com/adougherty/random-everything-generator/main/module.json",
+  "download": "https://github.com/adougherty/random-everything-generator/archive/refs/heads/main.zip",
+  "protected": false,
+  "coreTranslation": false,
+  "library": false
 }

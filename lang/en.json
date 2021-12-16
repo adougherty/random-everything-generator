@@ -1,5 +1,6 @@
 {
     "RandomEverythingGenerator" : {
-        "button-title": "Randomly Generate Anything"
+        "button-title": "Randomly Generate Anything",
+        "button-label": "Random Story"
     }
 }

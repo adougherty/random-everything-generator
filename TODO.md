@@ -11,6 +11,7 @@ Note: Random Everything Generator is currently in beta.
 - Add API hooks
 - Add Chat hooks
 - Source partial values from another tables. Ex: "A gold cloak." The color should come from another table. The cloak should come from a 3rd table
+- Add "Catch Phrases," voice sounds, accents, manner of speach, vocal ticks, and physical ticks to the various npc tables (Patreon?). Thanks for /u/deadlyllama for the suggestion
 
 ## [Version 1.1]
 - Add a button to NPC character sheets to randomly detail that character
