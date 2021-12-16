@@ -28,3 +28,10 @@ Note: Random Everything Generator is currently in beta.
 ## [Version 2.0]
 - Generate Random Maps
 - Generate Random Character sheets
+
+## Patreon Only
+- Create Giant Table
+- Create Brew/Beer/Ale Table
+- Create a Region Table (Ex. A county. Larger than a city, smaller than a nation)
+- Create a Legendary Hero Table
+- Create a Fortress/Stronghold Table
