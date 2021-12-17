@@ -131,7 +131,7 @@ class REGChild extends Application{
             let before = r.substr(0, start);
             let at = r.substr(start, length);
             let after = r.substr(end);
-            let linkId =  '{{appid}}' + path + '.' + i;
+            let linkId =  path + '.' + i;
             let className = 'reg-link';
             if (includes[i] == '__noun__')
                 className += ' reg-is-noun';
@@ -148,7 +148,7 @@ class REGChild extends Application{
                     regChild.render(true);
                 } else {
                     // Open a Child Window
-                    console.log(document.RandomEverythingGeneratorData[localPath])
+                    RandomEverythingGenerator.log(false, document.RandomEverythingGeneratorData[localPath])
                     if (document.RandomEverythingGeneratorData[localPath] && 
                         document.RandomEverythingGeneratorData[localPath] != parseInt(document.RandomEverythingGeneratorData[localPath])) {
                         // There is already a selected value for this category
@@ -181,7 +181,7 @@ class REGChild extends Application{
                     })
                 }
 
-                console.log(localPath);
+                RandomEverythingGenerator.log(false, localPath);
             }
 
             r = before+link+after;
@@ -205,14 +205,11 @@ class REGChild extends Application{
             return;
         }
 
-
-        const tableName = $(node).attr('name');
-        const tableId = $(node).attr('id')
         const tableType = $(node).attr('type') || 'standard';
 
         switch(tableType) {
             case 'standard': {
-                const localPath = path + '.' + tableId;
+                const localPath = path + '.' + $(node).attr('id');
 
                 // Deleted Node. Skip it.
                 if (document.RandomEverythingGeneratorData[localPath] == -2)
@@ -242,6 +239,7 @@ class REGChild extends Application{
                     const randValue = Math.floor(Math.random() * values.length);
                     document.RandomEverythingGeneratorData[localPath] = randValue;
                     document.getElementById('reg-val-' + localPath).innerHTML = this.processRegions(values[randValue], localPath + '.' + randValue);
+                    this.regenOpenChildCallBacks();
                 }
 
                 this.DropdownCallbacks[localPath] = () => {
@@ -282,6 +280,7 @@ class REGChild extends Application{
                             document.RandomEverythingGeneratorData[localPath] = i;
                             $(div).empty();
                             $(div).css('display', 'none');
+                            this.regenOpenChildCallBacks();
                         });
                         $(divOption).append(a);
                         $(div).append(divOption);
@@ -356,13 +355,11 @@ class REGChild extends Application{
                 const value = values[Math.floor(Math.random() * values.length)];
                 document.RandomEverythingGeneratorData[localPath] = value.textContent;
                 document.getElementById('reg-val-' + localPath).innerHTML = this.processRegions(value, localPath);
+                this.regenOpenChildCallBacks();
             });
         }
 
         this.DropdownCallbacks[localPath] = () => {
-            const include = $(child).attr('include');
-            const localPath = this.Path + '.' + include;
-
             const div = $(`#${this.id}-reg-option-select`);
             $(div).empty();
             const input = $('<input placeholder="Set your own value"/>');
@@ -371,6 +368,7 @@ class REGChild extends Application{
             if (document.RandomEverythingGeneratorData[localPath] != parseInt(document.RandomEverythingGeneratorData[localPath]) && document.RandomEverythingGeneratorData[localPath].length > 0)
                 input.val(document.RandomEverythingGeneratorData[localPath]);
 
+            // Create the initial Custom Value Input
             input.on('keypress', e => {
               if (e.which == 13) {
                 e.preventDefault();
@@ -382,6 +380,7 @@ class REGChild extends Application{
             });
             $(div).append(input);
 
+            // Get and create the list of possible values from this include
             $.get('/modules/random-everything-generator/xml/'+include+'.xml', data => {
                 const table = $(data).find('table')[0];
                 const values = $(table).find('value');
@@ -391,10 +390,11 @@ class REGChild extends Application{
                     let a = $('<a></a>')
                     $(a).html(value.textContent);
                     $(a).click(ev => {
-                        document.getElementById('reg-val-' + localPath).innerHTML = $(a).html();
+                        document.getElementById('reg-val-' + localPath).innerHTML = this.processRegions(value, localPath);
                         document.RandomEverythingGeneratorData[localPath] = i;
                         $(div).empty();
                         $(div).css('display', 'none');
+                        this.regenOpenChildCallBacks()
                     });
                     $(divOption).append(a);
                     $(div).append(divOption);
@@ -460,7 +460,7 @@ class REGChild extends Application{
 
     async populateCategory() {
         let r = [];
-        console.log(this.Path)
+        RandomEverythingGenerator.log(false, this.Path)
         let xml = $.parseXML(this.XML);
         let nodeCategory = $(xml).find('category')[0];
         let nodeName = $(nodeCategory).find('name');
@@ -582,6 +582,14 @@ class REGChild extends Application{
         regChild.render(true);
     }
 
+    regenOpenChildCallBacks() {
+        for (let id of Object.keys(this.OpenChildCallBacks)) {
+            const a = document.getElementById(id);
+            $(a).unbind();
+            $(a).click(this.OpenChildCallBacks[id]);
+        }        
+    }
+
     activateListeners(html) {
         super.activateListeners(html);
         html.find(`#${this.id}-add-member`).change(ev => this.addMember(html));
@@ -607,10 +615,7 @@ class REGChild extends Application{
             $(a).click(this.DeleteCallbacks[path]);
         }
 
-        for (let id of Object.keys(this.OpenChildCallBacks)) {
-            const a = document.getElementById(id);
-            $(a).click(this.OpenChildCallBacks[id]);
-        }
+        this.regenOpenChildCallBacks()
     }
 
     nextMemberIndex(base) {
