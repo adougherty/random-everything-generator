@@ -58,7 +58,7 @@
         <value region_start="9" region_end="16" region_include="barbarian">A mighty warlord</value>
         <value region_start="10" region_end="20" region_include="npc_class">A retired adventurer</value>
         <value region_start="13" region_end="21" region_include="__noun__">A celebrated war hero</value>
-        <value region_start="16" region_end="19" region_include="nobleman">An unscrupulous king</value>
+        <value region_start="16" region_end="20" region_include="nobleman">An unscrupulous king</value>
         <value region_start="16" region_end="21" region_include="noblewoman">An unscrupulous queen</value>
         <value region_start="7" region_end="11" region_include="nobleman">A vain lord</value>
         <value region_start="7" region_end="11" region_include="noblewoman">A vain lady</value>

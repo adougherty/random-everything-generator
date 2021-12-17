@@ -14,6 +14,85 @@ class RandomEverythingGenerator extends FormApplication{
             console.log(this.ID, '|', ...args);
         }
     };
+
+    static start(argCategory = null) {
+        let buildCategory = function(nodeCategories) {
+            let r = [];
+            for (const node of nodeCategories) { // Each of the top-level categories
+                let cat = {
+                    id: node.getAttribute('id'),
+                    name: node.getAttribute('name'),
+                    subcategories: (node.children.length) ? buildCategory(node.children) : []
+                };
+                r.push(cat);
+            }
+
+            return r;
+        }
+
+        if ($('.reg-title').length > 0) {
+            ui.notifications.error("Can only create one story at a time")
+            return;
+        }
+
+        RandomEverythingGenerator.log(false, "Opening RandomEverythingGenerator Form");
+
+        $.get('/modules/random-everything-generator/xml/_categories.xml', xml => {
+            if (argCategory && $(xml).find(`category[id='${argCategory}']`).length > 0) {
+                let category = $(xml).find(`category[id='${argCategory}']`)
+
+                if (category.children().length > 0) {
+                    let choices = {}
+                    for (const subcat of category.children()) {
+                        choices[subcat.getAttribute('id')] = subcat.getAttribute('name');
+                    }
+                    let REGWindow = new RandomEverythingGenerator();
+                    REGWindow.XML = (new XMLSerializer()).serializeToString(xml);;
+                    REGWindow.Choices = choices;
+                    REGWindow.render(true);
+                } else {
+                    document.RandomEverythingGeneratorData['top'] = argCategory;
+                    $.ajax({
+                        url: '/modules/random-everything-generator/markov-source/male-names.markov',
+                        success: markov => {
+                            $.ajax({
+                                url: `/modules/random-everything-generator/xml/${argCategory}.xml`,
+                                dataType: 'text',
+                                success: xmlStr => {
+                                    let xml = $.parseXML(xmlStr);
+                                    let category = $(xml).find('category')[0];
+                                    let name = $(category).attr('name');
+                                    let regChild = new REGChild(name);
+                                    regChild.XML = xmlStr;
+                                    regChild.Markov = markov;
+                                    regChild.render(true);
+                                }
+                            });
+                        }
+                    })
+                }
+            } else {
+                const nodeTop = $(xml).find('categories')[0]; // Guaranteed top level node
+                const nodeCategories = nodeTop.children;
+                const categories = [];
+                categories.push(buildCategory(nodeCategories));
+                RandomEverythingGenerator.log(false, categories);
+
+                document.RandomEverythingGeneratorData = {};
+                let reg = new RandomEverythingGenerator();
+                reg.Categories = categories[0];
+                reg.XML = (new XMLSerializer()).serializeToString(xml);
+
+                for (const node of nodeCategories) {
+                    reg.Choices[node.getAttribute('id')] = node.getAttribute('name')
+                }
+
+                reg.render(true);                
+            }
+
+        })
+    }
+
     Categories;
     XML;
     Choices = {};
@@ -78,7 +157,7 @@ class RandomEverythingGenerator extends FormApplication{
                             if (this.Path)
                                 document.RandomEverythingGeneratorData[this.Path] = formData.category;
                             this.OnLoadChildCallback(this, category.attr('name'), formData.category, xmlStr);
-                            console.log(this.Path)
+                            RandomEverythingGenerator.log(false, this.Path)
                             let regChild = new REGChild(category.attr('name'));
                             regChild.XML = xmlStr;
                             regChild.Path = (this.Path) ? this.Path + '.' + formData.category : '';
@@ -99,20 +178,6 @@ Hooks.once('devModeReady', ({ registerPackageDebugFlag }) => {
 Hooks.on("renderRollTableDirectory", (app, html, data) => {
     if (!game.user.isGM)
         return;
-
-    let buildCategory = function(nodeCategories) {
-        let r = [];
-        for (const node of nodeCategories) { // Each of the top-level categories
-            let cat = {
-                id: node.getAttribute('id'),
-                name: node.getAttribute('name'),
-                subcategories: (node.children.length) ? buildCategory(node.children) : []
-            };
-            r.push(cat);
-        }
-
-        return r;
-    }
 
     let json = game.settings.get(MODULE_NAME, STORAGE_STORIES);
     let stories = (json) ? JSON.parse(json) : {};
@@ -137,33 +202,7 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
     const regButton = html.find("button.reg");
     regButton.on('click', event => {
         event.preventDefault();
-
-        if ($('.reg-title').length > 0) {
-            ui.notifications.error("Can only create one story at a time")
-            return;
-        }
-
-        RandomEverythingGenerator.log(true, "Opening RandomEverythingGenerator Form");
-
-        $.get('/modules/random-everything-generator/xml/_categories.xml', xml => {
-            const nodeTop = $(xml).find('categories')[0]; // Guaranteed top level node
-            const nodeCategories = nodeTop.children;
-            const categories = [];
-            categories.push(buildCategory(nodeCategories));
-            RandomEverythingGenerator.log(true, categories);
-
-            document.RandomEverythingGeneratorData = {};
-            let reg = new RandomEverythingGenerator();
-            reg.Categories = categories[0];
-            reg.XML = (new XMLSerializer()).serializeToString(xml);
-
-            for (const node of nodeCategories) {
-                reg.Choices[node.getAttribute('id')] = node.getAttribute('name')
-            }
-
-            reg.render(true);
-
-        })
+        RandomEverythingGenerator.start();
     });
 
     const regStorySelect = html.find("select.reg");
@@ -181,7 +220,7 @@ Hooks.on("renderRollTableDirectory", (app, html, data) => {
                     url: `/modules/random-everything-generator/xml/${story.top}.xml`,
                     dataType: 'text',
                     success: xmlStr => {
-                        console.log(story.top)
+                        RandomEverythingGenerator.log(false, story.top)
                         let regChild = new REGChild(story.save);
                         regChild.XML = xmlStr;
                         regChild.path = '';
@@ -204,7 +243,7 @@ Hooks.on("init", async(app, hmtl) => {
         type: String,
         default: '',
         onChange: value => {
-            console.log(`${MODULE_NAME}: Updated Stories`)
+            RandomEverythingGenerator.log(false, `${MODULE_NAME}: Updated Stories`)
         }
     });
 });

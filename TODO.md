@@ -3,9 +3,6 @@ These are improvements that I intend to make in the future. If you would like to
 Note: Random Everything Generator is currently in beta.
 
 ## [Bugs]
-- Clicking on a randomly generated race (For example, with Assassin) does not load the race child
-- The initially loaded race (For example, with Assassin) does not link properly
-- Selecting a value from dropdown does not create links
 
 ## [Version 1.0]
 - Temporarily remove blue links until Editor issues resolved
@@ -15,6 +12,7 @@ Note: Random Everything Generator is currently in beta.
 - Improve Markov generator to account for name lengths
 - Add additional Markov sources for cities, dwarves, elves, etc
 - Add API hooks
+-- Get a specific result from the tables to feed into other modules
 - Add Chat hooks
 - Source partial values from another tables. Ex: "A gold cloak." The color should come from another table. The cloak should come from a 3rd table
 - Add "Catch Phrases," voice sounds, accents, manner of speach, vocal ticks, and physical ticks to the various npc tables (Patreon?). Thanks for /u/deadlyllama for the suggestion
@@ -32,3 +30,10 @@ Note: Random Everything Generator is currently in beta.
 ## [Version 2.0]
 - Generate Random Maps
 - Generate Random Character sheets
+
+## Patreon Only
+- Create Giant Table
+- Create Brew/Beer/Ale Table
+- Create a Region Table (Ex. A county. Larger than a city, smaller than a nation)
+- Create a Legendary Hero Table
+- Create a Fortress/Stronghold Table
