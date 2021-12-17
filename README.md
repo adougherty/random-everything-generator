@@ -36,3 +36,14 @@ Another way to add detail to a story is with Members. Members are additional ele
 ## Saving Your Story
 At any time, you can click the "Save" button in the title bar of any window. This will save your entire generated story. Saved stories can be accessed in the drop down menu next to the "Randomly Generate" button in the Rollable Tables directory.
 
+## For Macro Writers
+
+If you wish to open a new table with a macro, you simply need to call `RandomEverythingGenerator.start()`. This is the same as clicking on the "Random Story" button. The `.start()` function optionally accepts a single argument, being the id of a table you wish to start with.
+
+``
+RandomEverythingGenerator.start('npc')
+``
+
+### Opening a new window
+
+`RandomEverythingGenerator.start()` - Same as clicking the bu

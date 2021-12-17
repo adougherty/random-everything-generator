@@ -5,6 +5,11 @@
 2. links that pre-populate values are not working
 3. links that point to a category are not saving
 
+## [0.1.3]
+- Fixed issue with regenerated links not being clickable
+- Fixed issue with links from includes not being clickable
+- Added macro command to start the generator.
+
 ## [0.1.2]
 - Fixxed misaligned links in Crafting Guild
 - Make Randomly Generate button more concise
