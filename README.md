@@ -43,7 +43,3 @@ If you wish to open a new table with a macro, you simply need to call `RandomEve
 ``
 RandomEverythingGenerator.start('npc')
 ``
-
-### Opening a new window
-
-`RandomEverythingGenerator.start()` - Same as clicking the bu
