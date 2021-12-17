@@ -148,7 +148,7 @@ class REGChild extends Application{
                     regChild.render(true);
                 } else {
                     // Open a Child Window
-                    console.log(document.RandomEverythingGeneratorData[localPath])
+                    RandomEverythingGenerator.log(false, document.RandomEverythingGeneratorData[localPath])
                     if (document.RandomEverythingGeneratorData[localPath] && 
                         document.RandomEverythingGeneratorData[localPath] != parseInt(document.RandomEverythingGeneratorData[localPath])) {
                         // There is already a selected value for this category
@@ -181,7 +181,7 @@ class REGChild extends Application{
                     })
                 }
 
-                console.log(localPath);
+                RandomEverythingGenerator.log(false, localPath);
             }
 
             r = before+link+after;
@@ -460,7 +460,7 @@ class REGChild extends Application{
 
     async populateCategory() {
         let r = [];
-        console.log(this.Path)
+        RandomEverythingGenerator.log(false, this.Path)
         let xml = $.parseXML(this.XML);
         let nodeCategory = $(xml).find('category')[0];
         let nodeName = $(nodeCategory).find('name');
