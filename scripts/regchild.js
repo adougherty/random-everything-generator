@@ -641,7 +641,7 @@ class REGChild extends Application{
         let path = this.Path + '._member.'+index;
         let markov = this.Markov;
         let option = html.find(`#${this.id}-add-member option:selected`);
-        let div = document.createElement('DIV');
+        let div = document.createElement('LI');
         $(div).addClass('reg-member')
         let container = html.find(`#${this.id}-members-list`);
         container.append(div);
