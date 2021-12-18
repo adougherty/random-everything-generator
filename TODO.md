@@ -5,7 +5,6 @@ Note: Random Everything Generator is currently in beta.
 ## [Bugs]
 
 ## [Version 1.0]
-- Temporarily remove blue links until Editor issues resolved
 - Save NPCs to Character Sheets
 - Save Stories to JournalEntries
 - Save Items to ItemsDirectory
