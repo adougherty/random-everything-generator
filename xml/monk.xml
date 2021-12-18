@@ -10,7 +10,7 @@
         <value region_start="13" region_end="20" region_include="__noun__">A road-weary pilgrim</value>
         <value>A charismatic preacher</value>
         <value region_start="13" region_end="17" region_include="__noun__">An eccentric sage</value>
-        <value region_start="16" region_end="23" region_include="__noun__">A disillusioned scholar</value>
+        <value region_start="16" region_end="23" region_include="scholar">A disillusioned scholar</value>
         <value region_start="16" region_end="30" region_include="__noun__">A battle-tested martial artist</value>
         <value>A sharp-witted beggar-in-disguise</value>
         <value>An outspoken zealot</value>

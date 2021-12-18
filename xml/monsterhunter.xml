@@ -4,7 +4,7 @@
     <table name="The monster hunter is..." id="is">
         <value region_start="2" region_end="9" region_include="fighter">A warrior</value>
         <value region_start="2" region_end="8" region_include="priest">A priest or agent of the church</value>
-        <value>A scholar</value>
+        <value region_start="2" region_end="9" region_include="scholar">A scholar</value>
         <value region_start="11" region_end="16" region_include="nobile">A landless noble</value>
         <value region_start="2" region_end="8" region_include="knight">A knight errant</value>
         <value region_start="2" region_end="8" region_include="sailor">A sailor</value>

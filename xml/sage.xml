@@ -2,7 +2,7 @@
     <name name="The tutor's name is..."/>
     <include name="Race" include="npc_race" />
     <table name="The tutor is..." id="is">
-        <value region_start="23" region_end="33" region_include="__noun__">A scholar trained at a university</value>
+        <value region_start="2|23" region_end="9|33" region_include="scholar|__noun__">A scholar trained at a university</value>
         <value region_start="2|23" region_end="8|30" region_include="wizard|__noun__">A wizard trained at an academy</value>
         <value region_start="2" region_end="8" region_include="wizard">A wizard who has apprenticed to another</value>
         <value>A self-taught scholar of noble birth</value>

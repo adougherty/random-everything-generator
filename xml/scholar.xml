@@ -1,0 +1,210 @@
+<category name="Scholar" id="scholar">
+	<name name="Name" />
+	<include name="Race" include="npc_race" />
+	<table name="The scholar is" id="is">
+		<value>A young savant</value>
+		<value>A senile old man</value>
+		<value>An adventurer in thier spare time</value>
+		<value region_start="31" region_end="41"  region_include="__noun__">The president of a prestigious university</value>
+		<value>Interested only in the theoretical</value>
+		<value>Interested only in the practical</value>
+		<value>A traveller</value>
+		<value>A prolific speaker</value>
+		<value>A recluse</value>
+		<value>Very concerned about their physical appearance</value>
+		<value>Shy, and only ever comfortable with his books</value>
+		<value region_start="18" region_end="33"  region_include="__noun__">On the brink of a great discovery</value>
+		<value>Struggling to find something noteworth</value>
+	</table>
+	<table name="How people regard the scholar" id="regard">
+		<value>He is shunned by society</value>
+		<value>He is wanted for crimes against sensibility</value>
+		<value>He is treated like a common fool</value>
+		<value>He is considered the pinnacle of intelligence</value>
+		<value>He is largely unknown to the general population</value>
+		<value>People are often approaching him for wisdom and advise</value>
+		<value>He has a throng of followers when he his in public</value>
+		<value>People fear his research</value>
+		<value>He is divisive. Either you love him or you hate him. There is no in-between</value>
+		<value>He has a questionable past, but people are starting to warm up to him again</value>
+		<value>He's an up-and-commer. He hasn't made his mark yet, but people are sure he will soon</value>
+		<value>He is suspected of being a fraud</value>
+	</table>
+	<table name="The scholar's hobbies include" id="hobby">
+		<value>Writing massive tomes about his studies</value>
+		<value>Writing fictional novels with himself as the protagonist</value>
+		<value region_start="29" region_end="38"  region_include="beast">Hunting rare or mythological creatures</value>
+		<value>Stonecarving</value>
+		<value>Woodcutting</value>
+		<value region_start="11" region_end="19"  region_include="__noun__">Fixing old machines</value>
+		<value>Nothing. He studies, eats, and sleeps</value>
+		<value>Exercise. He defies the stereotypical look of a scholar with his stellar physique</value>
+		<value>Cooking</value>
+		<value>Hunting for sport</value>
+		<value>Practical Jokes</value>
+		<value>Gardening</value>
+		<value>Throwing lavish parties</value>
+		<value>Singing</value>
+		<value>Reading saucy romance novels</value>
+	</table>
+	<table name="The Scholar is currently studying" id="study">
+		<value>Mathematics</value>
+		<value>Spellcraft</value>
+		<value>Geology</value>
+		<value>Politics</value>
+		<value>Ancient History</value>
+		<value>Gnomish Technology</value>
+		<value>Metalworks</value>
+		<value>Alchemy</value>
+		<value>Military History</value>
+		<value>Herbology</value>
+		<value>Divinity</value>
+		<value>Geography</value>
+		<value>Mythology</value>
+		<value>Astronomy</value>
+		<value>Astrology</value>
+		<value>Biology</value>
+		<value>Chemistry</value>
+		<value>Paleontology</value>
+		<value>Psychology</value>
+	</table>
+	<table name="Knows nothing about" id="nothing">
+		<value>Human nature</value>
+		<value>Manners and eitquite</value>
+		<value>Spellcraft</value>
+		<value>History</value>
+		<value>Divinity</value>
+		<value>The world beyond what he can see</value>
+		<value>Economics</value>
+		<value>Animals</value>
+		<value>How to have fun</value>
+		<value>The organization he works with</value>
+	</table>
+	<table name="Quirk: The scholar" id="quirk">
+		<value>Has a stutter</value>
+		<value>Easily gets distracted</value>
+		<value>Speaks over others</value>
+		<value>Speaks with overly board hand gestures</value>
+		<value>Does not look anyone in the eye</value>
+		<value>Speaks very quickly</value>
+		<value>Speaks very slowly, trying carefuly to explain everything</value>
+		<value>Is easily lost in thought</value>
+		<value>Shuffles nervously</value>
+		<value>Shoves people when he laughs</value>
+		<value>Repeats himself, saying the same thing over again</value>
+		<value>Has an eye twitch</value>
+		<value>Has frequent headaches</value>
+		<value>Always has a cup of coffee in his hands</value>
+		<value>Can't function properly unless he's drunk</value>
+		<value>Is paranoid</value>
+		<value>Sees things that aren't there</value>
+	</table>
+	<table name="Experience with current field of study" id="experience">
+		<value>Has a passing interest</value>
+		<value>Just started studies</value>
+		<value>Has been studying off an on for 5-10 years</value>
+		<value>Has been deep in studies for 5-10 years</value>
+		<value>It is his life's work</value>
+		<value>He's beginning to give up this field of study for another</value>
+	</table>
+	<table name="Likes to share knowledge with" id="share">
+		<value>Anyone who will listen</value>
+		<value>No one</value>
+		<value>Only those he sees intelligent enough to understand it</value>
+		<value>Only his students</value>
+		<value>Only his peers</value>
+		<value>Kings and Queens</value>
+		<value>The organization he works with</value>
+		<value>The working class</value>
+		<value>His family</value>
+		<value region_start="0" region_end="19"  region_include="nation">Foreign governments</value>
+		<value>The world</value>
+	</table>
+	<table name="The scholar initially learned from" id="learned">
+		<value>No one. He is self-taught</value>
+		<value region_start="2" region_end="23"  region_include="scholar">A parent or grandparent</value>
+		<value region_start="13" region_end="20"  region_include="__noun__">A travelling scholar</value>
+		<value>The organization he belongs to</value>
+		<value region_start="2" region_end="7"  region_include="fiend">A fiend, as part of a dark bargain</value>
+		<value region_start="12|30" region_end="18|35"  region_include="__noun__|nation">A prominent school in another realm</value>
+		<value region_start="16|35" region_end="21|45"  region_include="book|wilderness">A collection of books found in the wilderness</value>
+		<value region_start="2" region_end="8" region_include="deity">A divine being</value>
+		<value region_start="2" region_end="7"  region_include="__noun__">A dream</value>
+		<value region_start="2|23" region_end="8|40"  region_include="__noun__|__noun__">A vision granted by an illicit substance</value>
+		<value region_start="2" region_end="13"  region_include="__noun__">A fever dream</value>
+		<value>Bits and pieces of disparate knowledge put together while traveling</value>
+		<value region_start="42" region_end="50"  region_include="npc">Tomes that were inherited from a deceased relative</value>
+	</table>
+	<table name="The scholar works with" id="organization">
+		<value region_start="12" region_end="22"  region_include="__noun__">A prominent university</value>
+		<value>A collaboration of other scholars</value>
+		<value region_start="8" region_end="14" region_include="__noun__">A small school</value>
+		<value region_start="16" region_end="29" region_include="noble">Advisors to the king or queen</value>
+		<value>His family</value>
+		<value region_start="12" region_end="19" region_include="__noun__">A wizarding academy</value>
+		<value>No one.</value>
+		<value region_start="2|16" region_end="8|28" region_include="__noun__|nation">A school from a foreign land</value>
+		<value region_start="2" region_end="14" region_include="__noun__">A secret cabal of scholars</value>
+		<value region_start="9" region_end="14" region_include="cult">A secret cabal of cultists</value>
+		<value region_start="13" region_end="20" region_include="caravan">A travelling caravan</value>
+		<value region_start="2" region_end="8" region_include="temple">A temple</value>
+		<value>Other scholars who are considered pariahs</value>
+	</table>
+	<table name="The scholar sees himself as" id="self">
+		<value>An expert in his field</value>
+		<value>The greatest expert in his field</value>
+		<value>A pillar among men</value>
+		<value>Not worthy of praise</value>
+		<value>A pariah</value>
+		<value>Struggling to get to the truth</value>
+		<value>Fighting against the forces of ignorance</value>
+		<value>Just doing his job, like everyone else</value>
+		<value>Perfectly average</value>
+		<value>A great educator</value>
+		<value>Too busy to be bothered</value>
+		<value>Not as important has his studies</value>
+		<value>Just a cog in a wheel</value>
+	</table>
+	<table name="The scholar has a secret" id="secret">
+		<value region_start="18" region_end="29"  region_include="__noun__">He discovered the great truth, and sharing it would mean utter chaos</value>
+		<value region_start="33" region_end="38"  region_include="fiend">He discovered the true name of a fiend</value>
+		<value>He is a fraud, and faked all of his work</value>
+		<value region_start="23" region_end="32" region_include="npc">He is in love with his assistant</value>
+		<value region_start="37" region_end="47" region_include="npc">He is responsible for the death of a friend</value>
+		<value>He is known by different names to different people</value>
+		<value region_start="24" region_end="31" region_include="disease">He is dying slowly of a disease</value>
+		<value region_start="29" region_end="36" region_include="disease">He is going to die soon of a disease</value>
+		<value region_start="27" region_end="43" region_include="__noun__">He knows the location of a magical artifact</value>
+		<value>He is of noble birth</value>
+		<value region_start="17" region_end="23" region_include="dragon">He is actually a dragon in disguise</value>
+		<value region_start="45" region_end="51" region_include="npc">He is a doppleganger, and owes a debt to the person who's form he took</value>
+		<value>He has a stash of gold hidden away for a rainy day</value>
+		<value region_start="0" region_end="7" region_include="npc">Someone is hunting him, and he's prepared for a quick escape</value>
+		<value>He is much older than he appears</value>
+	</table>	
+	<table name="The scholar wants" id="want">
+		<value>A new student</value>
+		<value>Someone to take over his studies</value>
+		<value region_start="2" region_end="15"  region_include="__noun__">A rare artifact that will confirm a theory</value>
+		<value region_start="2" region_end="15"  region_include="__noun__">A rare artifact that will aid him in his studies</value>
+		<value>To complete an unending study</value>
+		<value>To escape from his studies and have an adventure</value>
+		<value region_start="9" region_end="14" region_include="scholar">To see a rival slain</value>
+		<value>A higher position in his organization</value>
+		<value>To write a great novel</value>
+		<value>To find someone that truly understands him</value>
+		<value>To find someone to join him in his studies as a peer</value>
+		<value>An answer to the meaning of life</value>
+		<value region_start="17" region_end="31"  region_include="__noun__">A way to right a horrible wrong he committed</value>
+		<value>A new perspective</value>
+		<value>A new empty book</value>
+		<value>A comfortable couch</value>
+		<value>A night by the fire</value>
+		<value>To learn something new</value>
+		<value>To write a book that will be remembered long after he's gone</value>
+		<value>To be taken seriously</value>
+		<value>To be left alone</value>
+		<value>A good sleep</value>
+		<value region_start="29" region_end="46" region_include="noble">To present his findings to a foreign dignitary</value>
+	</table>
+</category>

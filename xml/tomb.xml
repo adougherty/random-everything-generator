@@ -221,7 +221,7 @@
         <value region_start="14" region_end="33" region_include="priest">A devoted old priest or priestess</value>
         <value region_start="16" region_end="35" region_include="priest">A curious young priest or priestess</value>
         <value region_start="2" region_end="10" region_include="traveler">A traveler from afar</value>
-        <value region_start="2" region_end="9" region_include="__noun__">A scholar from afar</value>
+        <value region_start="2" region_end="9" region_include="scholar">A scholar from afar</value>
         <value region_start="2|16" region_end="8|26" region_include="__noun__|__noun__">A member of the deceased's family</value>
         <value region_start="9" region_end="24" region_include="__noun__">A greedy treasure hunter</value>
         <value region_start="2" region_end="9" region_include="__noun__">A student of necromancy</value>

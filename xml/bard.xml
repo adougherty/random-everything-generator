@@ -6,7 +6,7 @@
                     <value>A virtuoso musician</value>
                     <value id="storyteller">A captivating storyteller</value>
                     <value>A brilliant poet</value>
-                    <value>A scholar of history</value>
+                    <value region_start="2" region_end="9" region_include="scholar">A scholar of history</value>
                     <value>A serious actor</value>
                     <value>A dashing swashbuckler</value>
                     <value>A wise-cracking magician</value>

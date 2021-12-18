@@ -249,7 +249,7 @@
                 <value>A charismatic cult leader.</value>
                 <value>One or more merchant guilds.</value>
                 <value>A scheming noble lord or lady.</value>
-                <value>An outspoken philosopher or scholar.</value>
+                <value region_start="28" region_end="35" region_include="scholar">An outspoken philosopher or scholar.</value>
                 <value>A celebrated poet and playwright.</value>
                 <value>A popular priest or priestess.</value>
                 <value>A secret society of lorekeepers.</value>

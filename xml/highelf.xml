@@ -56,7 +56,7 @@
                     <value region_start="9" region_end="32" region_include="__noun__">A unique gem or piece of jewelry</value>
                     <value>A finely-crafted longsword or bow</value>
                     <value>A tome of mystic lore</value>
-                    <value>The journal of an ancient scholar</value>
+                    <value region_start="26" region_end="33" region_include="scholar">The journal of an ancient scholar</value>
                     <value region_start="28" region_end="33" region_include="__noun__">A sword etched with ancient runes</value>
                     <value>A staff with a moon-white crystal set at the end</value>
                     <value>Arrows fletched with the feathers of an eagle</value>

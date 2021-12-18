@@ -110,7 +110,7 @@
         <value>home to a wizard</value>
         <value>home to a sorcerer</value>
         <value>home to a warlock</value>
-        <value>home to a scholar</value>
+        <value region_start="10" region_end="17" region_include="scholar">home to a scholar</value>
         <value>home to a monk</value>
         <value>home to a student</value>
         <value>home to a necromancer</value>

@@ -7,7 +7,7 @@
         <value region_start="9" region_end="16" region_include="soldier">A former soldier</value>
         <value region_start="13" region_end="22" region_include="nation">A mysterious foreigner</value>
         <value>A pompous windbag</value>
-        <value>An accomplished scholar</value>
+        <value region_start="16" region_end="23" region_include="scholar">An accomplished scholar</value>
         <value>A violent drunk</value>
         <value region_start="2" region_end="10" region_include="criminal">A criminal lackey</value>
         <value region_start="10" region_end="16" region_include="__noun__">A popular tavern patron</value>

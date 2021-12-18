@@ -37,7 +37,7 @@
                 <value region_start="9" region_end="17" region_include="dwarf">Intrepid dwarvish prospector.</value>
                 <value region_start="8" region_end="15" region_include="warlock">Wayward warlock.</value>
                 <value region_start="9" region_end="13" region_include="monk">Hermetic monk.</value>
-                <value>Half-fiend scholar.</value>
+                <value region_start="11" region_end="18" region_include="scholar">Half-fiend scholar.</value>
             </table>
             <table name="Beast: You meet a…" id="beast">
                 <value>Fire bat.</value>

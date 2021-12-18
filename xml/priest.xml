@@ -8,8 +8,8 @@
         <value region_start="8" region_end="14" region_include="healer" id="priest_healer">A adept healer</value>
         <value>A road-weary pilgrim</value>
         <value id="preacher">A charismatic preacher</value>
-        <value>An eccentric scholar</value>
-        <value id="scholar">A disillusioned scholar</value>
+        <value region_start="13" region_end="20" region_include="scholar">An eccentric scholar</value>
+        <value region_start="16" region_end="23" region_include="scholar">A disillusioned scholar</value>
         <value>A battle-tested war-priest</value>
         <value>A sharp-witted witch-hunter</value>
         <value id="zealot">An outspoken zealot</value>
@@ -125,7 +125,7 @@
         <value region_start="88" region_end="91" region_include="deity">He hunts members of other faiths with a dark devotion, then sacrifices them to his dark god.</value>
         <value region_start="16|62" region_end="27|68" region_include="necromancer|wildreness">He's a fearsome necromancer who has bound all the dead in the region to his will.</value>
         <value region_start="33|44" region_end="36|50" region_include="deity|__noun__">He is the the high priest of his god in the region. To his followers his word is law.</value>
-        <value>He's a scholar first and a priest second.</value>
+        <value region_start="7" region_end="14" region_include="scholar">He's a scholar first and a priest second.</value>
         <value>He's more politically motivated than faith driven.</value>
         <value>He's a promising young convert to his religion full of fervor.</value>
     </table>

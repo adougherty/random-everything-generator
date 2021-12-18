@@ -1,7 +1,7 @@
 <category name="Serial Killer" id="killer">
     <table name="The killer is..." id="is">
         <value>A quiet artisan</value>
-        <value>An eccentric scholar</value>
+        <value region_start="13" region_end="20" region_include="scholar">An eccentric scholar</value>
         <value region_start="13" region_end="22" region_include="nation">A mysterious foreigner</value>
         <value>A talented artist</value>
         <value>A polite shopkeeper</value>

@@ -500,7 +500,7 @@
         <value>A patient initiate</value>
         <value>A fierce martial artist</value>
         <value>A dogmatic teacher</value>
-        <value>An eccentric scholar</value>
+        <value region_start="13" region_end="20" region_include="scholar">An eccentric scholar</value>
         <value>A wise old master</value>
         <value region_start="0" region_end="27" region_include="traveler">A traveler from afar</value>
         <value>A member of the monastery's serving staff</value>

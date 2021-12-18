@@ -6,7 +6,7 @@
         <value>He has a strong preference for certain types of elemental attacks.</value>
         <value>His back is rumored to be covered in tattoos that move on their own.</value>
         <value>His wild an impulsive nature make him a dangerous agent for the side of good. There have been accidents.</value>
-        <value>Although a practitioner of wild magic, he's actually a consummate scholar and researcher.</value>
+        <value region_start="66" region_end="73" region_include="scholar">Although a practitioner of wild magic, he's actually a consummate scholar and researcher.</value>
         <value region_start="31|57" region_end="39|61" region_include="city|military">He used his magic to help save the city from a besieging army of humanoids.</value>
         <value region_start="69|88" region_end="75|92" region_include="city|military">He's a legendary monster. He used his magic to tear down the walls of a city and let an army of humanoids inside.</value>
         <value region_start="20" region_end="24" region_include="cult">He's part of a dark cult, raised from birth to take advantage of the magic in his blood.</value>

@@ -24,7 +24,7 @@
     </table>
     <table name="Often, the vampire poses as..." id="poses">
         <value region_start="11" region_end="16" region_include="noble">A powerful noble</value>
-        <value region_start="13" region_end="20" region_include="__noun__">An eccentric scholar</value>
+        <value region_start="13" region_end="20" region_include="scholar">An eccentric scholar</value>
         <value region_start="13" region_end="22" region_include="nation">A mysterious foreigner</value>
         <value region_start="11" region_end="17" region_include="__noun__">A talented artist</value>
         <value region_start="9" region_end="19" region_include="merchant">A polite shopkeeper</value>

@@ -8,7 +8,7 @@
                 <value>A poison maker</value>
                 <value>A potioneer</value>
                 <value>A pyromancer</value>
-                <value region_start="14" region_end="21" region_include="__noun__">An alchemical scholar</value>
+                <value region_start="14" region_end="21" region_include="scholar">An alchemical scholar</value>
                 <value>An experimental alchemist</value>
             </table>
             <table name="The alchemist is looking for..." id="alchemist_looking">

@@ -201,7 +201,7 @@
                 <value>Nature.</value>
                 <value region_start="2" region_end="7" region_include="druid">A druid.</value>
                 <value region_start="3" region_end="12" region_include="__noun__">An alchemist.</value>
-                <value region_start="2" region_end="9" region_include="__noun__">A scholar.</value>
+                <value region_start="2" region_end="9" region_include="scholar">A scholar.</value>
                 <value region_start="2" region_end="9" region_include="cultist">A cultist.</value>
                 <value region_start="2" region_end="8" region_include="dragon">A dragon.</value>
                 <value region_start="2" region_end="10" region_include="merchant">A merchant.</value>

@@ -30,7 +30,7 @@
         <value region_start="11" region_end="18" region_include="__noun__">A dogmatic teacher</value>
         <value region_start="9" region_end="14" region_include="healer">An adept healer</value>
         <value region_start="14" region_end="22" region_include="__noun__">A charismatic preacher</value>
-        <value region_start="13" region_end="20" region_include="__noun__">An eccentric scholar</value>
+        <value region_start="13" region_end="20" region_include="scholar">An eccentric scholar</value>
         <value region_start="13" region_end="19" region_include="__noun__">An outspoken zealot</value>
         <value>A dangerous megalomaniac</value>
         <value>A charismatic demagogue</value>

@@ -18,7 +18,7 @@
         <value region_start="2" region_end="11" region_include="traveler">A traveller</value>
         <value region_start="2" region_end="10" region_include="merchant">A merchant</value>
         <value region_start="14" region_end="26" region_include="secretsociety">A member of a secret order</value>
-        <value region_start="2" region_end="9" region_include="__noun__">A scholar</value>
+        <value region_start="2" region_end="9" region_include="scholar">A scholar</value>
         <value region_start="2" region_end="7" region_include="__noun__">A slave</value>
         <value region_start="15" region_end="19" region_include="nobleman">A servant to a lord</value>
     </table>

@@ -41,7 +41,7 @@
             </table>
             <table name="Profession: The woodsman is...">
                 <value>A strange hearbalist</value>
-                <value>A scholarly botanist</value>
+                <value region_start="2" region_end="11" region_include="scholar">A scholarly botanist</value>
                 <value>A skilled hunter</value>
                 <value>A desperate poacher</value>
                 <value region_start="2" region_end="10" region_include="criminal">A fugitive from justice</value>

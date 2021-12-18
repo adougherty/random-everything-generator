@@ -10,7 +10,7 @@
         <value region_start="9" region_end="19" region_include="merchant">A creepy shopkeeper</value>
         <value region_start="12" region_end="18" region_include="priest">A heretical priest or priestess</value>
         <value>An adept poisonmaker</value>
-        <value>A soft-spoken scholar</value>
+        <value region_start="14" region_end="21" region_include="scholar">A soft-spoken scholar</value>
         <value>A determined loreseeker</value>
     </table>
     <table name="The necromancer learned his/her craft from..." id="learned">

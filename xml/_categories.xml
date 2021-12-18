@@ -196,6 +196,7 @@
         <category id="quartermaster" name="Quartermaster" />
         <category id="robber" name="Robber" />
         <category id="sailor" name="Sailor" />
+        <category id="scholar" name="Scholar" patreon="true"/>
         <category id="seer" name="Seer" />
         <category id="killer" name="Killer" />
         <category id="shopkeeper" name="Shopkeeper" />

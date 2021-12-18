@@ -131,7 +131,7 @@
         <value region_start="12" region_end="18" region_include="outlaw">A notorious outlaw</value>
         <value>A dashing swashbuckler</value>
         <value region_start="11" region_end="18" region_include="fighter">A fearsome warrior</value>
-        <value region_start="12" region_end="19" region_include="traveler">A brilliant scholar</value>
+        <value region_start="12" region_end="19" region_include="scholar">A brilliant scholar</value>
         <value>A gifted orator</value>
         <value>A dangerous and mad ruler</value>
     </table>
