@@ -133,9 +133,15 @@ class REGChild extends Application{
             let after = r.substr(end);
             let linkId =  path + '.' + i;
             let className = 'reg-link';
-            if (includes[i] == '__noun__')
+
+            // Removing Noun links until I can get the editor to work
+            let link = '';
+            if (includes[i] == "__noun__") {
                 className += ' reg-is-noun';
-            let link = `<a id='${linkId}' class='${className}'>${at}</a>`;
+                link = at;
+            } else {
+                link = `<a id='${linkId}' class='${className}'>${at}</a>`;
+            }
 
             this.OpenChildCallBacks[linkId] = () => {
                 let file = includes[i];
