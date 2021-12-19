@@ -21,14 +21,18 @@ class REGChild extends Application{
     DropdownCallbacks = {};
     DeleteCallbacks = {};
     OpenChildCallBacks = {};
+    isMember = false;
+    MemberSrc = null;
 
-    constructor(title, noun=false) {
+    constructor(title, options = {}) {
         super({
             title: `${title} - Random Everything Generator`,
-            template: (noun) ? REGChild.TEMPLATES.NOUN : REGChild.TEMPLATES.MAIN,
-            height: (noun) ? '500' : 'auto'
+            template: (options.noun) ? REGChild.TEMPLATES.NOUN : REGChild.TEMPLATES.MAIN,
+            height: (options.noun) ? '500' : 'auto'
         });
         this.Title = title;
+        this.isMember = (options.isMember) ? true : false;
+        this.MemberSrc = options.memberSrc || null;
     }
 
     static get defaultOptions() {
@@ -55,14 +59,16 @@ class REGChild extends Application{
                 getCache[m[1] + '.' + m[2]] = true;
                 await $.get(`/modules/random-everything-generator/xml/${m[2]}.xml`, xml => {
                     let category = $(xml).find('category');
-                    label = $(category).attr('name');
+                    console.log(`${this.Path}._member.${m[1]}._title`);
+                    label = document.RandomEverythingGeneratorData[`${this.Path}._member.${m[1]}.${m[2]}._title`] || $(category).attr('name');
 
                     this.LinkedMembers.push({
                         index: m[1],
                         label,
                         path: this.Path + `._member.${m[1]}.${m[2]}`,
                         file: m[2],
-                        xml: (new XMLSerializer()).serializeToString(xml)
+                        xml: (new XMLSerializer()).serializeToString(xml),
+                        memberSrc: `${this.id}-member-${m[1]}`,
                     });
                 });
             }
@@ -149,7 +155,7 @@ class REGChild extends Application{
 
                 if (file == '__noun__') {
                     // Open the Noun Window
-                    const regChild = new REGChild(at, true);
+                    const regChild = new REGChild(at, {noun:true});
                     regChild.Path = localPath;
                     regChild.render(true);
                 } else {
@@ -576,12 +582,13 @@ class REGChild extends Application{
             owner: game.user.id,
             members: this.Members,
             linkedMembers: this.LinkedMembers,
-            tableResults: tableResults
+            tableResults: tableResults,
+            isMember: this.isMember
         };
     }
 
     onMemberClick(member) {
-        let regChild = new REGChild(member.label)
+        let regChild = new REGChild(member.label, {isMember:true, memberSrc:member.memberSrc})
         regChild.XML = member.xml;
         regChild.Path = member.path
         regChild.Markov = this.Markov;
@@ -596,9 +603,34 @@ class REGChild extends Application{
         }        
     }
 
+    editTitle(html) {
+        let h2 = html.find(`#${this.id}-reg-title`);
+        let title = html.find(`#${this.id}-reg-title b`).html();
+        $(h2).empty();
+        let input = $('<input/>');
+        $(input).val(title);
+        $(h2).append(input);
+        $(input).focus();
+        $(input).on('keypress', e => {
+            if (e.which == 13) {
+                e.preventDefault();
+                let newTitle = $(input).val();
+                $(h2).empty();
+                $(h2).append(`<b>${newTitle}</b> <i id="${this.id}-reg-title-edit" class="far fa-edit small"></i>`);
+                let i = $(h2).find('i');
+                $(i).click(ev => this.editTitle(html));
+                let memberLi = $(document.getElementById(this.MemberSrc))
+                memberLi.html(newTitle)
+                document.RandomEverythingGeneratorData[this.Path + '._title'] = newTitle;
+            }
+        })
+    }
+
     activateListeners(html) {
         super.activateListeners(html);
         html.find(`#${this.id}-add-member`).change(ev => this.addMember(html));
+        if (this.isMember)
+            html.find(`#${this.id}-reg-title-edit`).click(ev => this.editTitle(html))
 
         for (let member of this.LinkedMembers) {
             html.find(`#${this.id}-member-${member.index}`).click(ev => {
@@ -643,6 +675,7 @@ class REGChild extends Application{
         let option = html.find(`#${this.id}-add-member option:selected`);
         let div = document.createElement('LI');
         $(div).addClass('reg-member')
+        $(div).attr('id', `${this.id}-member-${index}`);
         let container = html.find(`#${this.id}-members-list`);
         container.append(div);
         $.ajax({
@@ -666,32 +699,35 @@ class REGChild extends Application{
                         container.Path = path;
                         $(div).text(name);
                         $(div).click(ev => {
-                            let member = {
+                            this.onMemberClick({
                                 index,
                                 label: name,
                                 xml: srcXml,
-                                path: path + '.' + file
-                            }
-                            this.onMemberClick(member)
-                        })
+                                path: path + '.' + file,
+                                memberSrc: `${this.id}-member-${index}`
+                            });
+                        });
                     }
                     reg.render(true);
                 } else {
                     $(div).text(option.text());
                     $(div).click(ev => {
-                        let member = {
+                        console.log(path);
+                        this.onMemberClick({
                             index,
-                            label: option.text(),
+                            label: document.RandomEverythingGeneratorData[`${path}._title`] || option.text(),
                             xml: xmlStr,
-                            path: path + '.' + option.val()
-                        }
-                        this.onMemberClick(member)
+                            path: path + '.' + option.val(),
+                            memberSrc: `${this.id}-member-${index}`
+                        })
                     })
-                    let regChild = new REGChild(option.text())
-                    regChild.XML = xmlStr;
-                    regChild.Path = path + '.' + option.val();
-                    regChild.Markov = markov;
-                    regChild.render(true);
+                    this.onMemberClick({
+                        index,
+                        label: option.text(),
+                        xml: xmlStr,
+                        path: path + '.' + option.val(),
+                        memberSrc: `${this.id}-member-${index}`
+                    })
                 }
             }
         });

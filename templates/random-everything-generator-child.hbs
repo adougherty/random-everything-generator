@@ -81,18 +81,26 @@
     padding-left:  5px;
     cursor: pointer;
   }
+
+  h2 i.small {
+    font-size:  12px;    
+  }
 </style>
 
 <form>
-  <h2 class="reg-title" id='{{appid}}-reg-title'><b>{{title}}</b></h2>
+  <h2 class="reg-title" id='{{appid}}-reg-title'><b>{{title}}</b>
+  {{#if isMember }}
+    <i id="{{appid}}-reg-title-edit" class="far fa-edit small"></i>
+  {{/if}}
+  </h2>
   <div class="flexrow" id="{{appid}}-reg-row">
     <section id="{{appid}}-child-col1" class="reg-tables">
       {{#each tableResults}}
         <div>
           <span>{{this.key}}: </span><span id="reg-val-{{this.id}}">{{{this.value}}}</span>
-          <a id="reg-regen-{{this.id}}"><i class="fas fa-sync-alt"></i></a>
-          <a id="reg-dd-{{this.id}}">&#9660;</a>
-          <a id="reg-delete-{{this.id}}"><i class="fas fa-minus"></i></a>
+          <a id="reg-regen-{{this.id}}" title="Get a new result"><i class="fas fa-sync-alt"></i></a>
+          <a id="reg-dd-{{this.id}}" title="Select a different result">&#9660;</a>
+          <a id="reg-delete-{{this.id}}" title="Delete this result"><i class="fas fa-minus"></i></a>
         </div>
       {{/each}}
     </section>

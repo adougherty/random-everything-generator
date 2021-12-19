@@ -12,11 +12,10 @@ Note: Random Everything Generator is currently in beta.
 - Add additional Markov sources for cities, dwarves, elves, etc
 - Add API hooks
 -- Get a specific result from the tables to feed into other modules
+-- Open a saved story from API
 - Add Chat hooks
 - Source partial values from another tables. Ex: "A gold cloak." The color should come from another table. The cloak should come from a 3rd table
 - Add "Catch Phrases," voice sounds, accents, manner of speach, vocal ticks, and physical ticks to the various npc tables (Patreon?). Thanks for /u/deadlyllama for the suggestion
-- Allow naming of Members. See: [Issue #5](https://github.com/adougherty/random-everything-generator/issues/5)
-- Add titles to regen button, dropdown button, and delete button
 - Allow for the tables to be weighted. See [Issue #6](https://github.com/adougherty/random-everything-generator/issues/6)
 - Let users filter lists for their worlds. For example, only have certain races available in the race table, or certain classes.
 - Consider: Having some system specific tables. Races just for 5e, or just for Pathfinder

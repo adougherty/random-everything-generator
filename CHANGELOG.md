@@ -5,6 +5,10 @@
 2. links that pre-populate values are not working
 3. links that point to a category are not saving
 
+## [0.1.4]
+- Add the ability to edit the name of a Member
+- Add tooltips for regen, dropdown, and delete buttons
+
 ## [0.1.3]
 - Fixed issue with regenerated links not being clickable
 - Fixed issue with links from includes not being clickable
