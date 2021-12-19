@@ -35,6 +35,7 @@ class RandomEverythingGenerator extends FormApplication{
             return;
         }
 
+        document.RandomEverythingGeneratorData = {};
         RandomEverythingGenerator.log(false, "Opening RandomEverythingGenerator Form");
 
         $.get('/modules/random-everything-generator/xml/_categories.xml', xml => {

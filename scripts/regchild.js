@@ -75,9 +75,9 @@ class REGChild extends Application{
         }
     }
 
-    fromMarkov() {
+    fromMarkov(markovJSON = null) {
         let r = '';   
-        var markov = JSON.parse(this.Markov);
+        var markov = JSON.parse(markovJSON || this.Markov);
         r = this.getNextLetter(markov, '');
         while (r.length < 3 || r.substr(r.length-2) != '--') {
             r += this.getNextLetter(markov, r.substr(r.length-1))
@@ -210,7 +210,7 @@ class REGChild extends Application{
         }
     }
 
-    valueFromTable(node, path) {
+    valueFromTable(node, path, markovJSON) {
         if ($(node).attr('include')) {
             // These shouldn't exist anymore
             console.warn("Invalid include attribute in " + node.getAttribute('id'));
@@ -316,7 +316,7 @@ class REGChild extends Application{
                 const localPath = this.Path + '.' + $(node).attr('id');
 
                 this.RegenCallbacks[localPath] = () => {
-                    const newName = this.generateName(node);
+                    const newName = this.generateName(node, markovJSON);
                     document.RandomEverythingGeneratorData[localPath] = newName;
                     document.getElementById('reg-val-' + localPath).innerHTML = newName;
                 }
@@ -348,7 +348,7 @@ class REGChild extends Application{
                     document.RandomEverythingGeneratorData[localPath] = -2;
                 }
 
-                const name = document.RandomEverythingGeneratorData[localPath] || this.generateName(node)
+                const name = document.RandomEverythingGeneratorData[localPath] || this.generateName(node, markovJSON)
                 document.RandomEverythingGeneratorData[localPath] = name;
                 return name;
                 break;
@@ -432,7 +432,7 @@ class REGChild extends Application{
         }
     }
 
-    generateName(node) {
+    generateName(node, markovJSON) {
         const nodePatterns = node.getElementsByTagName("patterns");
         if (nodePatterns.length == 0)
             return;
@@ -446,7 +446,7 @@ class REGChild extends Application{
             const listType = m[1];
             switch (listType) {
                 case 'markov': {
-                    p = p.replace('{markov}', this.fromMarkov());
+                    p = p.replace('{markov}', this.fromMarkov(markovJSON));
                     break;
                 }
                 default: {
@@ -470,7 +470,7 @@ class REGChild extends Application{
         return p;
     }
 
-    async populateCategory() {
+    async populateCategory(markovJSON = null) {
         let r = [];
         RandomEverythingGenerator.log(false, this.Path)
         let xml = $.parseXML(this.XML);
@@ -485,11 +485,11 @@ class REGChild extends Application{
             name['key'] = 'Name';
             name['value'] = (document.RandomEverythingGeneratorData[localPath])
                 ? document.RandomEverythingGeneratorData[localPath]
-                : this.fromMarkov();
+                : this.fromMarkov(markovJSON);
             document.RandomEverythingGeneratorData[localPath] = name['value'];
 
             this.RegenCallbacks[localPath] = () => {
-                let name = this.fromMarkov();
+                let name = this.fromMarkov(markovJSON);
                 document.getElementById(`reg-val-${localPath}`).innerHTML = name;
                 document.RandomEverythingGeneratorData[localPath] = name
             };
@@ -530,7 +530,7 @@ class REGChild extends Application{
                     let result = {};
                     result['id'] = this.Path + '.' + $(child).attr('id');
                     result['key'] = $(child).attr('short') || $(child).attr('name').replace(/(\.\.\.|:)$/,'');
-                    result['value'] = this.valueFromTable(child, this.Path)
+                    result['value'] = this.valueFromTable(child, this.Path, markovJSON)
                     r.push(result);
                     break;
                 }
@@ -569,8 +569,16 @@ class REGChild extends Application{
         }
 
         await this.loadMembers();
-        let tableResults = await this.populateCategory();
-
+        let xml = $.parseXML(this.XML);
+        let name = $(xml).find('name')[0];
+        let tableResults = [];
+        if (name && $(name).attr('markov-src')) {
+            let json = await $.get(`/modules/random-everything-generator/markov-source/${$(name).attr('markov-src')}.markov`);
+            tableResults = await this.populateCategory(json);
+            console.log('MARKOV SOURCE')
+        } else {
+            tableResults = await this.populateCategory();
+        }
 
         return {
             title: this.Title,
