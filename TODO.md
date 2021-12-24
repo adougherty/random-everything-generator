@@ -21,6 +21,7 @@ Note: Random Everything Generator is currently in beta.
 - Consider: Having some system specific tables. Races just for 5e, or just for Pathfinder
 - Split races off from mutations, such as vamprie, werewolf, etc.
 - Make NPC gender rollable, and replace all he/she language with the appropriate gender in tables. And such references should agree with each other.
+- Make pattern elements linkable (See ingredients/blood of a {dragon})
 
 
 ## [Version 1.1]
