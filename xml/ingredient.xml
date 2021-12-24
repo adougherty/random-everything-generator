@@ -1,0 +1,80 @@
+<category>
+	<table name="The rare ingredient is" short="Ingredient" id="rare">
+		<patterns>
+			<pattern>{phrase}</pattern>
+			<pattern>The {noun} of a {noun2}</pattern>
+		</patterns>
+		<list type="phrase">
+			<item>Black Lotus</item>
+			<item>A spice from a far off realm</item>
+			<item>A mote of elemental fire</item>
+			<item>A mote of elemental water</item>
+			<item>A mote of elemental earth</item>
+			<item>A mote of elemental air</item>
+			<item>A vial of ectoplasm</item>
+			<item>The feather of an angel</item>
+			<item>The ichor from a fiend</item>
+			<item>Lava from the heart of a volcano</item>
+			<item>An unusual mutation of a common plant</item>
+			<item>Bone marrow from an extinct creature</item>
+			<item>The soul of an fallen hero</item>
+			<item>An enchanted bottle</item>
+			<item>Mucus from a kraken</item>
+			<item>The last breath of a dragon</item>
+			<item>The hair from a werewolf</item>
+			<item>An aboleth's mucus</item>
+		</list>
+		<list type="noun">
+			<item>blood</item>
+			<item>tears</item>
+			<item>brain</item>
+			<item>spleen</item>
+			<item>stomach</item>
+			<item>eye</item>
+			<item>soul</item>
+			<item>bone</item>
+		</list>
+		<list type="noun2">
+			<item>dangerous beast</item>
+			<item>ghost</item>
+			<item>banshee</item>
+			<item>dragon</item>
+			<item>tiny creature</item>
+			<item>lover</item>
+			<item>family member</item>
+			<item>fallen hero</item>
+			<item>priest</item>
+			<item>wizard</item>
+			<item>abandoned child</item>
+			<item>cat</item>
+			<item>spider</item>
+			<item>newt</item>
+		</list>
+	</table>
+	<table name="The unique ingredient is" id="unique">
+		<value>A lock of hair from a princess</value>
+		<value>The blood of an enemy</value>
+		<value>The sweat of a lover</value>	
+		<value>Heart of a spouse or family member</value>
+		<value>The blessing of a deity</value>
+		<value>The best memory of a king</value>
+		<value>The worst memory of a saint</value>
+	</table>
+	<table name="The uncommon ingredient is" id="uncommon">
+		<value>The eye of a small creature</value>
+		<value>The spleen of a common creature</value>
+		<value>A rare gem</value>
+		<value>Black sand</value>
+	</table>
+	<table name="The common ingredient is" id="common">
+		<value>A lump of coal</value>
+		<value>A block of goal</value>
+		<value>A common gem</value>
+		<value>A turnip</value>
+		<value>Citris juice</value>
+		<value>Venom from a snake</value>
+		<value>Ginger</value>
+		<value>A common insect ground to dust</value>
+		<value>Peppermint</value>ps
+	</table>
+</category>
