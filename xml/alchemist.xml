@@ -16,8 +16,8 @@
         <value>New recipes</value>
         <value region_start="21" region_end="41" region_include="potions">A long-lost recipe for a legendary potion</value>
         <value>Purchasers</value>
-        <value region_start="5" region_end="16" region_include="__noun__">Rare ingredients</value>
-        <value region_start="9" region_end="19" region_include="__noun__">A unique ingredient</value>
+        <value region_start="5" region_end="16" region_include="ingredient">Rare ingredients</value>
+        <value region_start="9" region_end="19" region_include="ingredient">A unique ingredient</value>
     </table>
     <table name="The alchemist carries..." id="alchemist_carries">
         <value>Several vials of acid</value>

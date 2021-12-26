@@ -1,5 +1,5 @@
 <category>
-	<table name="The rare ingredient is" short="Ingredient" id="rare">
+	<table name="The rare ingredient is" id="rare" type="pattern">
 		<patterns>
 			<pattern>{phrase}</pattern>
 			<pattern>The {noun} of a {noun2}</pattern>
@@ -23,6 +23,7 @@
 			<item>The last breath of a dragon</item>
 			<item>The hair from a werewolf</item>
 			<item>An aboleth's mucus</item>
+			<item>Lightning in a bottle</item>
 		</list>
 		<list type="noun">
 			<item>blood</item>
@@ -60,21 +61,94 @@
 		<value>The best memory of a king</value>
 		<value>The worst memory of a saint</value>
 	</table>
-	<table name="The uncommon ingredient is" id="uncommon">
-		<value>The eye of a small creature</value>
-		<value>The spleen of a common creature</value>
-		<value>A rare gem</value>
-		<value>Black sand</value>
+	<table name="The uncommon ingredient is" id="uncommon" type="pattern">
+		<patterns>
+			<pattern>{phrase}</pattern>
+			<pattern>The {treepart} of a {tree}</pattern>
+			<pattern>Oil from {oil}</pattern>
+		</patterns>
+		<list type="phrase">
+			<value>The eye of a small creature</value>
+			<value>The spleen of a common creature</value>
+			<value>A rare gem</value>
+			<value>Black sand</value>
+		</list>
+		<list type="treepart">
+			<item>sap</item>
+			<item>bark</item>
+			<item>leaf</item>
+			<item>heart</item>
+			<item>oil</item>
+			<item>seed</item>
+		</list>
+		<list type="tree">
+			<item>birch</item>
+			<item>palm</item>
+			<item>pine tree</item>
+			<item>evergreen tree</item>
+			<item>spruce</item>
+			<item>eycalyptus</item>
+			<item>olive tree</item>
+			<item>orange tree</item>
+			<item>lemon tree</item>
+			<item>cedar</item>
+			<item>cypress</item>
+			<item>juniper</item>
+			<item>apple tree</item>
+		</list>
+		<list type="oil">
+			<item>brich</item>
+			<item>pine</item>
+			<item>corn</item>
+			<item>peppermint</item>
+			<item>spruce</item>
+			<item>pine tree</item>
+			<item>sunflower</item>
+			<item>garlic</item>
+			<item>an olive tree</item>
+			<item>the liver of a shark</item>
+			<item>lemon grass</item>
+			<item>an illicit substance</item>
+			<item>sandal wood</item>
+			<item>basil</item>
+			<item>black pepper</item>
+			<item>cardamom</item>
+			<item>cinnamon</item>
+			<item>carrot</item>
+			<item>cedarwood</item>
+			<item>sage</item>
+			<item>cypress</item>
+			<item>eycalyptus</item>
+			<item>fennel</item>
+			<item>frankincense</item>
+			<item>geranium</item>
+			<item>ginger</item>
+			<item>jasmine</item>
+			<item>juniper</item>
+			<item>lavender</item>
+			<item>lemon</item>
+			<item>lime</item>
+			<item>marjoram</item>
+			<item>myrrh</item>
+			<item>nutmeg</item>
+			<item>oregano</item>
+			<item>rose</item>
+			<item>rosemary</item>
+			<item>tea</item>
+			<item>thyme</item>
+			<item>vanilla</item>
+		</list>
 	</table>
 	<table name="The common ingredient is" id="common">
-		<value>A lump of coal</value>
-		<value>A block of goal</value>
-		<value>A common gem</value>
-		<value>A turnip</value>
-		<value>Citris juice</value>
-		<value>Venom from a snake</value>
-		<value>Ginger</value>
-		<value>A common insect ground to dust</value>
-		<value>Peppermint</value>ps
+		<value>a lump of coal</value>
+		<value>a block of goal</value>
+		<value>a common gem</value>
+		<value>a turnip</value>
+		<value>citrus juice</value>
+		<value>venom from a snake</value>
+		<value>ginger</value>
+		<value>a common insect ground to dust</value>
+		<value>peppermint</value>
+		<value>purified water</value>
 	</table>
 </category>

@@ -82,7 +82,7 @@
         <value region_start="15" region_end="28" region_include="junk">A sack full of odds and ends.</value>
     </table>
     <table name="Presently, the halfling is looking for..." id="looking">
-        <value region_start="8|26" region_end="19|30" region_include="__noun__|__noun__">Quality ingredients for a stew.</value>
+        <value region_start="8|26" region_end="19|30" region_include="ingredient|__noun__">Quality ingredients for a stew.</value>
         <value region_start="7" region_end="11" region_include="__noun__">A lost pipe.</value>
         <value region_start="6" region_end="13" region_include="__noun__">A new tea set.</value>
         <value region_start="13" region_end="16" region_include="__noun__">Something to eat.</value>

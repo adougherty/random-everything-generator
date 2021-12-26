@@ -10,7 +10,7 @@
             </table>
             <table name="The cook is looking for..." id="looking">
                 <value>Someone more important to talk to</value>
-                <value>Some better ingredients</value>
+                <value region_start="12" region_end="23" region_include="ingredient">Some better ingredients</value>
                 <value>A good joke or story</value>
                 <value>The bottom of a bottle</value>
             </table>

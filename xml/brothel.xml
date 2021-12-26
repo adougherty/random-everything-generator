@@ -237,7 +237,7 @@
                 <value>The most beautiful women and men. Not just a claim, it's the gods' honest truth</value>
                 <value>Ann all-inclusive lump-sum -- all the harlots, food, and drink you can handle!</value>
                 <value>The sale of mind-altering drugs</value>
-                <value>Stuff with exotic/magical ingredients, potions, etc</value>
+                <value region_start="26|39" region_end="37|46" region_include="ingredient|potions">Stuff with exotic/magical ingredients, potions, etc</value>
                 <value>Magical delights</value>
             </table>
             <table name="The place is run by..." id="runby">

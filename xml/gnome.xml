@@ -84,8 +84,8 @@
     <table name="Presently, the gnome is looking for..." id="gnome_looking">
         <value region_start="25" region_end="30" region_include="__noun__">Protection from an angry giant.</value>
         <value region_start="27" region_end="34" region_include="goblinclan">Protection from some tricky goblins.</value>
-        <value region_start="7|24" region_end="17|30" region_include="__noun__|potions">A rare ingredient for a potion</value>
-        <value region_start="7|24" region_end="17|30" region_include="__noun__|poisons">A rare ingredient for a poison</value>
+        <value region_start="7|24" region_end="17|30" region_include="ingredient|potions">A rare ingredient for a potion</value>
+        <value region_start="7|24" region_end="17|30" region_include="ingredient|poisons">A rare ingredient for a poison</value>
         <value region_start="7" region_end="11" region_include="book">A lost book of arcane secrets.</value>
         <value region_start="20" region_end="27" region_include="potions">Someone to buy some potions.</value>
         <value>Someone from whom to palm a few coins.</value>

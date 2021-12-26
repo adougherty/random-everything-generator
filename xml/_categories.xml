@@ -108,6 +108,7 @@
         <category id="disease" name="Disease" />
         <category id="charm" name="Charms" />
         <category id="heirloom" name="Heirloom" />
+        <category id="ingredient" name="Ingredients" />
         <category id="legendary_weapon" name="Legendary Weapon"/>
         <category id="pickpocketloot" name="Pickpoket Loot"/>
         <category id="poisons" name="Poisons"/>
@@ -275,12 +276,5 @@
     <category name="Rooms" id="rooms">
         <category name="Castle Dungeon" id="room_castledungeon" />
         <category name="Castle Chamber" id="room_castlechamber" />
-    </category>
-    <category name="Misc" id="misc">
-        <category name="Guilds" id="guilds">
-            <category name="Assassins' Guild" id="guild_assassin" />
-            <category name="Crafting Guild" id="guild_crafting" />
-            <category name="Merchants' Guild" id="guild_merchant" />
-        </category>
     </category>
 </categories>
