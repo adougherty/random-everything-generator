@@ -250,15 +250,62 @@ Hooks.on("init", async(app, hmtl) => {
 });
 
 Hooks.on('renderREGChild', (app, html, data) => {
+    let titleElement = html.closest('.app').find('.window-title');
+
+    // Save button
     let saveBtn = $(`<a class="reg-save"><i class="far fa-save"></i>Save</a>`);
     saveBtn.click(ev => {
         let saveApp = new REGTitle();
         saveApp.render(true);
     });
     html.closest('.app').find('.reg-save').remove();
-    let titleElement = html.closest('.app').find('.window-title');
     saveBtn.insertAfter(titleElement);
 
+    // Export Button
+    let exportBtn = $(`<a class="reg-export"><i class="fas fa-file-export"></i>Export</a>`);
+    exportBtn.click(ev => {
+        let xml = $.parseXML(app.XML);
+        let category = $(xml).find('category');
+        let exportType = $(category)?.attr('export') || 'JournalEntry'
+        switch (exportType) {
+            case 'ActorSheet': {
+                $.get('/modules/random-everything-generator/xml/npc_race.xml', async (raceXML) => {
+                    let races = {};
+                    let xmlRaces = $(raceXML).find('value');
+                    $(xmlRaces).each(v => {
+                        let race = xmlRaces[v];
+                        races[race.innerHTML] = {
+                            creatureType: $(race).attr('creatureType5e') || race.innerHTML,
+                            subtype: $(race).attr('subtype5e'),
+                            race: $(race).attr('race5e')
+                        }
+                    })
+
+                    RandomEverythingGenerator.log(true, 'Saving to ActorSheet');
+                    let name = document.RandomEverythingGeneratorData[`${app.Path}.name`];
+                    let creatureType = document.RandomEverythingGeneratorData[`${app.Path}.npc_race`]
+                    let actor = await Actor.create({
+                      name: name,
+                      type: 'npc',
+                      img: "icons/svg/mystery-man.svg",
+                      data: {
+                        data: {
+                            race: {
+                                creatureType: races[creatureType].creatureType
+                            }
+                        }
+                      }
+                    });
+                    //actor.labels = races[creatureType].creatureType;
+                })
+                break;
+            }
+        }
+    });
+    html.closest('.app').find('.reg-export').remove();
+    exportBtn.insertAfter(titleElement);
+
+    // Delete Button
     if (!app.Path && document.RandomEverythingGeneratorData.save) {
         let delBtn = $(`<a class="reg-delete"><i class="far fa-trash-alt"></i>Delete</a>`);
         delBtn.click(ev => {

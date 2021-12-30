@@ -1,58 +1,58 @@
 <table name="The character's race is..." id="npc_race" short="Race">
-    <value>Aaasimar</value>
-    <value>Aarakocra</value>
-    <value>Bugbear</value>
-    <value>Changling</value>
-    <value region_start="0" region_end="8" region_include="darkelf">Dark Elf</value>
-    <value>Dragonborn</value>
-    <value>Gith</value>
-    <value region_start="0" region_end="5" region_include="gnome">Gnome</value>
-    <value>Half-Orc</value>
+    <value creatureType5e="Humanoid" subtype5e="aasimar">Aasimar</value>
+    <value creatureType5e="Humanoid" subtype5e="aarakocra">Aarakocra</value>
+    <value creatureType5e="Humanoid" subtype5e="goblinoid" race5e="Bugbear">Bugbear</value>
+    <value creatureType5e="Humanoid" subtype5e="changeling, shaprechanger">Changeling</value>
+    <value creatureType5e="Humanoid" subtype5e="elf" race5e="Dark Elf" region_start="0" region_end="8" region_include="darkelf">Dark Elf</value>
+    <value creatureType5e="Humanoid" subtype5e="dragonborn">Dragonborn</value>
+    <value creatureType5e="Humanoid" subtype5e="gith">Gith</value>
+    <value creatureType5e="Humanoid" subtype5e="gnone" region_start="0" region_end="5" region_include="gnome">Gnome</value>
+    <value creatureType5e="Humanoid" subtype5e="half-orc">Half-Orc</value>
     <value>Half-Elf</value>
-    <value region_start="0" region_end="8" region_include="halfling">Halfling</value>
-    <value region_start="0" region_end="8" region_include="highelf">High Elf</value>
-    <value region_start="0" region_end="10" region_include="dwarf">Hill Dwarf</value>
-    <value>Human</value>
-    <value region_start="0" region_end="14" region_include="dwarf">Mountain Dwarf</value>
-    <value>Tiefling</value>
-    <value region_start="0" region_end="8" region_include="woodelf">Wood Elf</value>
-    <value>Centaur</value>
-    <value>Dryad</value>
-    <value>Duergar</value>
-    <value>Kalashtar</value>
-    <value>Kenku</value>
-    <value region_start="0" region_end="6" region_include="kobold">Kobold</value>
-    <value>Genasi</value>
-    <value region_start="0" region_end="6" region_include="goblin">Goblin</value>
-    <value>Goliath</value>
-    <value>Grung</value>
-    <value>Loxodon</value>
-    <value>Hobgoblin</value>
-    <value>Locathah</value>
-    <value>Medusa</value>
-    <value>Minotaur</value>
-    <value region_start="0" region_end="10" region_include="lizardfolk">Lizardfolk</value>
-    <value>Ogre</value>
-    <value>Orc</value>
-    <value>Owlin</value>
-    <value>Fairy</value>
-    <value>Harengon</value>
-    <value>Pixie</value>
-    <value>Revenant</value>
-    <value>Satyr</value>
-    <value>Shadar-kai</value>
-    <value>Shifter</value>
-    <value>Simic Hybrid</value>
-    <value>Tabaxi</value>
-    <value>Tortle</value>
-    <value>Triton</value>
-    <value>Troll</value>
-    <value region_start="0" region_end="7" region_include="vampire">Vampire</value>
-    <value>Vedalken</value>
-    <value>Verdan</value>
-    <value>Warforged</value>
-    <value region_start="0" region_end="8" region_include="lycanthrope">Werebear</value>
-    <value region_start="0" region_end="7" region_include="lycanthrope">Wererat</value>
-    <value region_start="0" region_end="8" region_include="lycanthrope">Werewolf</value>
-    <value>Yuan-ti Pureblood</value>
+    <value creatureType5e="Humanoid" subtype5e="halfling" region_start="0" region_end="8" region_include="halfling">Halfling</value>
+    <value creatureType5e="Humanoid" subtype5e="elf" race5e="High Elf" region_start="0" region_end="8" region_include="highelf">High Elf</value>
+    <value creatureType5e="Humanoid" subtype5e="dwarf" race5e="Hill Dwarf" region_start="0" region_end="10" region_include="dwarf">Hill Dwarf</value>
+    <value creatureType5e="Humanoid">Human</value>
+    <value creatureType5e="Humanoid" subtype5e="dwarf" race5e="Mountain Dwarf" region_start="0" region_end="14" region_include="dwarf">Mountain Dwarf</value>
+    <value creatureType5e="Humanoid" subtype5e="tiefling">Tiefling</value>
+    <value creatureType5e="Humanoid" subtype5e="elf" race5e="Wood Elf" region_start="0" region_end="8" region_include="woodelf">Wood Elf</value>
+    <value creatureType5e="Monstrosity">Centaur</value>
+    <value creatureType5e="Fey">Dryad</value>
+    <value creatureType5e="Humanoid" subtype5e="dwarf" race5e="Duergar">Duergar</value>
+    <value creatureType5e="Humanoid" subtype5e="kalashtar">Kalashtar</value>
+    <value creatureType5e="Humanoid" subtype5e="kenku">Kenku</value>
+    <value  creatureType5e="Humanoid" subtype5e="kobold" region_start="0" region_end="6" region_include="kobold">Kobold</value>
+    <value creatureType5e="Humanoid" subtype5e="genasi">Genasi</value>
+    <value creatureType5e="Humanoid" subtype5e="goblinoid" region_start="0" region_end="6" region_include="goblin">Goblin</value>
+    <value creatureType5e="Humanoid" subtype5e="goliath">Goliath</value>
+    <value creatureType5e="Humanoid" subtype5e="grung">Grung</value>
+    <value creatureType5e="Humanoid" subtype5e="loxodon">Loxodon</value>
+    <value creatureType5e="Humanoid" subtype5e="goblinoid" race5e="Hobgoblin">Hobgoblin</value>
+    <value creatureType5e="Humanoid" subtype5e="locathah">Locathah</value>
+    <value creatureType5e="Monstrosity">Medusa</value>
+    <value creatureType5e="Monstrosity">Minotaur</value>
+    <value creatureType5e="Humanoid" subtype5e="lizardfolk" region_start="0" region_end="10" region_include="lizardfolk">Lizardfolk</value>
+    <value creatureType5e="Giant">Ogre</value>
+    <value creatureType5e="Humanoid" subtype5e="orc">Orc</value>
+    <value creatureType5e="Humanoid" subtype5e="owlin">Owlin</value>
+    <value creatureType5e="Fey" race5e="Fairy">Fairy</value>
+    <value creatureType5e="Fey" race5e="Harengon">Harengon</value>
+    <value creatureType5e="Fey" race5e="Pixie">Pixie</value>
+    <value creatureType5e="Undead" race5e="Revenant">Revenant</value>
+    <value creatureType5e="Fey" race5e="Satyr">Satyr</value>
+    <value creatureType5e="Humanoid" subtype5e="elf, shadar-kai">Shadar-kai</value>
+    <value creatureType5e="Humanoid" subtype5e="shifter">Shifter</value>
+    <value creatureType5e="Humanoid" subtype5e="simic hybrid">Simic Hybrid</value>
+    <value creatureType5e="Humanoid" subtype5e="tabaxi">Tabaxi</value>
+    <value creatureType5e="Humanoid" subtype5e="tortle">Tortle</value>
+    <value creatureType5e="Humanoid" subtype5e="triton">Triton</value>
+    <value creatureType5e="Giant" race5e="Troll">Troll</value>
+    <value creatureType5e="Undead" race5e="Vampire" region_start="0" region_end="7" region_include="vampire">Vampire</value>
+    <value creatureType5e="Humanoid" subtype5e="vedalken">Vedalken</value>
+    <value creatureType5e="Humanoid" subtype5e="verdan">Verdan</value>
+    <value creatureType5e="Humanoid" subtype5e="warforged">Warforged</value>
+    <value creatureType5e="Humanoid" subtype5e="human, shaprechanger" region_start="0" region_end="8" region_include="lycanthrope">Werebear</value>
+    <value creatureType5e="Humanoid" subtype5e="human, shaprechanger" region_start="0" region_end="7" region_include="lycanthrope">Wererat</value>
+    <value creatureType5e="Humanoid" subtype5e="human, shaprechanger" region_start="0" region_end="8" region_include="lycanthrope">Werewolf</value>
+    <value creatureType5e="Humanoid" subtype5e="yuan-ti" race5e="Yuan-ti Pureblood">Yuan-ti Pureblood</value>
 </table>

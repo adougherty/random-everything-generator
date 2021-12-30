@@ -560,6 +560,8 @@ class REGChild extends Application{
     }
 
     async getData(options) {
+        let xml = $.parseXML(this.XML);
+
         if (!this.Members.length) {
             let doc = $.parseXML(this.XML);
             let memberNodes = $(doc).find('member');
@@ -569,7 +571,6 @@ class REGChild extends Application{
         }
 
         await this.loadMembers();
-        let xml = $.parseXML(this.XML);
         let name = $(xml).find('name')[0];
         let tableResults = [];
         if (name && $(name).attr('markov-src')) {

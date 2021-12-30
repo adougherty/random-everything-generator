@@ -1,4 +1,4 @@
-<category name="Random NPC" id="npc">
+<category name="Random NPC" id="npc" export="ActorSheet">
     <name name="The NPC's name is..."/>
     <include name="Race" include="npc_race" />
     <include name="Class" include="npc_class" />
