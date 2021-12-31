@@ -24,7 +24,7 @@
                 </table>
                 <table name="The druid learned the craft from..." id="craft">
                     <value region_start="27" region_end="32" region_include="witch">Apprenticing to a woodland witch</value>
-                    <value region_start="31" region_end="38" region_include="__noun__">Studying wilderness lore at an academy</value>
+                    <value region_start="31" region_end="38" region_include="academy">Studying wilderness lore at an academy</value>
                     <value region_start="2" region_end="8" region_include="druid">A parent who was also a druid</value>
                     <value region_start="34" region_end="41" region_include="noblehouse">Running a menagerie or garden for royalty</value>
                     <value>Surviving in the wild alone for years</value>

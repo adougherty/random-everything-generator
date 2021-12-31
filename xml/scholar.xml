@@ -5,7 +5,7 @@
 		<value>A young savant</value>
 		<value>A senile old man</value>
 		<value>An adventurer in thier spare time</value>
-		<value region_start="31" region_end="41"  region_include="__noun__">The president of a prestigious university</value>
+		<value region_start="31" region_end="41"  region_include="academy">The president of a prestigious university</value>
 		<value>Interested only in the theoretical</value>
 		<value>Interested only in the practical</value>
 		<value>A traveller</value>
@@ -126,7 +126,7 @@
 		<value region_start="13" region_end="20"  region_include="__noun__">A travelling scholar</value>
 		<value>The organization he belongs to</value>
 		<value region_start="2" region_end="7"  region_include="fiend">A fiend, as part of a dark bargain</value>
-		<value region_start="12|30" region_end="18|35"  region_include="__noun__|nation">A prominent school in another realm</value>
+		<value region_start="12|30" region_end="18|35"  region_include="academy|nation">A prominent school in another realm</value>
 		<value region_start="16|35" region_end="21|45"  region_include="book|wilderness">A collection of books found in the wilderness</value>
 		<value region_start="2" region_end="8" region_include="deity">A divine being</value>
 		<value region_start="2" region_end="7"  region_include="__noun__">A dream</value>
@@ -136,14 +136,14 @@
 		<value region_start="42" region_end="50"  region_include="npc">Tomes that were inherited from a deceased relative</value>
 	</table>
 	<table name="The scholar works with" id="organization">
-		<value region_start="12" region_end="22"  region_include="__noun__">A prominent university</value>
+		<value region_start="12" region_end="22"  region_include="academy">A prominent university</value>
 		<value>A collaboration of other scholars</value>
-		<value region_start="8" region_end="14" region_include="__noun__">A small school</value>
+		<value region_start="8" region_end="14" region_include="academy">A small school</value>
 		<value region_start="16" region_end="29" region_include="noble">Advisors to the king or queen</value>
 		<value>His family</value>
-		<value region_start="12" region_end="19" region_include="__noun__">A wizarding academy</value>
+		<value region_start="12" region_end="19" region_include="academy">A wizarding academy</value>
 		<value>No one.</value>
-		<value region_start="2|16" region_end="8|28" region_include="__noun__|nation">A school from a foreign land</value>
+		<value region_start="2|16" region_end="8|28" region_include="academy|nation">A school from a foreign land</value>
 		<value region_start="2" region_end="14" region_include="__noun__">A secret cabal of scholars</value>
 		<value region_start="9" region_end="14" region_include="cult">A secret cabal of cultists</value>
 		<value region_start="13" region_end="20" region_include="caravan">A travelling caravan</value>

@@ -1,8 +1,8 @@
 <category name="City Landmark and District" id="landmark">
     <table name="Landmark: You see a/an..." id="see">
-        <value>Academy or university</value>
+        <value region_start="0" region_end="21" region_include="academy">Academy or university</value>
         <value>Ancient ruin</value>
-        <value>Arena</value>
+        <value region_start="0" region_end="5" region_include="arena">Arena</value>
         <value>Cemetery</value>
         <value>Civic hall</value>value>
         <value>Council hall</value>

@@ -163,7 +163,7 @@
         <value region_start="24|41" region_end="29|45" region_include="noblehouse|city">Revenge against a rival house in another city</value>
         <value region_start="24|41" region_end="29|47" region_include="noblehouse|__noun__">Revenge against a rival house in another region</value>
         <value region_start="12" region_end="17" region_include="guilds">Sabotage of a guild run by commoners</value>
-        <value region_start="15" region_end="22" region_include="__noun__">Sabotage of an academy run by commoners</value>
+        <value region_start="15" region_end="22" region_include="academy">Sabotage of an academy run by commoners</value>
         <value region_start="14" region_end="23" region_include="__noun__">Sabotage of a religious faith run by commoners</value>
         <value region_start="12" region_end="28" region_include="secretsociety">Sabotage of a secret society run by commoners -- or secret society</value>
         <value region_start="49" region_end="61" region_include="noblehouse">Fomenting rebellion against the city or region's ruling house</value>

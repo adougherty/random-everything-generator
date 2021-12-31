@@ -2,7 +2,7 @@
     <name name="The necromancer's name is..."/>
     <include name="Race" include="npc_race" />
     <table name="The necromancer is..." id="is">
-        <value region_start="12" region_end="19" region_include="__noun__">A brilliant academy graduate</value>
+        <value region_start="12" region_end="19" region_include="academy">A brilliant academy graduate</value>
         <value region_start="13" region_end="20" region_include="villain">A well-known villain</value>
         <value>A violent maniac</value>
         <value region_start="13" region_end="17" region_include="wizard">An ambitious mage</value>
@@ -17,7 +17,7 @@
         <value region_start="9" region_end="20" region_include="necromancer">A fellow necromancer to who he/she apprenticed</value>
         <value region_start="34" region_end="45">A parent or grandparent who was a necromancer</value>
         <value>Books of necromantic lore</value>
-        <value region_start="13" region_end="20" region_include="__noun__">Attending an academy</value>
+        <value region_start="13" region_end="20" region_include="academy">Attending an academy</value>
         <value>Books of forbidden lore</value>
         <value>Communication with the spirits of the dead</value>
         <value region_start="16" region_end="23" region_include="fiend">Consorting with a fiend</value>

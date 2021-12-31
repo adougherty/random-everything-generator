@@ -221,7 +221,7 @@
         <value>Its wide streets</value>
         <value>Its incredibly beautiful architecture</value>
         <value>Its patronage of the arts</value>
-        <value>The nearby academy of magic</value>
+        <value region_start="11" region_end="18" region_include="academy">The nearby academy of magic</value>
         <value>The rare herbs that grow nearby</value>
         <value>The use of glowing crystal as streetlamps</value>
         <value>The settlement's astronomy observatory</value>

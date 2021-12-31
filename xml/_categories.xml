@@ -108,7 +108,7 @@
         <category id="disease" name="Disease" />
         <category id="charm" name="Charms" />
         <category id="heirloom" name="Heirloom" />
-        <category id="ingredient" name="Ingredients" />
+        <category id="ingredient" name="Ingredients" patron="true" />
         <category id="legendary_weapon" name="Legendary Weapon"/>
         <category id="pickpocketloot" name="Pickpoket Loot"/>
         <category id="poisons" name="Poisons"/>
@@ -231,6 +231,7 @@
     </category>
     <category name="Locations" id="locations">
         <category name="Arena" id="arena" />
+        <category name="Academy" id="academy" patreon="true" />
         <category name="Brothel" id="brothel" />
         <category name="Landmark" id="landmark" />
         <category name="Dwarf Enclave" id="dwarfenclave" />
