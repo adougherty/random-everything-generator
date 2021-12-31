@@ -1,0 +1,142 @@
+<category name="Academy" id="academy">
+	<table name="The primary focus of the academy is" id="focus">
+		<item>Alchemy</item>
+		<item>Magic (General)</item>
+		<item>Magic (Necromancy)</item>
+		<item>Magic (Abjuration)</item>
+		<item>Magic (Evocation)</item>
+		<item>Magic (Chronurgy)</item>
+		<item>Magic (Graviturgy)</item>
+		<item>Magic (Enchantment)</item>
+		<item>Magic (Illusion)</item>
+		<item>Magic (Transmutation)</item>
+		<item>Magic (Conjuration)</item>
+		<item>Magic (Divination)</item>
+		<item>Tinkering</item>
+		<item>Politics and Diplomacy</item>
+		<item>General Education</item>
+		<item>Astrology</item>
+		<item>History</item>
+		<item>Philosophy</item>
+		<item>Herbology</item>
+		<item>Biology</item>
+		<item>Divinity</item>
+		<item>Agriculture</item>
+		<item>Horticulture</item>
+		<item>Advanced Sciences</item>
+	</table>
+	<table name="The architecture of the academy is" id="architecture">
+		<item>A monolithic tower rising above the surrounding city</item>
+		<item>Seven towers arranged in a perfect circle</item>
+		<item>Many buildings establishing a campus</item>
+		<item>A former mansion converted into a school</item>
+		<item>A two-story warehouse</item>
+		<item>A series of caverns built into the side of a hill or mountain</item>
+		<item>A castle floating among the clouds</item>
+		<item>An extra-dimensional space</item>
+		<item>A building with infinite rooms that exists in multiple places at the same time</item>
+		<item>A few spare rooms connected to a friendly temple</item>
+		<item>A single room in the headmaster's house</item>
+		<item>Subterranian, sprawling beneath its host city</item>
+		<item>A former castle</item>
+		<item>A beautifuly built building predating the surrounding city</item>
+		<item>Distributed across homes of scholars</item>
+	</table>
+	<table name="The academy's relationship with it's surrounding town" id="town">
+		<item>It is a central part of their economy</item>
+		<item>It holds high political value</item>
+		<item>It attracts a lot of tourists</item>
+		<item>It is the pride and joy of the locals</item>
+		<item>Most people don't even realize it's there</item>
+		<item>It is an eyesore on an otherwise comfortable city</item>
+		<item>It attacts far too many ne'er-do-wells</item>
+		<item>The city folks consider the students and teachers as pompous</item>
+		<item>The locals are ashamed of the poor education it provides</item>
+		<item>Locals are expected to attend the academy</item>
+		<item>It is one of many academies in the city. No more special than the others</item>
+		<item>It's a dangerous place. They're bound to blow something up sooner than later</item>
+		<item>The locals are wary, as those who attend, never come out the same again</item>
+	</table>
+	<table name="The academy's relationship with other academies" id="other">
+		<item>It hosts regular sporting events</item>
+		<item>It hosts regular academic competitions</item>
+		<item>It considers itself too good to be compared with other academies</item>
+		<item>It considers itself an equal among a network of academies</item>
+		<item>It is one of a kind. No other academies like it exist</item>
+		<item>It is a lower tier academy. When students finish here, they move on to other academies of higher learning</item>
+		<item>It is a top tier academy, other academies send their students here when they are ready to progress further</item>
+		<item>It often poaches students from other academies</item>
+		<item>Most other academies consider this academy's education to be woefully lacking</item>
+		<item>Most other academies consider this academy's education to be fraudulent</item>
+		<item>Most other academies consider this academy's education to be the gold standard</item>
+	</table>
+	<table name="The academy holds a secret" id="secret">
+		<item>Select students are being recruited by an evil cult</item>
+		<item>The campus was built on unhallowed or cursed ground</item>
+		<item>The government is using the education to slowly indoctrinate the students</item>
+		<item>A monster lives in the basement, and is occassionally fed a student</item>
+		<item>The headmaster is a polymorphed dragon</item>
+		<item>The academy is the protector of a legendary artifact</item>
+		<item>The academy is the alma mater of a notorious villain</item>
+		<item>Hidden within the academy's walls is a portal to another realm</item>
+		<item>The academy is responsible for the accidental incursion of demons</item>
+		<item>A plague was accidently crafted and released from this academy</item>
+		<item>The headmaster is an illithid</item>
+		<item>The instructors are bound devils</item>
+		<item>Students only get a good education with a high enough bribe</item>
+		<item>Many unworthy students are accepted because the staff were bribed</item>
+		<item>To get ahead in the academy, a student will have to provide a blood sacrifice</item>
+		<item>To get ahead in the academy, a studeny will have to make a dark oath</item>
+	</table>
+	<table name="How are students educated" id="educated">
+		<item>There are many classes on all sorts of subjects with professors providing a standardized cirriculum</item>
+		<item>A few professors teach in large auditoriums on prescribed subjects</item>
+		<item>A single professor teaches on the subjects they deem necessary for the day</item>
+		<item>Students are given access to large libraries, and encouraged to learn on their own</item>
+		<item>Students are paired up one on one with a mentor</item>
+		<item>Mentors are assigned a group of students</item>
+		<item>A large number of students are accepted into the academy, but are required to compete with each other to progress. Only the best few graduate</item>
+		<item>Students must study on their own, and petition a mentor to take them on</item>
+		<item>Most education is done through magical means while the student is unconscious</item>
+		<item>Students are given a practical education by being sent into the wild with only a few tools to help them survive</item>
+		<item>A series of tiered classes are taught, each level requires more commitment from the student.</item>
+		<item>Students are sent into the field as journeyman or apprentices taught by a master</item>
+	</table>
+	<table name="There is a rumor about the academy" id="rumor">
+		<item>Some of the professors are not properly educated or skilled</item>
+		<item>The academy is losing money</item>
+		<item>One of the professors is a cultist</item>
+		<item>The headmaster is a beholder</item>
+		<item>The academy is hiding a magical artifact</item>
+		<item>Vampires lurk the grounds at night</item>
+		<item>Werewolves lurk the grounds at night</item>
+		<item>Ghosts lurk the grounds a night</item>
+		<item>There is a secret dungeon level, where arcane rituals are performed</item>
+		<item>Some of the students were involved in the assasination of a political figure at the behest of the academy</item>
+		<item>The academy is holding on to a dark secret that could doom the world</item>
+	</table>
+	<table name="The rumors are likely" id="rumor_likely">
+		<item>False</item>
+		<item>True</item>
+		<item>A distraction from what is really going on</item>
+		<item>A hoax</item>
+		<item>Only the tip of the iceberg</item>
+		<item>A conspiracy theory</item>
+	</table>
+	<table name="The academy is well known for" id="known">
+		<item>Graduated students that go on to great careers</item>
+		<item>A legendary wizard that once attended</item>
+		<item>Miraculous advances</item>
+		<item>A chicken that walks the grounds</item>
+		<item>A legendary acedemic that mysteriously died before announcing their greatest discovery.</item>
+		<item>Saving the city from a zombie massacre</item>
+		<item>Nothing, absolutely nothing</item>
+		<item>Crafting a magical artifact</item>
+		<item>Its strict rules regarding who is allowed to attend</item>
+		<item>Its rather odd unifoms that students are required to wear</item>
+		<item>Its bold mantra that has not changed since the school was established</item>
+		<item>Its age. It is over a thousand years old</item>
+		<item>Its resiliency. It has survived countless wars, and city occupations</item>
+	</table>
+	<member name="Scholar" include="scholar" />
+</category>
