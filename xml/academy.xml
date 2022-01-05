@@ -26,20 +26,20 @@
 		<item>Advanced Sciences</item>
 	</table>
 	<table name="The architecture of the academy is" id="architecture">
-		<item>A monolithic tower rising above the surrounding city</item>
+		<item region_start="48" region_end="52" region_include="city">A monolithic tower rising above the surrounding city</item>
 		<item>Seven towers arranged in a perfect circle</item>
 		<item>Many buildings establishing a campus</item>
 		<item>A former mansion converted into a school</item>
 		<item>A two-story warehouse</item>
-		<item>A series of caverns built into the side of a hill or mountain</item>
-		<item>A castle floating among the clouds</item>
+		<item region_start="12|53" region_end="19|61" region_include="cavern|mountain">A series of caverns built into the side of a hill or mountain</item>
+		<item region_start="2" region_end="8" region_include="castle">A castle floating among the clouds</item>
 		<item>An extra-dimensional space</item>
 		<item>A building with infinite rooms that exists in multiple places at the same time</item>
-		<item>A few spare rooms connected to a friendly temple</item>
-		<item>A single room in the headmaster's house</item>
-		<item>Subterranian, sprawling beneath its host city</item>
-		<item>A former castle</item>
-		<item>A beautifuly built building predating the surrounding city</item>
+		<item region_start="42" region_end="48" region_include="temple">A few spare rooms connected to a friendly temple</item>
+		<item region_start="21" region_end="31" region_include="__noun__">A single room in the headmaster's house</item>
+		<item region_start="41" region_end="45" region_include="city">Subterranian, sprawling beneath its host city</item>
+		<item region_start="9" region_end="15" region_include="castle">A former castle</item>
+		<item region_start="54" region_end="58" region_include="city">A beautifuly built building predating the surrounding city</item>
 		<item>Distributed across homes of scholars</item>
 	</table>
 	<table name="The academy's relationship with it's surrounding town" id="town">
@@ -71,17 +71,17 @@
 		<item>Most other academies consider this academy's education to be the gold standard</item>
 	</table>
 	<table name="The academy holds a secret" id="secret">
-		<item>Select students are being recruited by an evil cult</item>
-		<item>The campus was built on unhallowed or cursed ground</item>
-		<item>The government is using the education to slowly indoctrinate the students</item>
-		<item>A monster lives in the basement, and is occassionally fed a student</item>
-		<item>The headmaster is a polymorphed dragon</item>
-		<item>The academy is the protector of a legendary artifact</item>
-		<item>The academy is the alma mater of a notorious villain</item>
-		<item>Hidden within the academy's walls is a portal to another realm</item>
+		<item region_start="47" region_end="51" region_include="cult">Select students are being recruited by an evil cult</item>
+		<item region_start="38" region_end="51" region_include="__noun__">The campus was built on unhallowed or cursed ground</item>
+		<item region_start="4" region_end="14" region_include="__noun__">The government is using the education to slowly indoctrinate the students</item>
+		<item region_start="2" region_end="9" region_include="monsters">A monster lives in the basement, and is occassionally fed a student</item>
+		<item region_start="4|32" region_end="14|38" region_include="__noun__|dragon">The headmaster is a polymorphed dragon</item>
+		<item region_start="34" region_end="52" region_include="__noun__">The academy is the protector of a legendary artifact</item>
+		<item region_start="45" region_end="52" region_include="villain">The academy is the alma mater of a notorious villain</item>
+		<item region_start="57" region_end="62" region_include="nation">Hidden within the academy's walls is a portal to another realm</item>
 		<item>The academy is responsible for the accidental incursion of demons</item>
-		<item>A plague was accidently crafted and released from this academy</item>
-		<item>The headmaster is an illithid</item>
+		<item region_start="2" region_end="8" region_include="__noun__">A plague was accidently crafted and released from this academy</item>
+		<item region_start="4|21" region_end="14|29" region_include="__noun__|__noun__">The headmaster is an illithid</item>
 		<item>The instructors are bound devils</item>
 		<item>Students only get a good education with a high enough bribe</item>
 		<item>Many unworthy students are accepted because the staff were bribed</item>
@@ -91,7 +91,7 @@
 	<table name="How are students educated" id="educated">
 		<item>There are many classes on all sorts of subjects with professors providing a standardized cirriculum</item>
 		<item>A few professors teach in large auditoriums on prescribed subjects</item>
-		<item>A single professor teaches on the subjects they deem necessary for the day</item>
+		<item region_start="9" region_end="18" region_include="scholar">A single professor teaches on the subjects they deem necessary for the day</item>
 		<item>Students are given access to large libraries, and encouraged to learn on their own</item>
 		<item>Students are paired up one on one with a mentor</item>
 		<item>Mentors are assigned a group of students</item>
@@ -105,14 +105,14 @@
 	<table name="There is a rumor about the academy" id="rumor">
 		<item>Some of the professors are not properly educated or skilled</item>
 		<item>The academy is losing money</item>
-		<item>One of the professors is a cultist</item>
-		<item>The headmaster is a beholder</item>
-		<item>The academy is hiding a magical artifact</item>
+		<item region_start="11|27" region_end="21|34" region_include="scholar|cultist">One of the professors is a cultist</item>
+		<item region_start="4" region_end="14" region_include="__noun__">The headmaster is a beholder</item>
+		<item region_start="24" region_end="40" region_include="__noun__">The academy is hiding a magical artifact</item>
 		<item>Vampires lurk the grounds at night</item>
 		<item>Werewolves lurk the grounds at night</item>
 		<item>Ghosts lurk the grounds a night</item>
 		<item>There is a secret dungeon level, where arcane rituals are performed</item>
-		<item>Some of the students were involved in the assasination of a political figure at the behest of the academy</item>
+		<item region_start="60" region_end="76" region_include="noble">Some of the students were involved in the assasination of a political figure at the behest of the academy</item>
 		<item>The academy is holding on to a dark secret that could doom the world</item>
 	</table>
 	<table name="The rumors are likely" id="rumor_likely">
@@ -125,13 +125,13 @@
 	</table>
 	<table name="The academy is well known for" id="known">
 		<item>Graduated students that go on to great careers</item>
-		<item>A legendary wizard that once attended</item>
+		<item region_start="12" region_end="18" region_include="wizard">A legendary wizard that once attended</item>
 		<item>Miraculous advances</item>
 		<item>A chicken that walks the grounds</item>
-		<item>A legendary acedemic that mysteriously died before announcing their greatest discovery.</item>
-		<item>Saving the city from a zombie massacre</item>
+		<item region_start="12" region_end="20" region_include="scholar">A legendary acedemic that mysteriously died before announcing their greatest discovery.</item>
+		<item region_start="11" region_end="15" region_include="city">Saving the city from a zombie massacre</item>
 		<item>Nothing, absolutely nothing</item>
-		<item>Crafting a magical artifact</item>
+		<item region_start="11" region_end="27" region_include="__noun__">Crafting a magical artifact</item>
 		<item>Its strict rules regarding who is allowed to attend</item>
 		<item>Its rather odd unifoms that students are required to wear</item>
 		<item>Its bold mantra that has not changed since the school was established</item>
