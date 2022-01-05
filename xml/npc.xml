@@ -2,6 +2,17 @@
     <name name="The NPC's name is..."/>
     <include name="Race" include="npc_race" />
     <include name="Class" include="npc_class" />
+    <table name="The character's alignment is..." id="npc_alignment" short="Alignment">
+        <value>Lawful Good</value>
+        <value>Lawful Neutral</value>
+        <value>Lawful Evil</value>
+        <value>Neutral Good</value>
+        <value>Neutral</value>
+        <value>Neutral Evil</value>
+        <value>Chaotic Good</value>
+        <value>Chaotic Neutral</value>
+        <value>Chaotic Evil</value>
+    </table>
     <table name="The character's background is..." id="npc_background" short="Background">
         <value>Acolyte</value>
         <value>Anthropologist</value>

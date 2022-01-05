@@ -274,30 +274,60 @@ Hooks.on('renderREGChild', (app, html, data) => {
                     let xmlRaces = $(raceXML).find('value');
                     $(xmlRaces).each(v => {
                         let race = xmlRaces[v];
+                        let creatureType = $(race).attr('creatureType5e') || race.innerHTML;
+                        creatureType += ($(race).attr('subtype5e')) ? ` (${$(race).attr('subtype5e')})` : '';
                         races[race.innerHTML] = {
-                            creatureType: $(race).attr('creatureType5e') || race.innerHTML,
+                            creatureType,
+                            value: $(race).attr('creatureType5e') || race.innerHTML,
                             subtype: $(race).attr('subtype5e'),
                             race: $(race).attr('race5e')
                         }
                     })
 
                     RandomEverythingGenerator.log(true, 'Saving to ActorSheet');
+                    let xml = $.parseXML(app.XML);
                     let name = document.RandomEverythingGeneratorData[`${app.Path}.name`];
                     let creatureType = document.RandomEverythingGeneratorData[`${app.Path}.npc_race`]
+                    let tableAlignment = $(xml).find('table#npc_alignment')[0];
+                    let alignments = $(tableAlignment).children()
+                    let alignment = alignments[document.RandomEverythingGeneratorData[`${app.Path}.npc_alignment`]].innerHTML;
+                    let biography = "<div>";
+                    Object.keys(document.RandomEverythingGeneratorData).forEach(key => {
+                        if (key.match(`^${app.Path}\\.`)) {
+                            let id = key.substr(1); // Remove leading period
+                            let xmlTable = $(xml).find(`#${id}`)[0];
+                            if (!xmlTable)
+                                xmlTable = $(xml).find(`[include="${id}"]`)[0]
+                            let xmlValue = $(xmlTable).children();
+                            let value = '';
+                            if (document.RandomEverythingGeneratorData[key] == parseInt(document.RandomEverythingGeneratorData[key])) { // isInt()
+                                value = xmlValue[document.RandomEverythingGeneratorData[key]].innerHTML;
+                            } else {
+                                value = document.RandomEverythingGeneratorData[key];
+                            }
+                            let label = $(xmlTable).attr('short') || $(xmlTable).attr('name');
+                            if (label) {
+                                biography += `<div>${label}: ${value}</div>\n`
+                            }
+                        }
+                    });
+                    biography += "</div>"
+
                     let actor = await Actor.create({
                       name: name,
                       type: 'npc',
-                      img: "icons/svg/mystery-man.svg",
-                      data: {
-                        data: {
-                            race: {
-                                creatureType: races[creatureType].creatureType
-                            }
-                        }
-                      }
+                      img: "icons/svg/mystery-man.svg"
                     });
-                    //actor.labels = races[creatureType].creatureType;
+                    await actor.update({
+                        'data.details.type.subtype': races[creatureType].subtype,
+                        'data.details.type.value': races[creatureType].value.toLowerCase(),
+                        'data.details.alignment': alignment,
+                        'data.details.biography': {value: biography}
+                    });
                 })
+                break;
+            }
+            case 'JournalEntry': {
                 break;
             }
         }

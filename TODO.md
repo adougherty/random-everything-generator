@@ -22,6 +22,7 @@ Note: Random Everything Generator is currently in beta.
 - Split races off from mutations, such as vamprie, werewolf, etc.
 - Make NPC gender rollable, and replace all he/she language with the appropriate gender in tables. And such references should agree with each other.
 - Make pattern elements linkable (See ingredients/blood of a {dragon})
+- A link should be able to create a list of children. For example, academy relationship with other "Academies". 
 
 
 ## [Version 1.1]

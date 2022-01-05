@@ -38,7 +38,7 @@
     <value creatureType5e="Fey" race5e="Fairy">Fairy</value>
     <value creatureType5e="Fey" race5e="Harengon">Harengon</value>
     <value creatureType5e="Fey" race5e="Pixie">Pixie</value>
-    <value creatureType5e="Undead" race5e="Revenant">Revenant</value>
+    <value creatureType5e="Undead" subtype5e="Revenant" race5e="Revenant">Revenant</value>
     <value creatureType5e="Fey" race5e="Satyr">Satyr</value>
     <value creatureType5e="Humanoid" subtype5e="elf, shadar-kai">Shadar-kai</value>
     <value creatureType5e="Humanoid" subtype5e="shifter">Shifter</value>
@@ -47,7 +47,7 @@
     <value creatureType5e="Humanoid" subtype5e="tortle">Tortle</value>
     <value creatureType5e="Humanoid" subtype5e="triton">Triton</value>
     <value creatureType5e="Giant" race5e="Troll">Troll</value>
-    <value creatureType5e="Undead" race5e="Vampire" region_start="0" region_end="7" region_include="vampire">Vampire</value>
+    <value creatureType5e="Undead" subtype5e="Vampire" race5e="Vampire" region_start="0" region_end="7" region_include="vampire">Vampire</value>
     <value creatureType5e="Humanoid" subtype5e="vedalken">Vedalken</value>
     <value creatureType5e="Humanoid" subtype5e="verdan">Verdan</value>
     <value creatureType5e="Humanoid" subtype5e="warforged">Warforged</value>
