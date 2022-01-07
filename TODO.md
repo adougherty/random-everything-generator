@@ -23,7 +23,7 @@ Note: Random Everything Generator is currently in beta.
 - Make NPC gender rollable, and replace all he/she language with the appropriate gender in tables. And such references should agree with each other.
 - Make pattern elements linkable (See ingredients/blood of a {dragon})
 - A link should be able to create a list of children. For example, academy relationship with other "Academies". 
-
+- Make patreon=true links to a link that promotes patreon (but unlocked in patreon level)
 
 ## [Version 1.1]
 - Add a button to NPC character sheets to randomly detail that character
