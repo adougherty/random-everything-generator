@@ -263,7 +263,7 @@ Hooks.on('renderREGChild', (app, html, data) => {
 
     // Export Button
     let exportBtn = $(`<a class="reg-export"><i class="fas fa-file-export"></i>Export</a>`);
-    exportBtn.click(ev => {
+    exportBtn.click(async (ev) => {
         let xml = $.parseXML(app.XML);
         let category = $(xml).find('category');
         let exportType = $(category)?.attr('export') || 'JournalEntry'
@@ -328,6 +328,47 @@ Hooks.on('renderREGChild', (app, html, data) => {
                 break;
             }
             case 'JournalEntry': {
+                RandomEverythingGenerator.log(true, 'Saving to JournalEntry');
+                let xml = $.parseXML(app.XML);
+                let content = "<div>";
+                Object.keys(document.RandomEverythingGeneratorData).forEach(key => {
+                    if (key.match(`^${app.Path}\\.`)) {
+                        let id = key.substr(1); // Remove leading period
+                        let xmlTable = $(xml).find(`#${id}`)[0];
+                        if (!xmlTable)
+                            xmlTable = $(xml).find(`[include="${id}"]`)[0]
+                        let xmlValue = $(xmlTable).children();
+                        let value = '';
+                        if (document.RandomEverythingGeneratorData[key] == parseInt(document.RandomEverythingGeneratorData[key])) { // isInt()
+                            value = xmlValue[document.RandomEverythingGeneratorData[key]].innerHTML;
+                        } else {
+                            value = document.RandomEverythingGeneratorData[key];
+                        }
+                        let label = $(xmlTable).attr('short') || $(xmlTable).attr('name');
+                        if (label) {
+                            content += `<div>${label}: ${value}</div>\n`
+                        }
+                    }
+                });
+                content += "</div>";
+
+                let name = document.RandomEverythingGeneratorData[`${app.Path}.name`];
+                if (!name) {
+                    await $.get(`/modules/random-everything-generator/xml/${document.RandomEverythingGeneratorData['top']}.xml`, topXMLString => {
+                        let topXML = $.parseXML(topXMLString);
+                        let topCategory = $(topXMLString).find('category')[0];
+                        console.log($(topCategory))
+                        name = $(topCategory).attr('name');
+                    });
+                }
+                console.log(name);
+                name ??= 'Unknown Name';
+
+                let journal = await JournalEntry.create({
+                    name,
+                    content
+                });
+
                 break;
             }
         }
