@@ -15,7 +15,7 @@
   "url": "https://github.com/adougherty/random-everything-generator",
   "flags": {},
   "version": "0.1.3",
-  "minimumCoreVersion": "9",
+  "minimumCoreVersion": "0.8.9",
   "compatibleCoreVersion": "9",
   "scripts": [
     "reg.js",
