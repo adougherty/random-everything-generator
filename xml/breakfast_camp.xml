@@ -1,5 +1,5 @@
         <category name="Breakfast at a Camp Fire" id="breakfast_camp">
-            <table name="Tonight, we dine on..." id="dine">
+            <table name="Tonight, we dine on..." id="dine" type="pattern">
                 <patterns>
                     <pattern>{prep} {dish}</pattern>
                 </patterns>
