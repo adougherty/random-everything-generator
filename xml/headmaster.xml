@@ -1,0 +1,161 @@
+<!-- Option Count = 1,889,508,741,120 -->
+<category name="Headmaster" id="headmaster">
+	<name name="The Headmaster's name is" />
+	<include name="Race" include="npc_race" />
+	<table name="The headmaster is" id="is">
+		<value>A doting old fool</value>
+		<value>playing at being a doting fool, but is actually quite aware of his surroundings</value>
+		<value>A young man just starting his journey</value>
+		<value region_start="2" region_end="12" region_include="__noun__">A politician, playing students and teachers off each other</value>
+		<value region_start="2" region_end="10" region_include="__noun__">A diplomat, making the best of odd situations and personalities</value>
+		<value>A connoisseur of the finer things in life</value>
+		<value>typically unavailable</value>
+		<value region_start="38" region_end="44" region_include="academy">often seen walking the grounds of his school</value>
+		<value>A busy-body, always poking his nose into places where he isn't wanted</value>
+		<value>A gossip, no one's secrets are safe with him</value>
+		<value region_start="60" region_end="66" region_include="academy">A shy recluse, more interested in the administration of the school</value>
+		<value region_start="30" region_end="36" region_include="academy">Lazy. He would rather let the school run itself</value>
+		<value>Highly intelligent, but selective with who he shares his knowledge</value>
+		<value>Highly intelligent, and is often taking the place of other teachers</value>
+		<value>Not interested in education, but is a great administrator</value>
+		<value>A wise old man who always seems to be there when he is needed</value>
+		<value>Notoriously absent, while on one adventure or another</value>
+		<value>A strict taskmaster</value>
+		<value>A drunkard</value>
+		<value>An charismatic middle-aged man who often embelishes his stories putting himself in the best light possible</value>
+		<value>A gentleman</value>
+		<value>Easily distracted, always jumping from one idea to another on how to run or improve the school</value>
+		<value>very stubborn.</value>
+		<value>often showing up in the oddest places</value>
+		<value>A bully at heart</value>
+		<value>A rampant philanderer</value>
+	</table>
+	<table name="The headmaster is looking for" id="looking">
+		<value>This year's valedictorian</value>
+		<value>A shot of brandy</value>
+		<value region_start="10" region_end="17" region_include="scholar">A missing teacher</value>
+		<value region_start="10" region_end="17" region_include="scholar">A missing student</value>
+		<value>A new teacher</value>
+		<value>A way to improve the school's reputation</value>
+		<value>The funds to keep the school running</value>
+		<value>A new campus</value>
+		<value>Some alone time, away from everyone</value>
+		<value>A party to crash</value>
+		<value>Someone to make an example of</value>
+		<value>The respect he believes he deserves</value>
+		<value>A rich donor</value>
+		<value region_start="24" region_end="30" region_include="academy">A new direction for the school</value>
+	</table>
+	<table name="The headmaster carries" id="carries">
+		<value>A ledger with the schedule of all teachers and students</value>
+		<value>A record of all disciplinary actions taken this year</value>
+		<value>A walking cane</value>
+		<value>A bauble that shines with a eerie light</value>
+		<value>A pompous hat that never leaves his head</value>
+		<value region_start="10" region_end="14" region_include="wands">A magical wand</value>
+		<value>A map to a hidden room on the campus</value>
+		<value>A pet lizard on his shoulder</value>
+		<value>A glass eye of unknown origin</value>
+		<value>A leather whip that he uses for discipline</value>
+		<value>A different book every day</value>
+		<value>A soiled handkerchief</value>
+		<value>A pair of spectacles that he rarely wears</value>
+		<value>A letter from home</value>
+		<value region_start="14" region_end="19" region_include="noble">A note from a noble</value>
+	</table>
+	<table name="Before being a headmaster, they were a" id="before">
+		<value region_start="0" region_end="7" region_include="scholar">Scholar</value>
+		<value region_start="0" region_end="10" region_include="npc_class">Adventurer</value>
+		<value region_start="0" region_end="7" region_include="scholar">Teacher</value>
+		<value region_start="0" region_end="5" region_include="noble">Noble</value>
+		<value>Nobody</value>
+		<value region_start="0" region_end="6" region_include="__noun__">Beggar</value>
+		<value region_start="0" region_end="10" region_include="__noun__">Dockworker</value>
+		<value region_start="15" region_end="25" region_include="noble">Advisor to the king/queen</value>
+		<value>Grand Vizier</value>
+		<value>Diplomat</value>
+		<value>Military Officer</value>
+		<value region_start="0" region_end="14" region_include="pirate">Pirate Captain</value>
+		<value region_start="15" region_end="29" region_include="__noun__">The owner of a mining company</value>
+		<value region_start="0" region_end="6" region_include="priest">Priest</value>
+		<value region_start="0" region_end="7" region_include="cultist">Cultist</value>
+		<value region_start="10" region_end="16" region_include="__noun__">Religious Zealot</value>
+		<value region_start="0" region_end="10" region_include="__noun__">Con Artist</value>
+		<value region_start="0" region_end="8" region_include="__noun__">Explorer</value>
+		<value region_start="22" region_end="28" region_include="academy">Headmaster at another school</value>
+	</table>
+	<table name="The headmaster favors students who" id="favor">
+		<value>Work hard</value>
+		<value>Are naturally intelligent</value>
+		<value>Give him gifts or bribes</value>
+		<value>Are good looking</value>
+		<value>Stay out of his way</value>
+		<value>Stroke his ego</value>
+		<value>Are well behaved</value>
+		<value>Come from money</value>
+		<value region_start="19" region_end="25" region_include="academy">Have stayed at the school for a long time</value>
+		<value>Are new students</value>
+		<value>Attend his parties and soirees</value>
+		<value>Have connections in high places</value>
+		<value>Are minorities in the community</value>
+		<value>Struggled to get to where they are</value>
+		<value>Can spin a good tale</value>
+		<value>Show him proper respect</value>
+	</table>
+	<table name="The headmaster dislikes students who" id="dislike">
+		<value>Disobey the rules</value>
+		<value>Succeed easily</value>
+		<value>Don't pay attention to their studies</value>
+		<value>Come from foreign lands</value>
+		<value>Cause trouble for their teachers</value>
+		<value>Are unclean</value>
+		<value>Are poor</value>
+		<value>Are rich</value>
+		<value>Come from noble families</value>
+		<value>Come from common families</value>
+		<value>Consume alcohol</value>
+		<value region_start="17" region_end="34" region_include="__noun__">Do not share his religious beliefs</value>
+		<value>Don't show him proper respect</value>
+		<value>Don't value education for education's sake</value>
+	</table>
+	<table name="Students regard the headmaster as" id="regards">
+		<value>A true gentleman</value>
+		<value>Someone to best avoid</value>
+		<value>A fool</value>
+		<value region_start="31" region_end="40" region_include="__noun__">One of the greatest men in the community</value>
+		<value>An ignoramous</value>
+		<value>Just another cog in the wheel</value>
+		<value>A hinderance to their education</value>
+		<value region_start="31" region_end="37" region_include="academy">The reason why they chose this school over others</value>
+		<value>A true genious</value>
+		<value>A villinous snake</value>
+		<value>A philanderer</value>
+		<value>A tyrant</value>
+	</table>
+	<table name="The headmaster got their role by" id="role">
+		<value>Working hard to advance himself academically</value>
+		<value>Getting administrative experience in another part of life</value>
+		<value>Bribing the right people</value>
+		<value region_start="21" region_end="31" region_include="headmaster">Killing the previous headmaster</value>
+		<value>Rigging an election</value>
+		<value>Simply taking the job. No one else wanted it</value>
+		<value region_start="28" region_end="32" region_include="nobleman">Calling in a favor from the king</value>
+		<value region_start="32" region_end="42" region_include="headmaster">Being the child of the previous headmaster</value>
+		<value region_start="13" region_end="19" region_include="academy">Starting the school</value>
+		<value>Demonstrating a great act or sacrifice</value>
+		<value region_start="46" region_end="56" region_include="headmaster">Exposing the ethical breaches of the previous headmaster</value>
+	</table>
+	<table name="The headmaster has a secret" id="secret">
+		<value>They have a bastard child</value>
+		<value region_start="23|41" region_end="28|45" region_include="fiend|cult">They are a member of a demon worshipping cult</value>
+		<value region_start="23" region_end="37" region_include="secretsociety">They are a member of a secret society</value>
+		<value region_start="40" region_end="47" region_include="scholar">They are responsible for the death of a student</value>
+		<value>They never recieved a formal education</value>
+		<value>They have no idea what they are doing</value>
+		<value>They are stealing from tuitions</value>
+		<value>They are in hiding from a foreign government</value>
+		<value>They are easily bribed</value>
+		<value>They are a doppleganger who took the place of the headmaster years ago</value>
+		<value>One of their parents is a pariah</value>
+	</table>
+</category>
